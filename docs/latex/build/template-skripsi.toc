@@ -1,0 +1,59 @@
+\babel@toc {english}{}\relax 
+\babel@toc {bahasa}{}\relax 
+\contentsline {chapter}{DAFTAR ISI}{vi}{chapter*.2}%
+\contentsline {chapter}{DAFTAR GAMBAR}{viii}{chapter*.3}%
+\babel@toc {bahasa}{}\relax 
+\contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Pembatasan Masalah}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Tujuan Penelitian}{6}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Manfaat Penelitian}{6}{section.1.5}%
+\babel@toc {bahasa}{}\relax 
+\contentsline {chapter}{\numberline {II}KAJIAN PUSTAKA}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Citra Gambar Digital}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Pemrosesan Citra Digital}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Citra Gambar Berwarna}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pemodelan Distribusi \emph {Gaussian Mixture Model}}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Segmentasi Pemisahan Objek dari Latar Belakang dengan Algoritma \emph {GraphCut}}{16}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}{Metode Awal}}{17}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}{Latar Belakang Pada Graf}}{18}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}Permasalahan pada \emph {Min-Cut} dan \emph {Max-Flow}}{19}{subsubsection.2.5.2.1}%
+\contentsline {subsection}{\numberline {2.5.3}{Algoritma \emph {Mincut/Max-Flow} Terbaru}}{21}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}Penjelasan Algoritma}{22}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}Implementasi Lebih Lanjut}{23}{subsubsection.2.5.3.2}%
+\contentsline {paragraph}{\numberline {2.5.3.2.1}Fase \emph {Growth}}{24}{paragraph.2.5.3.2.1}%
+\contentsline {paragraph}{\numberline {2.5.3.2.2}Fase \emph {Augmentation}}{24}{paragraph.2.5.3.2.2}%
+\contentsline {paragraph}{\numberline {2.5.3.2.3}Fase \emph {Adoption}}{25}{paragraph.2.5.3.2.3}%
+\contentsline {section}{\numberline {2.6}Segmentasi Citra dengan Algoritma \emph {GrabCut}}{26}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}{Sistem yang Diusulkan : \emph {GrabCut}}}{26}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}{Segmentasi gambar dengan \emph {graph cut}}}{27}{subsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.2.1}{Segmentasi dengan \emph {energy minimisation}}}{27}{subsubsection.2.6.2.1}%
+\contentsline {subsection}{\numberline {2.6.3}{Segmentasi gambar dengan algoritma \emph {GrabCut}}}{30}{subsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.1}{Model Pendataan Warna}}{30}{subsubsection.2.6.3.1}%
+\contentsline {subsubsection}{\numberline {2.6.3.2}{Segmentasi berdasarkan Iterasi \emph {Energy Minimization}}}{32}{subsubsection.2.6.3.2}%
+\contentsline {subsubsection}{\numberline {2.6.3.3}{Interaksi Pengguna dan Trimap yang Tidak Lengkap}}{33}{subsubsection.2.6.3.3}%
+\contentsline {chapter}{\numberline {III}METODOLOGI PENELITIAN}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Desain Segmentasi Luka dengan Metode \emph {GrabCut}}{35}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Inisiasi Kotak Pembatas (\emph {Bounding Box})}{35}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Implementasi Algoritma \emph {GrabCut}}{36}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Penyuntingan oleh Pengguna}{37}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Diagram Alir Segmentasi Luka dengan Metode \emph {GrabCut}}{37}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Struktur Data}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}\emph {Node}}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}\emph {Linkedlist}}{39}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}\emph {Tree}}{41}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Graf}{43}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Algoritma \emph {GrabCut}}{51}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Algoritma Segmentasi Gambar dengan Metode \emph {GrabCut}}{54}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Alat dan Bahan Penelitian}{62}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Tahapan Penelitian}{62}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Persiapan \emph {dataset} input citra}{62}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Inisiai \emph {Bounding Box} di area luka}{64}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Inisiasi GMM}{64}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Mempelajari parameter GMM}{64}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Segmentasi Citra dengan Algoritma \emph {Mincut}}{65}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Penyuntingan oleh Pengguna}{67}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}Menghitung Tingkat Akurasi}{67}{subsection.3.6.7}%
+\contentsline {section}{\numberline {3.7}Skenario Eksperimen}{68}{section.3.7}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{69}{Item.37}%

@@ -1,0 +1,1828 @@
+**
+(template-skripsi.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (jtetiskripsi.cls
+Document Class: jtetiskripsi 
+(babel.sty
+Package: babel 2022/02/26 3.73 The Babel package
+\babel@savecnt=\count181
+\U@D=\dimen138
+\l@unhyphenated=\language87
+ (xebabel.def (txtbabel.def))
+\bbl@readstream=\read2
+\bbl@dirlevel=\count182
+ (bahasa.ldf
+Language: bahasa 2017/02/15 v1.0m Bahasa Indonesia support from the babel syste
+m
+ (indonesian.ldf
+Language: indonesian 2017/02/15 v1.0m Bahasa Indonesia support from the babel s
+ystem
+))
+(english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 108.
+)) (indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+ (t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+) (geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks17
+)
+(verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks18
+\verbatim@line=\toks19
+\verbatim@in@stream=\read3
+) (enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks20
+) (booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen149
+\lightrulewidth=\dimen150
+\cmidrulewidth=\dimen151
+\belowrulesep=\dimen152
+\belowbottomsep=\dimen153
+\aboverulesep=\dimen154
+\abovetopsep=\dimen155
+\cmidrulesep=\dimen156
+\cmidrulekern=\dimen157
+\defaultaddspace=\dimen158
+\@cmidla=\count186
+\@cmidlb=\count187
+\@aboverulesep=\dimen159
+\@belowrulesep=\dimen160
+\@thisruleclass=\count188
+\@lastruleclass=\count189
+\@thisrulewidth=\dimen161
+) (xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+
+(colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+ (array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box50
+\extrarowheight=\dimen163
+\NC@list=\toks21
+\extratabsurround=\skip47
+\backup@length=\skip48
+\ar@cellbox=\box51
+)
+\everycr=\toks22
+\minrowclearance=\skip49
+)
+\rownum=\count190
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip50
+\multirow@cntb=\count191
+\multirow@dima=\skip51
+\bigstrutjot=\dimen164
+) (float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count192
+\float@exts=\toks23
+\float@box=\box52
+\@float@everytoks=\toks24
+\@floatcapt=\box53
+) (report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count193
+\c@chapter=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count199
+\c@figure=\count266
+\c@table=\count267
+\abovecaptionskip=\skip52
+\belowcaptionskip=\skip53
+\bibindent=\dimen165
+)) (tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip54
+\cftbeforetoctitleskip=\skip55
+\cftaftertoctitleskip=\skip56
+\cftbeforepartskip=\skip57
+\cftpartnumwidth=\skip58
+\cftpartindent=\skip59
+\cftbeforechapskip=\skip60
+\cftchapindent=\skip61
+\cftchapnumwidth=\skip62
+\cftbeforesecskip=\skip63
+\cftsecindent=\skip64
+\cftsecnumwidth=\skip65
+\cftbeforesubsecskip=\skip66
+\cftsubsecindent=\skip67
+\cftsubsecnumwidth=\skip68
+\cftbeforesubsubsecskip=\skip69
+\cftsubsubsecindent=\skip70
+\cftsubsubsecnumwidth=\skip71
+\cftbeforeparaskip=\skip72
+\cftparaindent=\skip73
+\cftparanumwidth=\skip74
+\cftbeforesubparaskip=\skip75
+\cftsubparaindent=\skip76
+\cftsubparanumwidth=\skip77
+\cftbeforeloftitleskip=\skip78
+\cftafterloftitleskip=\skip79
+\cftbeforefigskip=\skip80
+\cftfigindent=\skip81
+\cftfignumwidth=\skip82
+\c@lofdepth=\count268
+\c@lotdepth=\count269
+\cftbeforelottitleskip=\skip83
+\cftafterlottitleskip=\skip84
+\cftbeforetabskip=\skip85
+\cfttabindent=\skip86
+\cfttabnumwidth=\skip87
+) (hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+ (ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen166
+\Hy@linkcounter=\count270
+\Hy@pagecounter=\count271
+ (pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+)
+(intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count272
+ (puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count273
+ (url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen167
+ (bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count274
+\Field@Width=\dimen168
+\Fld@charsize=\dimen169
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+ (atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count275
+\c@Item=\count276
+\c@Hfootnote=\count277
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (hxetex.def
+File: hxetex.def 2022-02-21 v7.00n Hyperref driver for XeTeX
+ (stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box54
+\c@Hy@AnnotLevel=\count278
+\HyField@AnnotCount=\count279
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
+ (rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+) (uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip88
+)
+\mylenf=\skip89
+ (caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen170
+\captionmargin=\dimen171
+\caption@leftmargin=\dimen172
+\caption@rightmargin=\dimen173
+\caption@width=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count282
+\c@continuedfloat=\count283
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+(subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count284
+\c@subtable=\count285
+) (xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (pdfpages.sty
+Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
+ (ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count286
+\calc@Bcount=\count287
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip90
+\calc@Bskip=\skip91
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count288
+\calc@Cskip=\skip92
+)
+(eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen180
+\ESO@tempdimb=\dimen181
+)
+\AM@pagewidth=\dimen182
+\AM@pageheight=\dimen183
+\AM@fboxrule=\dimen184
+ (ppxetex.def
+File: ppxetex.def 2022/01/29 v0.5u Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count289
+\AM@pagebox=\box55
+\AM@global@opts=\toks25
+\AM@pagecnt=\count290
+\AM@toc@title=\toks26
+\c@AM@survey=\count291
+\AM@templatesizebox=\box56
+) (longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip93
+\LTright=\skip94
+\LTpre=\skip95
+\LTpost=\skip96
+\LTchunksize=\count292
+\LTcapwidth=\dimen185
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count293
+\LT@rows=\count294
+\c@LT@tables=\count295
+\c@LT@chunks=\count296
+\LT@p@ftn=\toks27
+) (wrapfig.sty
+\wrapoverhang=\dimen186
+\WF@size=\dimen187
+\c@WF@wrappedlines=\count297
+\WF@box=\box62
+\WF@everypar=\toks28
+Package: wrapfig 2003/01/31  v 3.6
+) (biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+(etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count298
+) (logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count299
+ (logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count300
+\c@listtotal=\count301
+\c@listcount=\count302
+\c@liststart=\count303
+\c@liststop=\count304
+\c@citecount=\count305
+\c@citetotal=\count306
+\c@multicitecount=\count307
+\c@multicitetotal=\count308
+\c@instcount=\count309
+\c@maxnames=\count310
+\c@minnames=\count311
+\c@maxitems=\count312
+\c@minitems=\count313
+\c@citecounter=\count314
+\c@maxcitecounter=\count315
+\c@savedcitecounter=\count316
+\c@uniquelist=\count317
+\c@uniquename=\count318
+\c@refsection=\count319
+\c@refsegment=\count320
+\c@maxextratitle=\count321
+\c@maxextratitleyear=\count322
+\c@maxextraname=\count323
+\c@maxextradate=\count324
+\c@maxextraalpha=\count325
+\c@abbrvpenalty=\count326
+\c@highnamepenalty=\count327
+\c@lownamepenalty=\count328
+\c@maxparens=\count329
+\c@parenlevel=\count330
+\blx@tempcnta=\count331
+\blx@tempcntb=\count332
+\blx@tempcntc=\count333
+\c@blx@maxsection=\count334
+\c@blx@maxsegment@0=\count335
+\blx@notetype=\count336
+\blx@parenlevel@text=\count337
+\blx@parenlevel@foot=\count338
+\c@blx@sectionciteorder@0=\count339
+\blx@entrysetcounter=\count340
+\blx@biblioinstance=\count341
+\labelnumberwidth=\skip97
+\labelalphawidth=\skip98
+\biblabelsep=\skip99
+\bibitemsep=\skip100
+\bibnamesep=\skip101
+\bibinitsep=\skip102
+\bibparsep=\skip103
+\bibhang=\skip104
+\blx@bcfin=\read4
+\blx@bcfout=\write3
+\blx@langwohyphens=\language88
+\c@mincomprange=\count342
+\c@maxcomprange=\count343
+\c@mincompwidth=\count344
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authoryear-icomp.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count345
+\c@savedafterword=\count346
+\c@annotator=\count347
+\c@savedannotator=\count348
+\c@author=\count349
+\c@savedauthor=\count350
+\c@bookauthor=\count351
+\c@savedbookauthor=\count352
+\c@commentator=\count353
+\c@savedcommentator=\count354
+\c@editor=\count355
+\c@savededitor=\count356
+\c@editora=\count357
+\c@savededitora=\count358
+\c@editorb=\count359
+\c@savededitorb=\count360
+\c@editorc=\count361
+\c@savededitorc=\count362
+\c@foreword=\count363
+\c@savedforeword=\count364
+\c@holder=\count365
+\c@savedholder=\count366
+\c@introduction=\count367
+\c@savedintroduction=\count368
+\c@namea=\count369
+\c@savednamea=\count370
+\c@nameb=\count371
+\c@savednameb=\count372
+\c@namec=\count373
+\c@savednamec=\count374
+\c@translator=\count375
+\c@savedtranslator=\count376
+\c@shortauthor=\count377
+\c@savedshortauthor=\count378
+\c@shorteditor=\count379
+\c@savedshorteditor=\count380
+\c@labelname=\count381
+\c@savedlabelname=\count382
+\c@institution=\count383
+\c@savedinstitution=\count384
+\c@lista=\count385
+\c@savedlista=\count386
+\c@listb=\count387
+\c@savedlistb=\count388
+\c@listc=\count389
+\c@savedlistc=\count390
+\c@listd=\count391
+\c@savedlistd=\count392
+\c@liste=\count393
+\c@savedliste=\count394
+\c@listf=\count395
+\c@savedlistf=\count396
+\c@location=\count397
+\c@savedlocation=\count398
+\c@organization=\count399
+\c@savedorganization=\count400
+\c@origlocation=\count401
+\c@savedoriglocation=\count402
+\c@origpublisher=\count403
+\c@savedorigpublisher=\count404
+\c@publisher=\count405
+\c@savedpublisher=\count406
+\c@language=\count407
+\c@savedlanguage=\count408
+\c@origlanguage=\count409
+\c@savedoriglanguage=\count410
+\c@pageref=\count411
+\c@savedpageref=\count412
+\shorthandwidth=\skip105
+\shortjournalwidth=\skip106
+\shortserieswidth=\skip107
+\shorttitlewidth=\skip108
+\shortauthorwidth=\skip109
+\shorteditorwidth=\skip110
+\locallabelnumberwidth=\skip111
+\locallabelalphawidth=\skip112
+\localshorthandwidth=\skip113
+\localshortjournalwidth=\skip114
+\localshortserieswidth=\skip115
+\localshorttitlewidth=\skip116
+\localshortauthorwidth=\skip117
+\localshorteditorwidth=\skip118
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+ (blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count413
+\c@textcitetotal=\count414
+\c@textcitemaxnames=\count415
+\c@biburlbigbreakpenalty=\count416
+\c@biburlbreakpenalty=\count417
+\c@biburlnumpenalty=\count418
+\c@biburlucpenalty=\count419
+\c@biburllcpenalty=\count420
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count421
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear-icomp'...
+Package biblatex Info: ... file 'authoryear-icomp.bbx' found.
+ (authoryear-icomp.bbx
+File: authoryear-icomp.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+ (authoryear.bbx
+File: authoryear.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count422
+\c@bbx:relatedtotal=\count423
+)))
+Package biblatex Info: Trying to load citation style 'authoryear-icomp'...
+Package biblatex Info: ... file 'authoryear-icomp.cbx' found.
+ (authoryear-icomp.cbx
+File: authoryear-icomp.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (biblatex.cfg
+File: biblatex.cfg 
+)
+
+Package biblatex Warning: 'firstinits' option is deprecated.
+(biblatex)                Please use 'giveninits' instead.
+
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+(expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+ (l3backend-xetex.def
+File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
+\c__kernel_sys_dvipdfmx_version_int=\count424
+\l__color_backend_stack_int=\count425
+\g__color_backend_stack_int=\count426
+\g__graphics_track_int=\count427
+\l__pdf_internal_box=\box63
+\g__pdf_backend_object_int=\count428
+\g__pdf_backend_annotation_int=\count429
+\g__pdf_backend_link_int=\count430
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-02-24 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (blx-case-expl3.sty (xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+(amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip119
+
+For additional information on amsmath, use the `?' option.
+(amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen188
+)) (amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen189
+) (amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count431
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count432
+\leftroot@=\count433
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count434
+\DOTSCASE@=\count435
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box64
+\strutbox@=\box65
+\big@size=\dimen190
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count436
+\c@MaxMatrixCols=\count437
+\dotsspace@=\muskip21
+\c@parentequation=\count438
+\dspbrk@lvl=\count439
+\tag@help=\toks30
+\row@=\count440
+\column@=\count441
+\maxfields@=\count442
+\andhelp@=\toks31
+\eqnshift@=\dimen191
+\alignsep@=\dimen192
+\tagshift@=\dimen193
+\tagwidth@=\dimen194
+\totwidth@=\dimen195
+\lineht@=\dimen196
+\@envbody=\toks32
+\multlinegap=\skip120
+\multlinetaggap=\skip121
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks34
+\c@algorithm=\count443
+)
+(algpseudocode.sty
+Package: algpseudocode 
+ (algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count444
+\c@ALG@rem=\count445
+\c@ALG@nested=\count446
+\ALG@tlm=\skip122
+\ALG@thistlm=\skip123
+\c@ALG@Lnr=\count447
+\c@ALG@blocknr=\count448
+\c@ALG@storecount=\count449
+\c@ALG@tmpcounter=\count450
+\ALG@tmplength=\skip124
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (listings.sty
+\lst@mode=\count451
+\lst@gtempboxa=\box66
+\lst@token=\toks35
+\lst@length=\count452
+\lst@currlwidth=\dimen197
+\lst@column=\count453
+\lst@pos=\count454
+\lst@lostspace=\dimen198
+\lst@width=\dimen199
+\lst@newlines=\count455
+\lst@lineno=\count456
+\lst@maxwidth=\dimen256
+ (lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count457
+\lst@skipnumbers=\count458
+\lst@framebox=\box67
+) (listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count459
+\@quotereset=\count460
+
+Package biblatex Warning: Conflicting options.
+(biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
+(biblatex)                Setting 'uniquename=init' on input line 175.
+
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 17
+5.
+(t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux)
+(bab3_new.aux))
+\openout1 = `template-skripsi.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+75.
+ (ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* pass: disregarded the geometry package!
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=406.87448pt
+* \textheight=625.96062pt
+* \oddsidemargin=41.54121pt
+* \evensidemargin=41.54121pt
+* \topmargin=-25.6073pt
+* \headheight=12.0pt
+* \headsep=65.44142pt
+* \topskip=5.16667pt
+* \footskip=42.67912pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 175.
+(nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count461
+)
+LaTeX Info: Redefining \ref on input line 175.
+LaTeX Info: Redefining \pageref on input line 175.
+LaTeX Info: Redefining \nameref on input line 175.
+ (template-skripsi.out)
+(template-skripsi.out)
+\@outlinefile=\write4
+\openout4 = `template-skripsi.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+ (lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'bahasa'...
+Package biblatex Info: ... file 'bahasa.lbx' not found.
+
+
+Package biblatex Warning: Language 'bahasa' not supported.
+(biblatex)                Using dummy definitions on input line 175.
+
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `template-skripsi.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'template-skripsi.bbl' found.
+(template-skripsi.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Silva:2015
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 175.
+Package biblatex Info: Reference segment=0 on input line 175.
+\c@lstlisting=\count462
+File: gambar/logounj.png Graphic file (type bmp)
+<gambar/logounj.png>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+ [1
+
+]
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+ [2]
+\openout2 = `kata-pengantar.aux'.
+
+ (kata-pengantar.tex [3
+
+
+]
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 46
+.
+ (ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
+Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--185
+[][] 
+ []
+
+[4] (template-skripsi.toc [5
+
+
+
+])
+\tf@toc=\write5
+\openout5 = `template-skripsi.toc'.
+
+ [6] (template-skripsi.lof
+Missing character: There is no ∈ ("2208) in font ptmr8t!
+[7
+
+])
+\tf@lof=\write6
+\openout6 = `template-skripsi.lof'.
+
+ [8]
+\openout2 = `bab1.aux'.
+
+ (bab1.tex
+BAB I.
+[1
+
+
+
+] [2] [3] [4] [5]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+28.
+ (ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [6]) [7]
+\openout2 = `bab2.aux'.
+
+ (bab2.tex
+BAB II.
+[8
+
+
+
+
+]
+File: gambar/gelombang_cahaya.png Graphic file (type bmp)
+<gambar/gelombang_cahaya.png>
+ [9]
+File: gambar/gelombang_rgb_mata.png Graphic file (type bmp)
+<gambar/gelombang_rgb_mata.png>
+ [10]
+File: gambar/gambar_citra_warna.png Graphic file (type bmp)
+<gambar/gambar_citra_warna.png>
+File: gambar/rgb_cube.png Graphic file (type bmp)
+<gambar/rgb_cube.png>
+ [11] [12]
+File: gambar/gmm_curve.png Graphic file (type bmp)
+<gambar/gmm_curve.png>
+ [13] [14] [15] [16]
+File: gambar/gambar_1-A.png Graphic file (type bmp)
+<gambar/gambar_1-A.png>
+File: gambar/gambar_1-B.png Graphic file (type bmp)
+<gambar/gambar_1-B.png>
+
+Missing character: There is no ∈ ("2208) in font ptmr8t!
+Missing character: There is no ∈ ("2208) in font ptmr8t!
+[17] [18]
+File: gambar/graph-A.png Graphic file (type bmp)
+<gambar/graph-A.png>
+File: gambar/cut-A.png Graphic file (type bmp)
+<gambar/cut-A.png>
+ [19]
+File: gambar/gambar-2.png Graphic file (type bmp)
+<gambar/gambar-2.png>
+File: gambar/gambar-2a.png Graphic file (type bmp)
+<gambar/gambar-2a.png>
+File: gambar/gambar-2b.png Graphic file (type bmp)
+<gambar/gambar-2b.png>
+ [20]
+File: gambar/gambar-3.png Graphic file (type bmp)
+<gambar/gambar-3.png>
+ [21]
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+[22]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 70
+4.
+ (t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [23]
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 729.
+
+[24]
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 788.
+
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 801.
+
+[25] [26]
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+[27] [28]
+File: gambar/gambar-2_5(a).png Graphic file (type bmp)
+<gambar/gambar-2_5(a).png>
+File: gambar/gambar-2_5(b).png Graphic file (type bmp)
+<gambar/gambar-2_5(b).png>
+File: gambar/gambar-2_5(c).png Graphic file (type bmp)
+<gambar/gambar-2_5(c).png>
+File: gambar/gambar-2_5(d).png Graphic file (type bmp)
+<gambar/gambar-2_5(d).png>
+File: gambar/gambar-2_5(e).png Graphic file (type bmp)
+<gambar/gambar-2_5(e).png>
+File: gambar/gambar-2_5(f).png Graphic file (type bmp)
+<gambar/gambar-2_5(f).png>
+ [29] [30] [31]
+File: gambar/gambar-2_6.png Graphic file (type bmp)
+<gambar/gambar-2_6.png>
+ [32]
+File: gambar/gambar-2_7(a).png Graphic file (type bmp)
+<gambar/gambar-2_7(a).png>
+File: gambar/gambar-2_7(b).png Graphic file (type bmp)
+<gambar/gambar-2_7(b).png>
+File: gambar/gambar-2_7(c).png Graphic file (type bmp)
+<gambar/gambar-2_7(c).png>
+
+Missing character: There is no — ("2014) in font ptmr8t!
+[33]
+File: gambar/gambar-2_8.png Graphic file (type bmp)
+<gambar/gambar-2_8.png>
+) [34]
+\openout2 = `bab3_new.aux'.
+
+ (bab3_new.tex
+BAB III.
+File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
+<gambar/gambar-3_2(b).jpg>
+File: gambar/rectangle.png Graphic file (type bmp)
+<gambar/rectangle.png>
+[35
+
+
+
+
+]
+File: gambar/res_1.png Graphic file (type bmp)
+<gambar/res_1.png>
+ [36]
+File: gambar/res_1.png Graphic file (type bmp)
+<gambar/res_1.png>
+File: gambar/brush.png Graphic file (type bmp)
+<gambar/brush.png>
+File: gambar/res_2.png Graphic file (type bmp)
+<gambar/res_2.png>
+File: gambar/diagram_penelitian.png Graphic file (type bmp)
+<gambar/diagram_penelitian.png>
+File: gambar/diagram_grabcut.png Graphic file (type bmp)
+<gambar/diagram_grabcut.png>
+ [37]
+File: gambar/diagram_gmm.png Graphic file (type bmp)
+<gambar/diagram_gmm.png>
+ [38]
+File: gambar/node_representasi.png Graphic file (type bmp)
+<gambar/node_representasi.png>
+ (lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 143.
+File: gambar/node_komponen.png Graphic file (type bmp)
+<gambar/node_komponen.png>
+ [39]
+File: gambar/linkedlist_example.png Graphic file (type bmp)
+<gambar/linkedlist_example.png>
+ [40]
+File: gambar/tree_example.png Graphic file (type bmp)
+<gambar/tree_example.png>
+
+[41] [42]
+File: gambar/graf.png Graphic file (type bmp)
+<gambar/graf.png>
+ [43] [44]
+File: gambar/contoh_path.png Graphic file (type bmp)
+<gambar/contoh_path.png>
+ [45] [46] [47] [48] [49] [50] [51] [52] [53]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 766.
+
+Overfull \hbox (8.4281pt too wide) in paragraph at lines 775--776
+[]$\OML/cmm/m/it/12 mask \OMS/cmsy/m/n/12   []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
+ gambar:shape\OT1/cmr/m/n/12 [0]\OML/cmm/m/it/12 ; gambar:shape\OT1/cmr/m/n/12 
+[1])$ 
+ []
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 780.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 780.
+
+
+Overfull \hbox (14.65237pt too wide) in paragraph at lines 780--782
+[]$\OML/cmm/m/it/12 flagsValue\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 bg[]\OT1/cmr/
+m/n/12 ]\OML/cmm/m/it/12 ; flagsValue\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 fg[]\O
+T1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; flagsValue\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12
+ prob[]bg[]\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; flagsValue\OT1/cmr/m/n/12 [[]\OM
+L/cmm/m/it/12 prob[]fg[]\OT1/cmr/m/n/12 ][] 
+ []
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 785.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 787.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 798.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 802.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 804.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 824.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 825.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 827.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 827.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 828.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 828.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 833.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 833.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 834.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 834.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 835.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 835.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 836.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 837.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 843.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 843.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 843.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 844.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 844.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 844.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 850.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 850.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
+
+
+Overfull \hbox (11.711pt too wide) in paragraph at lines 851--852
+[] $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 gc[]graph; gc[]sink; gc[]source; gc[]gr
+aph[]capacity\OT1/cmr/m/n/12 )$ 
+ []
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 864.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 865.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 865.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 866.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 867.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 867.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 868.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 871.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 872.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 873.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 874.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 890.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 890.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 891.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 891.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 892.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 892.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 894.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 894.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 894.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 895.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 895.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 895.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 899.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 901.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 904.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 905.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 906.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 906.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 907.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 908.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 910.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 910.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 913.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 931.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 935.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 935.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 935.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 936.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 936.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 936.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 941.
+
+
+Overfull \hbox (64.09506pt too wide) in paragraph at lines 945--946
+[] $\OML/cmm/m/it/12 coefs\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 ] 
+\OMS/cmsy/m/n/12   \OML/cmm/m/it/12 labelCounts\OT1/cmr/m/n/12 [\OML/cmm/m/it/1
+2 k\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =accumulate\OT1/cmr/m/n/12 (\OML/cmm/m/it/
+12 labelCounts:begin\OT1/cmr/m/n/12 ()\OML/cmm/m/it/12 ; labelCounts:end\OT1/cm
+r/m/n/12 ()\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)$ 
+ []
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 952.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 953.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 964.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 964.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 965.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 968.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 968.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 978.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 979.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 979.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 980.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 981.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 981.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 982.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 982.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 984.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 984.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 985.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 985.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
+
+
+Overfull \hbox (11.711pt too wide) in paragraph at lines 986--987
+[] $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 gc[]graph; gc[]sink; gc[]source; gc[]gr
+aph[]capacity\OT1/cmr/m/n/12 )$ 
+ []
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 997.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 998.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 999.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 999.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1000.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1002.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1002.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1003.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1003.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1007.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1008.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1009.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1009.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1009.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1010.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1010.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1012.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1022.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1034.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1035.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1041.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1042.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1046.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1046.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1047.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1047.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1048.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1048.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1048.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
+
+
+
+Overfull \hbox (92.85147pt too wide) in paragraph at lines 1051--1052
+[]\T1/ptm/b/n/12 fun-ction $\OML/cmm/m/it/12 mincut[]segmentataion$\T1/ptm/m/n/
+12 ($[]\OML/cmm/m/it/12 gc[]graph; gc[]sink; gc[]source; gc[]graph[]capacity$\T
+1/ptm/m/n/12 ) 
+ []
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1071.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1072.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1073.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1073.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1074.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1075.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1076.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1077.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1078.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1078.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1080.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1080.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1080.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1081.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1081.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1085.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1097.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1098.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1099.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1101.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1102.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1104.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1116.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1118.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1119.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1119.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1121.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1126.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1126.
+
+
+[54] [55] [56] [57] [58] [59] [60] [61]
+
+LaTeX Warning: Citation 'Silva:2015' on page 62 undefined on input line 1161.
+
+[62]
+File: gambar/gambar-3_2(a).png Graphic file (type bmp)
+<gambar/gambar-3_2(a).png>
+File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
+<gambar/gambar-3_2(b).jpg>
+File: gambar/gambar-3_2(c).jpg Graphic file (type bmp)
+<gambar/gambar-3_2(c).jpg>
+File: gambar/gambar-3_2(d).png Graphic file (type bmp)
+<gambar/gambar-3_2(d).png>
+File: gambar/gambar-3_4.png Graphic file (type bmp)
+<gambar/gambar-3_4.png>
+ [63]
+File: gambar/rectangle.png Graphic file (type bmp)
+<gambar/rectangle.png>
+ [64]
+File: gambar/cth-graph-1.png Graphic file (type bmp)
+<gambar/cth-graph-1.png>
+File: gambar/cth-graph-2.png Graphic file (type bmp)
+<gambar/cth-graph-2.png>
+ [65] [66]
+File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
+<gambar/gambar-3_2(b).jpg>
+File: gambar/rectangle.png Graphic file (type bmp)
+<gambar/rectangle.png>
+File: gambar/res_1.png Graphic file (type bmp)
+<gambar/res_1.png>
+File: gambar/brush.png Graphic file (type bmp)
+<gambar/brush.png>
+File: gambar/res_2.png Graphic file (type bmp)
+<gambar/res_2.png>
+ [67]) [68] [69
+
+
+
+] (template-skripsi.aux
+(kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3_new.aux))
+Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
+(rerunfilecheck)             Checksum: 7EE18F22B38596E6F7E0AAA5D8C1D3DA;8411.
+Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
+\openout1 = `template-skripsi.run.xml'.
+
+ )
+Output written on template-skripsi.xdv (77 pages, 359748 bytes).

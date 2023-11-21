@@ -1,0 +1,670 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Aryani:2018}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=7336ee2eafe2139eb56cbd10ba474423}{%
+           family={Aryani},
+           familyi={A\bibinitperiod},
+           given={Ratna},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17f314018b2a920399eed09f2fc2afa5}{%
+           family={Yusro},
+           familyi={Y\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccd6e88d066c6b8fa92ccb815bf090fd}{%
+           family={Suryana},
+           familyi={S\bibinitperiod},
+           given={M\bibnamedelima Eka},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=736df7bc7387d4057076c269c626c90a}{%
+           family={Firmansyah},
+           familyi={F\bibinitperiod},
+           given={Imam},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9873da17222150c8c6fed9d1429a6e1b}
+      \strng{fullhash}{805778c6f5ef54446c5273d026142057}
+      \strng{bibnamehash}{9873da17222150c8c6fed9d1429a6e1b}
+      \strng{authorbibnamehash}{9873da17222150c8c6fed9d1429a6e1b}
+      \strng{authornamehash}{9873da17222150c8c6fed9d1429a6e1b}
+      \strng{authorfullhash}{805778c6f5ef54446c5273d026142057}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Buku Panduan: Rancang Bangun Aplikasi Mobile Android Sebagai Alat Deteksi Warna Dasar Luka Dalam Membantu Proses Pengkajian Luka Kronis dengan Nekrosis}}
+      \field{year}{2018}
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Ratna,2018)_BUKU PANDUAN RANCANG BANGUN APLIKASI MOBILE ANDROID.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Boykov:2004}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a76f930a93f4c5f1e0d6b35394956814}{%
+           family={Boykov},
+           familyi={B\bibinitperiod},
+           given={Yuri},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2f15cfb437774c22b5947d50bf3de13}{%
+           family={Kolmogorov},
+           familyi={K\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ac92003447c68eefb8860ef1cda7258}
+      \strng{fullhash}{c6bd30e6e0876dcafe7ddec46905b961}
+      \strng{bibnamehash}{c6bd30e6e0876dcafe7ddec46905b961}
+      \strng{authorbibnamehash}{c6bd30e6e0876dcafe7ddec46905b961}
+      \strng{authornamehash}{8ac92003447c68eefb8860ef1cda7258}
+      \strng{authorfullhash}{c6bd30e6e0876dcafe7ddec46905b961}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Minimum cut/maximum flow algorithms on graphs have emerged as an increasingly useful tool for exactor approximate energy minimization in low-level vision. The combinatorial optimization literature provides many min-cut/max-flow algorithms with different polynomial time complexity. Their practical efficiency, however, has to date been studied mainly outside the scope of computer vision. The goal of this paper is to provide an experimental comparison of the efficiency of min-cut/max flow algorithms for applications in vision. We compare the running times of several standard algorithms, as well as a new algorithm that we have recently developed. The algorithms we study include both Goldberg-Tarjan style "push -relabel" methods and algorithms based on Ford-Fulkerson style "augmenting paths." We benchmark these algorithms on a number of typical graphs in the contexts of image restoration, stereo, and segmentation. In many cases, our new algorithm works several times faster than any of the other methods, making near real-time performance possible. An implementation of our max-flow/min-cut algorithm is available upon request for research purposes.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0162-8828}
+      \field{issn}{0162-8828}
+      \field{journaltitle}{IEEE Trans. Pattern Anal. Mach. Intell.}
+      \field{number}{9}
+      \field{title}{{An Experimental Comparison of Min-Cut/Max-Flow Algorithms for Energy Minimization in Vision}}
+      \field{volume}{26}
+      \field{year}{2004}
+      \field{pages}{1124\bibrangedash 1137}
+      \range{pages}{14}
+      \verb{eprint}
+      \verb 0703101v1
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Yuriboykov-Vladimir)pami04.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/1316848/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/1316848/
+      \endverb
+    \endentry
+    \entry{Garcia-Zapirain:2017}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=171226176acc5bcb401eb3dd8a607ff5}{%
+           family={Garcia-Zapirain},
+           familyi={G\bibinithyphendelim Z\bibinitperiod},
+           given={Begonya},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d154fd4a8210030b6f916039f3c4c35}{%
+           family={Shalaby},
+           familyi={S\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=172d367da7a81e1c8a440c02d4b2405d}{%
+           family={El-Baz},
+           familyi={E\bibinithyphendelim B\bibinitperiod},
+           given={Ayman},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d5587c4c642e7d51278bb36658192d1}{%
+           family={Elmaghraby},
+           familyi={E\bibinitperiod},
+           given={Adel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{f185d6db6a97fd72efeb9f18213dd8b7}
+      \strng{fullhash}{366ed7d0e96f4550215b3b8c7f3f8415}
+      \strng{bibnamehash}{f185d6db6a97fd72efeb9f18213dd8b7}
+      \strng{authorbibnamehash}{f185d6db6a97fd72efeb9f18213dd8b7}
+      \strng{authornamehash}{f185d6db6a97fd72efeb9f18213dd8b7}
+      \strng{authorfullhash}{366ed7d0e96f4550215b3b8c7f3f8415}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ulcer tissue segmentation is of immense importance in helping medical personnel to assess wounds. This paper introduces a new computational framework employing state-of-the-art image processing techniques to segment pressure ulcer tissue structures from color images. The framework integrates a visual appearance model of an observed input image with prior color information from an available database of previously stored color RGB images. The following four processing steps are performed. First, to minimize the execution time and enhance the segmentation accuracy, a region-of-interest (ROI) of the whole ulcer area is automatically identified based on contrast changes. This step exploits synthetic frequencies of pixelwise intensities, which are calculated by using an electric field energy model to describe relations between the pixelwise intensities. Secondly, visual appearance of the observed image is modeled by a linear combination of discrete Gaussians (LCDG) model in order to estimate marginal probability distributions of three main tissue classes for the grayscale ROI image. Next, the pixel-wise probabilities of these classes for the color ROI image are calculated using the available prior information about the RGB colors on manually segmented database images. Initial labeling is obtained based on both the observed and prior probabilities of pixelwise colors. Finally, to preserve continuity, the labels are refined and normalized using the generalized Gauss-Markov random field (GGMRF) model. Experimental validation on 24 clinical images of pressure ulcers, provided by the Centre IGURCO, showed the high segmentation accuracy of 90.4\%.}
+      \field{issn}{18790534}
+      \field{journaltitle}{Computers in Biology and Medicine}
+      \field{title}{{Automated Framework for Accurate Segmentation of Pressure Ulcer Images}}
+      \field{volume}{90}
+      \field{year}{2017}
+      \field{pages}{137\bibrangedash 145}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.compbiomed.2017.09.015
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Zapirain)_j.compbiomed.2017.09.015.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.compbiomed.2017.09.015
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.compbiomed.2017.09.015
+      \endverb
+      \keyw{GGMRF,LCDG,Pressure ulcer,RGB,Segmentation}
+    \endentry
+    \entry{Gonzalez:2018}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=07713b8c79fe78ffaf9ab728a5f3ce88}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Rafael\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7e4f4ce32d8e1ac04f7ee5eefcabe8f}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2d3f574078f3bec786a6f4bed9913c2}
+      \strng{fullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{bibnamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorbibnamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authornamehash}{b2d3f574078f3bec786a6f4bed9913c2}
+      \strng{authorfullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Fourth edition. "For 40 years, Image Processing has been the foundational text for the study of digital image processing. The book is suited for students at the college senior and first-year graduate level with prior background in mathematical analysis, vectors, matrices, probability, statistics, linear systems, and computer programming. As in all earlier editions, the focus of this edition of the book is on fundamentals. The 4th Edition, which celebrates the book's 40th anniversary, is based on an extensive survey of faculty, students, and independent readers in 150 institutions from 30 countries. Their feedback led to expanded or new coverage of topics such as deep learning and deep neural networks, including convolutional neural nets, the scale-invariant feature transform (SIFT), maximally-stable extremal regions (MSERs), graph cuts, k-means clustering and superpixels, active contours (snakes and level sets), and exact histogram matching. Major improvements were made in reorganizing the material on image transforms into a more cohesive presentation, and in the discussion of spatial kernels and spatial filtering. Major revisions and additions were made to examples and homework exercises throughout the book. For the first time, we added MATLAB projects at the end of every chapter, and compiled support packages for you and your teacher containing, solutions, image databases, and sample code."--Amazon.com. Introduction -- Digital image fundamentals -- Intensity transformations and spatial filtering -- Filtering in the frequency domain -- Image restoration and reconstruction -- Wavelet and other image transforms -- Color image processing -- Image compression and watermarking -- Morphological image processing -- Image segmentation I -- Image segmentation II active contours : snakes and level sets -- Feature extraction -- Image pattern classification.}
+      \field{isbn}{9780133356724}
+      \field{title}{{4TH EDITION Digital image processing}}
+      \field{year}{2018}
+      \field{pages}{1168}
+      \range{pages}{1}
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(gonzales)01c56e081202b62bd7d3b4f8545775fb.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Han:2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9e936506a64405155bc8676d4647fce2}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Healthcare}%
+      }
+      \strng{namehash}{9e936506a64405155bc8676d4647fce2}
+      \strng{fullhash}{9e936506a64405155bc8676d4647fce2}
+      \strng{bibnamehash}{9e936506a64405155bc8676d4647fce2}
+      \strng{authorbibnamehash}{9e936506a64405155bc8676d4647fce2}
+      \strng{authornamehash}{9e936506a64405155bc8676d4647fce2}
+      \strng{authorfullhash}{9e936506a64405155bc8676d4647fce2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1865-8652}
+      \field{journaltitle}{Advances in Therapy}
+      \field{number}{3}
+      \field{title}{{Chronic Wound Healing : A Review of Current Management and Treatments}}
+      \field{volume}{34}
+      \field{year}{2017}
+      \field{pages}{599\bibrangedash 610}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/s12325-017-0478-y
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Han-Ceilley, 2017)_12325-017-0478-y.pdf:pdf
+      \endverb
+      \keyw{Biofilms,Chronic wounds,Growth factors,Hyperbaric,biofilms,chronic wounds,factors,growth,hyperbaric oxygen,negative pressure,skin infection,skin substitutes,wound dressings,wound healing,wound therapy}
+    \endentry
+    \entry{ManoharDhane:2017}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=2a7ae56aca42e34f97c9a73d71375bec}{%
+           family={{Manohar Dhane}},
+           familyi={M\bibinitperiod},
+           given={Dhiraj},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bcdd7a1f35c4da7a431fb583a1c8e59}{%
+           family={Maity},
+           familyi={M\bibinitperiod},
+           given={Maitreya},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4aea2328252ed62b58520fd9ab1f86a4}{%
+           family={Mungle},
+           familyi={M\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8fba6f8a085a4c7e2a3c2562b3b3a408}{%
+           family={Bar},
+           familyi={B\bibinitperiod},
+           given={Chittaranjan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4140cd483466eb646f529402ea3005cf}{%
+           family={Achar},
+           familyi={A\bibinitperiod},
+           given={Arun},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08d6da1adebf5163613132d98a46e396}{%
+           family={Kolekar},
+           familyi={K\bibinitperiod},
+           given={Maheshkumar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a95958681107ccdd6c4bd9147b38fd3}{%
+           family={Chakraborty},
+           familyi={C\bibinitperiod},
+           given={Chandan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{80474d875d651dbaa6ff6a70ea296157}
+      \strng{fullhash}{4670179479ebab30e6d4d4f65e2125d8}
+      \strng{bibnamehash}{80474d875d651dbaa6ff6a70ea296157}
+      \strng{authorbibnamehash}{80474d875d651dbaa6ff6a70ea296157}
+      \strng{authornamehash}{80474d875d651dbaa6ff6a70ea296157}
+      \strng{authorfullhash}{4670179479ebab30e6d4d4f65e2125d8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Chronic wound is an abnormal disease condition of localized injury to the skin and its underlying tissues having physiological impaired healing response. Assessment and management of such wound is a significant burden on the healthcare system. Currently, precise wound bed estimation depends on the clinical judgment and remains a difficult task. The paper introduces a novel method for ulcer boundary demarcation and estimation, using optical images captured by a hand-held digital camera. The proposed approach involves gray based fuzzy similarity measure using spatial knowledge of an image. The fuzzy measure is used to construct similarity matrix. The best color channel was chosen by calculating the mean contrast for 26 different color channels of 14 color spaces. It was found that Db color channel has highest mean contrast which provide best segmentation result in comparison with other color channels. The fuzzy spectral clustering (FSC) method was applied on Db color channel for effective delineation of wound region. The segmented wound regions were effectively post-processed using various morphological operations. The performance of proposed segmentation technique was validated by ground-truth images labeled by two experienced dermatologists and a surgeon. The FSC approach was tested on 70 images. FSC effectively segmented targeted ulcer boundary yielding 91.5\% segmentation accuracy, 86.7\%, Dice index and 79.0\%. Jaccard score. The sensitivity and specificity was found to be 87.3\% and 95.7\% respectively. The performance evaluation shows the robustness of the proposed method of wound area segmentation and its potential to be used for designing patient comfort centric wound care system.}
+      \field{issn}{18790534}
+      \field{journaltitle}{Computers in Biology and Medicine}
+      \field{title}{{Fuzzy Spectral Clustering for Automated Delineation of Chronic Wound Region Using Digital Images}}
+      \field{volume}{89}
+      \field{year}{2017}
+      \field{pages}{551\bibrangedash 560}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.compbiomed.2017.04.004
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Manohar)j.compbiomed.2017.04.004.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.compbiomed.2017.04.004
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.compbiomed.2017.04.004
+      \endverb
+      \keyw{Chronic wound,Color constancy,Digital image processing,Fuzzy similarity measure,Segmentation,Spectral clustering}
+    \endentry
+    \entry{Nugraha:2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b490f191fff25534c4801b41edcee287}{%
+           family={Nugraha},
+           familyi={N\bibinitperiod},
+           given={Bagus},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b490f191fff25534c4801b41edcee287}
+      \strng{fullhash}{b490f191fff25534c4801b41edcee287}
+      \strng{bibnamehash}{b490f191fff25534c4801b41edcee287}
+      \strng{authorbibnamehash}{b490f191fff25534c4801b41edcee287}
+      \strng{authornamehash}{b490f191fff25534c4801b41edcee287}
+      \strng{authorfullhash}{b490f191fff25534c4801b41edcee287}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Skripsi}
+      \field{title}{{Ekstraksi Latar Depan pada Citra Ikan dengan Metode GrabCut yang Diutomasi Menggunakan Saliency Map}}
+      \field{year}{2022}
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/Skripsi_BagusNugraha_1313617002.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Power:2002}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=632ff238ed5e78ab331a9cf63719febe}{%
+           family={Power},
+           familyi={P\bibinitperiod},
+           given={P\bibnamedelima Wayne},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=605639d99e815abe73275f8e8699ec76}{%
+           family={Schoonees},
+           familyi={S\bibinitperiod},
+           given={Johann\bibnamedelima a},
+           giveni={J\bibinitperiod\bibinitdelim a\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f78b8e1e3f6568b2b07bf055a9e939e4}
+      \strng{fullhash}{6d826fab06fecee432eb265ec0314b58}
+      \strng{bibnamehash}{6d826fab06fecee432eb265ec0314b58}
+      \strng{authorbibnamehash}{6d826fab06fecee432eb265ec0314b58}
+      \strng{authornamehash}{f78b8e1e3f6568b2b07bf055a9e939e4}
+      \strng{authorfullhash}{6d826fab06fecee432eb265ec0314b58}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The seminal video surveillance papers on moving object segmenta- tion through adaptive Gaussian mixture models of the background image do not provide adequate information for easy replication of the work. They also do not explicitly base their algorithms on the underlying statistical theory and sometimes even suffer from errors of derivation. This tutorial paper describes a practical implementation of the Stauffer-Grimson algorithm and provides values for all model parameters. It also shows what approximations to the theory were made and how to improve the standard algorithm by redefining those approximations.}
+      \field{journaltitle}{Image and Vision Computing}
+      \field{number}{November}
+      \field{title}{{Understanding Background Mixture Models for Foreground Segmentation}}
+      \field{volume}{2002}
+      \field{year}{2002}
+      \field{pages}{267\bibrangedash 271}
+      \range{pages}{5}
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Power-2002)_gaussian_mixture_models.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5222&rep=rep1&type=pdf
+      \endverb
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.9.5222&rep=rep1&type=pdf
+      \endverb
+      \keyw{background subtraction,mixture,video surveillance}
+    \endentry
+    \entry{Rizki:2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=edd027bd66b484713c90937601e67673}{%
+           family={Rizki},
+           familyi={R\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{edd027bd66b484713c90937601e67673}
+      \strng{fullhash}{edd027bd66b484713c90937601e67673}
+      \strng{bibnamehash}{edd027bd66b484713c90937601e67673}
+      \strng{authorbibnamehash}{edd027bd66b484713c90937601e67673}
+      \strng{authornamehash}{edd027bd66b484713c90937601e67673}
+      \strng{authorfullhash}{edd027bd66b484713c90937601e67673}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Skripsi}
+      \field{title}{{Deteksi Keliling Luka Kronis Menggunakan Active Contour (Snake) dan Active Contour yang Ditambahkan Interpolasi.}}
+      \field{year}{2022}
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SPS/3145160661_skripsi_Rizki.pdf:pdf
+      \endverb
+      \keyw{Luka kronis,active contour,deteksi keliling,interpolasi.}
+    \endentry
+    \entry{Rother:2004}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=574542c2f7c4308c28c190f314a2de4c}{%
+           family={Rother},
+           familyi={R\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2f15cfb437774c22b5947d50bf3de13}{%
+           family={Kolmogorov},
+           familyi={K\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce1ee0c7b0f0c05c900a3a8391793436}{%
+           family={Blake},
+           familyi={B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ae19f09a1b93d3075f22c87762f8ac0}
+      \strng{fullhash}{faace2f1da6b88b9e9d395e7996d80f4}
+      \strng{bibnamehash}{faace2f1da6b88b9e9d395e7996d80f4}
+      \strng{authorbibnamehash}{faace2f1da6b88b9e9d395e7996d80f4}
+      \strng{authornamehash}{9ae19f09a1b93d3075f22c87762f8ac0}
+      \strng{authorfullhash}{faace2f1da6b88b9e9d395e7996d80f4}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The problem of efficient, interactive foreground/background segmentation in still images is of great practical importance in image editing. Classical image segmentation tools use either texture (colour) information, e.g. Magic Wand, or edge (contrast) information, e.g. Intelligent Scissors. Recently, an approach based on optimization by graph-cut has been developed which successfully combines both types of information. In this paper we extend the graph-cut approach in three respects. First, we have developed a more powerful, iterative version of the optimisation. Secondly, the power of the iterative algorithm is used to simplify substantially the user interaction needed for a given quality of result. Thirdly, a robust algorithm for "border matting" has been developed to estimate simultaneously the alpha-matte around an object boundary and the colours of foreground pixels. We show that for moderately difficult examples the proposed method outperforms competitive tools. Copyright {©} 2004 ACM.}
+      \field{journaltitle}{ACM SIGGRAPH 2004 Papers, SIGGRAPH 2004}
+      \field{title}{{GrabCut - Interactive Foreground Extraction using Iterated Graph Cuts}}
+      \field{year}{2004}
+      \field{pages}{309\bibrangedash 314}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/1186562.1015720
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(boykov)_grabcut-siggraph04.pdf:pdf
+      \endverb
+      \keyw{Alpha matting,Foreground extraction,Graph cuts,Image editing,Interactive image segmentation}
+    \endentry
+    \entry{Silva:2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ba8d243e823e904bf2e5dfd835a4bd87}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Rodolfo\bibnamedelimb Herman\bibnamedelimb Lara\bibnamedelima e.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim e\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7a2b2905e335b5d13e0d374d524c1ca}{%
+           family={Machado},
+           familyi={M\bibinitperiod},
+           given={Alexei\bibnamedelimb Manso\bibnamedelima Correa},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V.}%
+      }
+      \strng{namehash}{ba66c5be54eb4273a0156a454ded7f25}
+      \strng{fullhash}{fd61c45373ec20fc6408e425ba69c789}
+      \strng{bibnamehash}{fd61c45373ec20fc6408e425ba69c789}
+      \strng{authorbibnamehash}{fd61c45373ec20fc6408e425ba69c789}
+      \strng{authornamehash}{ba66c5be54eb4273a0156a454ded7f25}
+      \strng{authorfullhash}{fd61c45373ec20fc6408e425ba69c789}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background and Objective: Pressure ulcers are regions of trauma caused by a continuous pressure applied to soft tissues between a bony prominence and a hard surface. The manual monitoring of their healing evolution can be achieved by area assessment techniques that include the use of rulers and adhesive labels in direct contact with the injury, being highly inaccurate and subjective. In this paper we present a Support Vector Machine classifier in combination with a modified version of the GrabCut method for the automatic measurement of the area affected by pressure ulcers in digital images. Methods: Three methods of region segmentation using the superpixel strategy were evaluated from which color and texture descriptors were extracted. After the superpixel classification, the GrabCut segmentation method was applied in order to delineate the region affected by the ulcer from the rest of the image. Results: Experiments on a set of 105 pressure ulcer images from a public data set resulted in an average accuracy of 96\%, sensitivity of 94\%, specificity of 97\% and precision of 94\%. Conclusions: The association of support vector machines with superpixel segmentation outperformed current methods based on deep learning and may be extended to tissue classification.}
+      \field{issn}{18727565}
+      \field{journaltitle}{Computer Methods and Programs in Biomedicine}
+      \field{title}{{Automatic Measurement of Pressure Ulcers Using Support Vector Machines and GrabCut}}
+      \field{volume}{200}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1016/j.cmpb.2020.105867
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Silva & Machado)1-s2.0-S0169260720317004-main.pdf:pdf
+      \endverb
+      \keyw{Pressure ulcers,image segmentation,medical image analysis,support vector machines}
+    \endentry
+    \entry{Velnar:2009}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=086155c39d64badd053e90bbf7895171}{%
+           family={Velnar},
+           familyi={V\bibinitperiod},
+           given={Tomaz},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0056fc4091bc6e9b903f791797b620f4}{%
+           family={Bailey},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f548a9ed08867f2e18cfd2d8bb0a468}{%
+           family={Smrkolj},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{42f3efaa9c96d16dd7733c2cc57236fe}
+      \strng{fullhash}{4d858d1c56b0be38fcd980d8829208f1}
+      \strng{bibnamehash}{4d858d1c56b0be38fcd980d8829208f1}
+      \strng{authorbibnamehash}{4d858d1c56b0be38fcd980d8829208f1}
+      \strng{authornamehash}{42f3efaa9c96d16dd7733c2cc57236fe}
+      \strng{authorfullhash}{4d858d1c56b0be38fcd980d8829208f1}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Wound healing remains a challenging clinical problem and correct, efficient wound management is essential. Much effort has been focused on wound care with an emphasis on new therapeutic approaches and the development of technologies for acute and chronic wound management. Wound healing involves multiple cell populations, the extracellular matrix and the action of soluble mediators such as growth factors and cytokines. Although the process of healing is continuous, it may be arbitrarily divided into four phases: (i) coagulation and haemostasis; (ii) inflammation; (iii) proliferation; and (iv) wound remodelling with scar tissue formation. The correct approach to wound management may effectively influence the clinical outcome. This review discusses wound classification, the physiology of the wound healing process and the methods used in wound management. Copyright {©} 2009 Field House Publishing LLP.}
+      \field{issn}{03000605}
+      \field{journaltitle}{Journal of International Medical Research}
+      \field{number}{5}
+      \field{title}{{The Wound Healing Process: An Overview of the Cellular and Molecular Mechanisms}}
+      \field{volume}{37}
+      \field{year}{2009}
+      \field{pages}{1528\bibrangedash 1542}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1177/147323000903700531
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Velnar)_147323000903700531.pdf:pdf
+      \endverb
+      \keyw{Cell proliferation,Inflammation,Wound healing,Wound remodelling,Wounds}
+    \endentry
+    \entry{Wang:2015}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=2242e23b82996e29a58069cd958eaca7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Changhan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba676e881344787363f4b7380db5d34d}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Xinchen},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2511a9dec8e3c5c6e0d5418de60fe435}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5226ac8f49cac7119bcdbb6ddcfa0577}{%
+           family={Kochhar},
+           familyi={K\bibinitperiod},
+           given={Kanika},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7dc209d40bb1f33ec99a27531b0b6779}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Marcie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c59415d700de378e4efc3ef50d4cfb3f}{%
+           family={Warren},
+           familyi={W\bibinitperiod},
+           given={Stephen\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8bf5513999a8e24eb9283119a8055a5}{%
+           family={Wrobel},
+           familyi={W\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d09ea8631bf43468107b5ef02c5195aa}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Honglak},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9236d088cd849d4853ea8861dd45f1d9}
+      \strng{fullhash}{6382a96ea8b7d2a26ec30e704a084de9}
+      \strng{bibnamehash}{9236d088cd849d4853ea8861dd45f1d9}
+      \strng{authorbibnamehash}{9236d088cd849d4853ea8861dd45f1d9}
+      \strng{authornamehash}{9236d088cd849d4853ea8861dd45f1d9}
+      \strng{authorfullhash}{6382a96ea8b7d2a26ec30e704a084de9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Wound surface area changes over multiple weeks are highly predictive of the wound healing process. Furthermore, the quality and quantity of the tissue in the wound bed also offer important prognostic information. Unfortunately, accurate measurements of wound surface area changes are out of reach in the busy wound practice setting. Currently, clinicians estimate wound size by estimating wound width and length using a scalpel after wound treatment, which is highly inaccurate. To address this problem, we propose an integrated system to automatically segment wound regions and analyze wound conditions in wound images. Different from previous segmentation techniques which rely on handcrafted features or unsupervised approaches, our proposed deep learning method jointly learns task-relevant visual features and performs wound segmentation. Moreover, learned features are applied to further analysis of wounds in two ways: infection detection and healing progress prediction. To the best of our knowledge, this is the first attempt to automate long-term predictions of general wound healing progress. Our method is computationally efficient and takes less than 5 seconds per wound image (480 by 640 pixels) on a typical laptop computer. Our evaluations on a large-scale wound database demonstrate the effectiveness and reliability of the proposed system.}
+      \field{isbn}{9781424492718}
+      \field{issn}{1557170X}
+      \field{journaltitle}{Proceedings of the Annual International Conference of the IEEE Engineering in Medicine and Biology Society, EMBS}
+      \field{title}{{A Unified Framework for Automatic Wound Segmentation and Analysis with Deep Convolutional Neural Networks}}
+      \field{volume}{2015-Novem}
+      \field{year}{2015}
+      \field{pages}{2415\bibrangedash 2418}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/EMBC.2015.7318881
+      \endverb
+      \verb{file}
+      \verb :D\:/Documents/file apis/kebutuhan kuliah/mata kuliah/smester 7/SKRIPSI/paper/(Wan)_embc.2015.7318881.pdf:pdf
+      \endverb
+      \keyw{Image segmentation,Image feature extraction,Image}
+    \endentry
+  \enddatalist
+  \missing{Silva:2015}
+\endrefsection
+\endinput
+
