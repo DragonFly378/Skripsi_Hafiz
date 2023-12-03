@@ -1,5 +1,5 @@
 import numpy as np 
-from GMM import GaussianMixtureModels
+from GMM_new import DataTermMixture
 import igraph as ig
 
 COLOR = {
@@ -30,7 +30,7 @@ class GrabCut:
             'TF' : []
         }
 
-        self.baris, self.kolom, _ = gambar.shape
+        self.baris, self.kolom, self.n_channels = gambar.shape
 
         self.graf = None
         self.kapasitas_graph = []
@@ -43,6 +43,22 @@ class GrabCut:
         self.gamma_val = 50
         self.beta_val = 0
 
+        
+        self.theta = {
+            'TU' : {
+                'koefisien' : np.zeros(self.komponen_gmm),
+                'means' : np.zeros((self.komponen_gmm, self.n_channels)),
+                'kovarians' : np.zeros((self.komponen_gmm, self.n_channels, self.n_channels))
+            },
+            'TB' : {
+                'koefisien' : np.zeros(self.komponen_gmm),
+                'means' : np.zeros((self.komponen_gmm, self.n_channels)),
+                'kovarians' : np.zeros((self.komponen_gmm, self.n_channels, self.n_channels))
+            }
+        }
+
+        
+
         self.komponen_piksel = np.zeros((self.baris, self.kolom), dtype=np.uint32)
         print('class grabcut berjalan')
         # print(self.baris)
@@ -53,7 +69,6 @@ class GrabCut:
         self.mempelajari_gmm()
         self.build_graph()
         self.mincut_segmentation()
-
         print("program kelar")
 
     def count_smoothness(self):
@@ -100,32 +115,36 @@ class GrabCut:
         self.alpha[iy:y, ix:x] = F_TF
         self.trimap['TB'] = np.where(self.alpha == F_TB)
         self.trimap['TU'] = np.where(self.alpha == F_TF)
-        
-        self.gmm_fg = GaussianMixtureModels(self.gambar[self.trimap['TU']])
-        self.gmm_bg = GaussianMixtureModels(self.gambar[self.trimap['TB']])
-        
-        # print('(pr_)bgd count: \n', self.trimap['TU'][0], '\n (pr_)fgd count: \n', self.trimap['TU'])
-        # print('(pr_)bgd count: ', self.trimap['TB'][1].size, '(pr_)fgd count:', self.trimap['TU'][1].size)
-        print('anu: \n', self.alpha[self.trimap['TU']])
+        # print("trimap TU: ", self.trimap['TU'])
 
+        """Inisiasi GMM"""
+        self.gmm_fg = DataTermMixture(self.trimap['TU'], 
+                        self.gambar[self.trimap['TU']], 
+                        self.komponen_gmm, self.theta['TU'])
+
+        self.gmm_bg = DataTermMixture(self.trimap['TB'], 
+                        self.gambar[self.trimap['TB']], 
+                        self.komponen_gmm, self.theta['TB'])
+        
         """Inisiasi GMM untuk bg dan fg dengan parameter gambar"""
-        print('\nMulai init GMM')
+        print('\nMulai init random GMM')
         
-        self.gmm_fg.init_gmm_rand(self.gambar[self.trimap['TU']])
-        self.gmm_bg.init_gmm_rand(self.gambar[self.trimap['TB']])
+        self.gmm_fg.init_gmm_rand(self.gambar[self.trimap['TU']], self.theta['TU'])
+        self.gmm_bg.init_gmm_rand(self.gambar[self.trimap['TB']], self.theta['TB'])
 
+        # print('theta: ', self.theta)
         print('Inisiasi piksel selesai')
-        # return(trimap_TB, trimap_TU)
+
 
     def assign_gmm(self):
         """Step 1 (assign GMM) pada gambar 2.11"""
         print('\nMulai assign GMM')
         self.komponen_piksel[self.trimap['TU']] = self.gmm_fg.assign_component(
-            self.gambar[self.trimap['TU']]
+            self.gambar[self.trimap['TU']], self.theta['TU'], self.komponen_gmm
         )
 
         self.komponen_piksel[self.trimap['TB']] = self.gmm_bg.assign_component(
-            self.gambar[self.trimap['TB']]
+            self.gambar[self.trimap['TB']], self.theta['TB'], self.komponen_gmm
         )
 
         print('hasil komponen piksel fg: ',self.komponen_piksel[self.trimap['TU']])
@@ -134,32 +153,72 @@ class GrabCut:
         print('Komponen piksel TU: %d, Komponen piksel TB: %d, Total komponen: %d' % (
         len(self.komponen_piksel[self.trimap['TU']]), len(self.komponen_piksel[self.trimap['TB']]), len(self.komponen_piksel)))
 
-
     def mempelajari_gmm(self):
         """
         Lanjut step 2 (learn GMM) pada gambar 2.11
         """
         print("\nMulai learn gmm")
         self.gmm_fg.count_params(self.gambar[self.trimap['TU']], 
-                                 self.komponen_piksel[self.trimap['TU']])
+                                 self.komponen_piksel[self.trimap['TU']], 
+                                 self.theta['TU'])
+
         self.gmm_bg.count_params(self.gambar[self.trimap['TB']], 
-                                 self.komponen_piksel[self.trimap['TB']])
+                                 self.komponen_piksel[self.trimap['TB']], 
+                                 self.theta['TB'])
+
+        # print('theta: ', self.theta)
 
         idx_TF = np.where(self.alpha.reshape(-1) == 3)
         idx_TB = np.where(self.alpha.reshape(-1) == F_TB)
         idx_TU = np.where(self.alpha.reshape(-1) == F_TF)
+        print("Idx TU: ", self.alpha.reshape(-1)[idx_TU])
 
-               
-        self.D_count_bg = self.gmm_bg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU])
-        self.D_count_fg = self.gmm_fg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU])
-        
-    
+
+        print('\nmenghitung D')       
+        print('theta shape: ', self.theta['TU']['koefisien'].shape)
+        self.U_count_fg = self.gmm_fg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU], 
+                            self.komponen_gmm, self.theta['TU'])
+        self.U_count_bg = self.gmm_bg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU], 
+                            self.komponen_gmm, self.theta['TB'])
+
+
+        # self.count_fg = []
+        # self.count_bg = []
+
+        # for kn in range(self.komponen_gmm):
+        #     d_res_fg = np.zeros(len(self.gambar.reshape(-1, 3)[idx_TU]))
+        #     d_res_bg = []
+        #     i = 0
+        #     for zn in self.gambar.reshape(-1, 3)[idx_TU]:
+        #         tmp_d_fg = self.gmm_fg.d_calc(zn, kn, self.theta['TU'])
+        #         # print(tmp_d_fg)
+        #         # exit()
+        #         tmp_d_bg = self.gmm_bg.d_calc(zn, kn, self.theta['TB'])
+        #         d_res_fg[i] = tmp_d_fg
+        #         d_res_bg.append(tmp_d_bg)
+        #         i += 1
+        #     self.count_fg.append(d_res_fg)
+        #     self.count_bg.append(d_res_bg)
+
+        # self.count_fg = np.array(self.count_fg)
+        # self.count_bg = np.array(self.count_bg)
+        # self.U_count_fg = np.sum(self.count_fg, axis=0)
+        # self.U_count_bg = np.sum(self.count_bg, axis=0)
+
+
+        # self.U_count_fg = self.gmm_fg.d_calc_old(self.alpha, self.komponen_gmm, self.gambar, self.theta['TU'])
+        # self.U_count_bg = self.gmm_bg.d_calc_old(self.alpha, self.komponen_gmm, self.gambar, self.theta['TB'])
+
+        print("D fg count: ", self.U_count_fg.shape)
+        print("D bg count: ", self.U_count_bg.shape)
+
+
     def build_graph(self):
         idx_TF = np.where(self.alpha.reshape(-1) == 3)
         idx_TB = np.where(self.alpha.reshape(-1) == F_TB)
         idx_TU = np.where(self.alpha.reshape(-1) == F_TF)
 
-        print('jumlah TB: %d, jumlah TU: %d' % (
+        print('\n jumlah TB: %d, jumlah TU: %d' % (
             len(idx_TB[0]), len(idx_TU[0])))
 
         edges = []
@@ -175,7 +234,7 @@ class GrabCut:
 
         # Construct T-links
         edges.extend(list(zip([self.source_gc] * idx_TU[0].size, idx_TU[0])))
-        self.kapasitas_graph.extend(self.D_count_bg.tolist())
+        self.kapasitas_graph.extend(self.U_count_bg.tolist())
 
         edges.extend(list(zip([self.source_gc] * idx_TB[0].size, idx_TB[0])))
         self.kapasitas_graph.extend([0] * idx_TB[0].size)
@@ -184,7 +243,7 @@ class GrabCut:
         self.kapasitas_graph.extend([9 * self.gamma_val] * idx_TF[0].size)
 
         edges.extend(list(zip([self.sink_gc] * idx_TU[0].size, idx_TU[0])))
-        self.kapasitas_graph.extend(self.D_count_fg.tolist())
+        self.kapasitas_graph.extend(self.U_count_fg.tolist())
 
         edges.extend(list(zip([self.sink_gc] * idx_TB[0].size, idx_TB[0])))
         self.kapasitas_graph.extend([9 * self.gamma_val] * idx_TB[0].size)

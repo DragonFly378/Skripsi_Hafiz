@@ -1,7 +1,7 @@
 import sys
 # from tkinter import ttk, filedialog, PhotoImage
 from tkinter import *
-from grabcut import GrabCut
+from grabcut_new import GrabCut
 from PIL import Image, ImageTk, ImageMath, ImageDraw
 import numpy as np
 

@@ -2,21 +2,26 @@ import numpy as np
 import random
 
 class GaussianMixtureModels:
-    def __init__(self, target, komponen_gmm = 5):
+    def __init__(self, z, komponen_gmm = 5):
         self.komponen_gmm = komponen_gmm
-        # print('target object: ', target.shape)
-        self.n_channels = target.shape[1]
+        # print('z object: ', z.shape)
+        self.n_channels = z.shape[1]
         # print(self.n_channels)
         self.n_samples = np.zeros(self.komponen_gmm)
 
-        self.koefisien = np.zeros(self.komponen_gmm)
-        self.means = np.zeros((self.komponen_gmm, self.n_channels))
-        self.kovarians = np.zeros((self.komponen_gmm, self.n_channels, self.n_channels))
+        self.theta ={
+            'koefisien' : np.zeros(self.komponen_gmm),
+            'kovarians' : np.zeros((self.komponen_gmm, self.n_channels, self.n_channels)),
+            'means' : np.zeros((self.komponen_gmm, self.n_channels))
+        }
+        # self.koefisien = np.zeros(self.komponen_gmm)
+        # self.means = np.zeros((self.komponen_gmm, self.n_channels))
+        # self.kovarians = np.zeros((self.komponen_gmm, self.n_channels, self.n_channels))
 
-        # print("ini x shape: ", target.shape)
+        # print("ini x shape: ", z.shape)
         # print('means = ', self.means)
         # print('ini covariance awal :', self.kovarians)
-        self.init_gmm_rand(target)
+        # self.init_gmm_rand(z)
 
 
     def init_gmm_rand(self, z):
@@ -43,7 +48,7 @@ class GaussianMixtureModels:
             - nilai kovarians
         """
         self.n_samples[:] = 0
-        self.koefisien[:] = 0   
+        self.theta['koefisien'][:] = 0   
 
         # print(len(target))
 
@@ -57,9 +62,9 @@ class GaussianMixtureModels:
             print(k)
             n_k = self.n_samples[k]
 
-            self.koefisien[k] = n_k / np.sum(self.n_samples)
-            self.means[k] = np.mean(z[k == labels_k], axis = 0)
-            self.kovarians[k] = np.cov(z[k == labels_k].T) 
+            self.theta['koefisien'][k] = n_k / np.sum(self.n_samples)
+            self.theta['means'][k] = np.mean(z[k == labels_k], axis = 0)
+            self.theta['kovarians'][k] = np.cov(z[k == labels_k].T) 
 
             # self.kovarians[k] = 0 if self.n_samples[k] <= 1 else np.cov(target[k == labels_k].T)
             # print(tmp)
@@ -69,32 +74,8 @@ class GaussianMixtureModels:
         # print('kovarians: ', self.kovarians)
         print('\n')
         # print(np.sum(self.n_samples))
-    
-    def dis_mult(self, z, k):
-        """
-        Fungsi untuk menghitung 
-        distribusi gaussian multivariate 
-        pada rumus 2.4
 
-        **Parameter fungsi:
-            1. Z (image target) : array, shape (n_samples, n_features)
-            2. k : int
-
-        return
-        score : array, shape(n_samples)
-        ----------------
-        """
-    
-        # print('menghitung distribusi multivariate ', k)
-        result = np.zeros(z.shape[0])
-        # print(result.shape)
-        if self.koefisien[k] > 0 :
-            diff = z - self.means[k]
-            # print('selisih:\n, ', diff[:10])
-            mult  = np.einsum('ij,ij->i', diff, np.dot(np.linalg.inv(self.kovarians[k]), diff.T).T)
-            result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(self.kovarians[k])))
-        return result
-
+        
     def assign_component(self, z):
         """
         Tahap assign gmm dengan menggunakan rumus 2.7
@@ -114,14 +95,44 @@ class GaussianMixtureModels:
 
         return np.argmin(gauss_distribution, axis=1)
 
+    def dis_mult(self, z, k):
+        """
+        Fungsi untuk menghitung 
+        distribusi gaussian multivariate 
+        pada rumus 2.4
+
+        **Parameter fungsi:
+            1. Z (image target) : array, shape (n_samples, n_features)
+            2. k : int
+
+        return
+        score : array, shape(n_samples)
+        ----------------
+        """
+    
+        # print('menghitung distribusi multivariate ', k)
+        result = np.zeros(z.shape[0])
+        # print(result.shape)
+        if self.theta['koefisien'][k] > 0 :
+            diff = z - self.theta['means'][k]
+            # print('selisih:\n, ', diff[:10])
+            inv_covariance = np.linalg.inv(self.theta['kovarians'][k])
+            mult  = np.einsum('ij,ij->i', diff, np.dot(inv_covariance, diff.T).T)
+            result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(self.theta['kovarians'][k])))
+        return result
+
+    
     def count_D_formula(self, z):
         gauss_distribution = []
+        print("koefisien: ",self.theta['koefisien'])
+        print("kovarians: ",self.theta['kovarians'])
+        print("means: ",self.theta['means'])
         for k in range(self.komponen_gmm):
             tmp_gauss_distribution = self.dis_mult(z, k)
             gauss_distribution.append(tmp_gauss_distribution)
         gauss_distribution = np.array(gauss_distribution)
         print("gauss shape: ", gauss_distribution.shape)
-        print("koef shape: ", self.koefisien.shape)
+        print("koef shape: ", self.theta['koefisien'].shape)
 
-        return -np.log(np.dot(self.koefisien, gauss_distribution))
+        return -np.log(np.dot(self.theta['koefisien'], gauss_distribution))
 
