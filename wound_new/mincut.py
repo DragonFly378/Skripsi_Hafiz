@@ -1,5 +1,6 @@
 import numpy as np
 import igraph as ig
+from tqdm import tqdm
 
 class mincut_segmentation:
     def __init__(self, edges, weights):
@@ -16,8 +17,7 @@ class mincut_segmentation:
         self.node_s = None
         self.node_t = None
 
-        self.in_pq = []
-        self.node_pq = []
+        self.node_pq = None
         
         # self.calc_mincut()
 
@@ -37,7 +37,6 @@ class mincut_segmentation:
         print('total node graf: ', self.G.vcount())
 
         # Point 3 from paper
-        self.node_a = self.G_0.vs[0]
         self.n_nodes = self.G_0.vcount()
         self.all_nodes = np.array(self.G_0.vs)
         self.best_cut = []
@@ -46,16 +45,28 @@ class mincut_segmentation:
 
         self.node_t = self.node_a
         
-        while (self.n_nodes >= 2):
+        while_progress_bar = tqdm(total=self.n_nodes, desc="Outer Loop", unit="Iteration")
+        while self.n_nodes >= 2:
             # Phase 5 from paper
-            # Phase 6 from paper
-            for node in self.all_nodes:
-                if (node != self.node_a):
-                    self.node_pq.append(0)
-                    self.in_pq.append(True)
+            # Phase 6 from paper     
+            self.in_pq = [False] * self.n_nodes
+            self.node_a = self.G_0.vs[0].index
 
+            for_progress_bar = tqdm(range(self.n_nodes - 1), desc="Inner Loop", unit="Iteration")
+            # print(self.n_nodes)
+            for _ in range(self.n_nodes - 1):
+                # print(_)
+                for node in range(self.n_nodes):
+                    if not self.in_pq[node]:
+                        self.node_pq = 0
+                        self.in_pq[self.node_a] = True
+                for_progress_bar.update(1)
+                    # for edge in self.G.es:
+            for_progress_bar.close() 
+            while_progress_bar.update(1)
             self.n_nodes -= 1
-        print(len(self.node_pq))
+        while_progress_bar.close()
+        # print(len(self.node_pq))
 
 
 

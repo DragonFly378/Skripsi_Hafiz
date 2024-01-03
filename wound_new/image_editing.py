@@ -1,7 +1,7 @@
 import sys
 # from tkinter import ttk, filedialog, PhotoImage
 from tkinter import *
-from grabcut_new import GrabCut
+from grabcut import GrabCut
 from PIL import Image, ImageTk, ImageMath, ImageDraw
 import numpy as np
 
@@ -40,9 +40,13 @@ class ImageEditing:
         self.root.title("Image Segmentation using Grabcut")   
         self.image_path = image_path    
 
+        # Create a frame for title labels
+        self.title_frame = Frame(self.root)
+        self.title_frame.pack(side=TOP, fill=X)
+
         # Create a frame for canvases
         self.canvas_frame = Frame(self.root)
-        self.canvas_frame.pack(side=TOP, fill=X)
+        self.canvas_frame.pack(side=TOP, fill=BOTH, expand=YES)  # Adjusted to fill both X and Y, expand
 
         # Create a frame for buttons
         self.button_frame = Frame(self.root)
@@ -66,26 +70,19 @@ class ImageEditing:
         
         self.LoadCanvas()
 
-        # Display canvas
-        self.main_canvas.pack(side=LEFT)
-        self.mask_canvas.pack(side=LEFT)
-        self.result_canvas.pack(side=LEFT)
 
-        # Display Buttons
-        self.draw_rect_button.pack()
-        self.draw_brush_button.pack()
-        self.segmentation_button.pack()
-        self.reset_button.pack()
 
 
     def LoadCanvas(self):    
 
         # Make image as main canvas
+        main_title_label = Label(self.title_frame, text="Main Canvas", font=('Helvetica', 10, 'bold'))
         self.photo = ImageTk.PhotoImage(self.image)
         self.main_canvas = Canvas(self.canvas_frame, width=self.image.width, height=self.image.height)
         self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
 
         # Create mask canvas
+        mask_title_label = Label(self.title_frame, text="Mask Canvas", font=('Helvetica', 10, 'bold'))
         self.mask_image = Image.fromarray(self.mask)
         self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
         self.mask_photo = ImageTk.PhotoImage(self.mask_image)
@@ -93,21 +90,39 @@ class ImageEditing:
         self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
 
         # Create a result canvas for result display
+        result_title_label = Label(self.title_frame, text="Result Canvas", font=('Helvetica', 10, 'bold'))
         self.result_image = Image.new("RGB", (self.image.width, self.image.height))
         self.result_photo = ImageTk.PhotoImage(self.result_image)
         self.result_canvas = Canvas(self.canvas_frame, width=self.image.width, height=self.image.height)
         self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
 
-        # Create the buttons and add them to the frame
-        self.draw_rect_button = Button(self.button_frame, text="Draw Rectangle", command=self.drawing_rectangle)
-        self.draw_brush_button = Button(self.button_frame, text="Draw Brush", command=self.drawing_brush)
-        self.segmentation_button = Button(self.button_frame, text="Segmentation Grabcut", command=self.segmentation_image)
-        self.reset_button = Button(self.button_frame, text="Reset", command=self.reset_image)
+        
+        # Create the buttons with custom styles
+        self.draw_rect_button = Button(self.button_frame, text="Draw Rectangle", command=self.drawing_rectangle, bg='#4CAF50', fg='white', font=('Helvetica', 10))
+        self.segmentation_button = Button(self.button_frame, text="Segmentation Grabcut", command=self.segmentation_image, bg='#2196F3', fg='white', font=('Helvetica', 10))
+        self.save_button = Button(self.button_frame, text="Save Result", command=self.save_result_image, bg='#FFC107', fg='black', font=('Helvetica', 10))
+        self.reset_button = Button(self.button_frame, text="Restart Program", command=self.reset_image, bg='#607D8B', fg='white', font=('Helvetica', 10))
+        
+        # Display canvas
+        self.main_canvas.pack(side=LEFT)
+        main_title_label.pack(side=LEFT, padx=(10, 220))
+
+        # self.mask_canvas.pack(side=LEFT)
+        # mask_title_label.pack(side=LEFT, padx=(10, 220))
+
+        self.result_canvas.pack(side=LEFT)
+        result_title_label.pack(side=LEFT, padx=(10, 220))
+
+        # Display Buttons
+        self.draw_rect_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))
+        self.segmentation_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))
+        self.save_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))        
+        self.reset_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))
 
     def setSizeImg(self):
         global new_width, aspect_ratio, new_height
         # set ukuran gambar
-        new_width = 280  # Atur ukuran hanya 480 px
+        new_width = 320  # Atur ukuran hanya 480 px
         aspect_ratio = self.image.width / self.image.height
         new_height = int(new_width / aspect_ratio)
 
@@ -116,9 +131,9 @@ class ImageEditing:
 
     def drawing_rectangle(self):
         print("mulai gambar kotak")
-        self.main_canvas.bind("<ButtonPress-3>", self.onClick_rect)
-        self.main_canvas.bind("<B3-Motion>", self.onDrag_rect)
-        self.main_canvas.bind("<ButtonRelease-3>", self.onRelease_rect)
+        self.main_canvas.bind("<ButtonPress-1>", self.onClick_rect)
+        self.main_canvas.bind("<B1-Motion>", self.onDrag_rect)
+        self.main_canvas.bind("<ButtonRelease-1>", self.onRelease_rect)
 
     def onClick_rect(self, event):
         print("Keberadaan kotak: ",KOTAK["is_drawn"])
@@ -188,26 +203,39 @@ class ImageEditing:
         self.mask = np.where((self.mask2 == F_FG) | (self.mask2 == F_PR_FG), 255, 0).astype('uint8')
         self.update_result()
 
+
+    def save_result_image(self):
+        result_filename = f"result_grabcut.png"
+
+        if result_filename:
+            self.result_image.save(result_filename)
+            print("Result image saved successfully:", result_filename)
+
     def reset_image(self):
-        # Reset relevant variables
-        KOTAK["coord"] = ()
-        KOTAK["is_drawn"] = False
-        KOTAK["titik_start"] = None
-        KOTAK["titik_akhir"] = None
-       
-        # Laod image
+        # Reset image and mask to initial state
         self.image = Image.open(self.image_path)
-
-        # Resize ukuran gambar
-        self.setSizeImg() 
-        self.image = self.image.resize((new_width, new_height)) # <-- untuk resize ukuran
-
+        self.image = self.image.resize((new_width, new_height))  # <-- untuk resize ukuran
         self.gambar = np.array(self.image)
         self.gambar2 = self.gambar.copy()
-        print("ukuran gambar: ", self.gambar.shape)
-
-        # buat masking dari gambar awal
         self.mask = np.zeros(self.gambar2.shape[:2], dtype=np.uint8)
         self.mask2 = self.mask.copy()
-        
-        self.LoadCanvas()
+
+        # Reset annotation variables
+        KOTAK["coord"] = ()
+        KOTAK["is_init"] = False
+        KOTAK["is_drawn"] = False
+
+        # Reload main canvas
+        self.photo = ImageTk.PhotoImage(self.image)
+        self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
+
+        # Clear the mask canvas
+        self.mask_image = Image.fromarray(self.mask)
+        self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
+        self.mask_photo = ImageTk.PhotoImage(self.mask_image)
+        self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
+
+        # Clear the result canvas
+        self.result_image = Image.new("RGB", (self.image.width, self.image.height))
+        self.result_photo = ImageTk.PhotoImage(self.result_image)
+        self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
