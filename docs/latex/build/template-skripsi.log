@@ -763,6 +763,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
+\currentparindent=\skip125
 
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
@@ -773,41 +774,41 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
-(biblatex)                Setting 'uniquename=init' on input line 175.
+(biblatex)                Setting 'uniquename=init' on input line 198.
 
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 17
-5.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 19
+8.
 (t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux)
-(bab3_new.aux))
+(bab3.aux) (bab4.aux))
 \openout1 = `template-skripsi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 198.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-75.
+98.
  (ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 198.
+LaTeX Font Info:    ... okay on input line 198.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -837,7 +838,7 @@ LaTeX Font Info:    ... okay on input line 175.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 175.
+Package hyperref Info: Link coloring OFF on input line 198.
 (nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (refcount.sty
@@ -847,9 +848,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count461
 )
-LaTeX Info: Redefining \ref on input line 175.
-LaTeX Info: Redefining \pageref on input line 175.
-LaTeX Info: Redefining \nameref on input line 175.
+LaTeX Info: Redefining \ref on input line 198.
+LaTeX Info: Redefining \pageref on input line 198.
+LaTeX Info: Redefining \nameref on input line 198.
  (template-skripsi.out)
 (template-skripsi.out)
 \@outlinefile=\write4
@@ -882,7 +883,7 @@ Package biblatex Info: ... file 'bahasa.lbx' not found.
 
 
 Package biblatex Warning: Language 'bahasa' not supported.
-(biblatex)                Using dummy definitions on input line 175.
+(biblatex)                Using dummy definitions on input line 198.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -901,15 +902,24 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 175.
-Package biblatex Info: Reference segment=0 on input line 175.
+Package biblatex Info: Reference section=0 on input line 198.
+Package biblatex Info: Reference segment=0 on input line 198.
 \c@lstlisting=\count462
 File: gambar/logounj.png Graphic file (type bmp)
 <gambar/logounj.png>
+ [1
+
+]
 File: Lembar_Pengesahan.pdf Graphic file (type pdf)
 <use Lembar_Pengesahan.pdf>
 File: Lembar_Pengesahan.pdf Graphic file (type pdf)
 <use Lembar_Pengesahan.pdf>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
+File: Lembar_Pengesahan.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan.pdf, page 1>
 File: Lembar_Pengesahan.pdf Graphic file (type pdf)
 <use Lembar_Pengesahan.pdf, page 1>
 File: Lembar_Pengesahan.pdf Graphic file (type pdf)
@@ -917,16 +927,9 @@ File: Lembar_Pengesahan.pdf Graphic file (type pdf)
  [1
 
 ]
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
- [2]
 \openout2 = `kata-pengantar.aux'.
 
- (kata-pengantar.tex [3
+ (kata-pengantar.tex [2
 
 
 ]
@@ -935,11 +938,11 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 46
  (ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ))
-Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--185
+Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--210
 [][] 
  []
 
-[4] (template-skripsi.toc [5
+[3] (template-skripsi.toc [4
 
 
 
@@ -947,15 +950,15 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--185
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
- [6] (template-skripsi.lof
+ [5] (template-skripsi.lof
 Missing character: There is no ∈ ("2208) in font ptmr8t!
-[7
+[6
 
 ])
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [8]
+ [7]
 \openout2 = `bab1.aux'.
 
  (bab1.tex
@@ -1071,9 +1074,9 @@ Missing character: There is no — ("2014) in font ptmr8t!
 File: gambar/gambar-2_8.png Graphic file (type bmp)
 <gambar/gambar-2_8.png>
 ) [34]
-\openout2 = `bab3_new.aux'.
+\openout2 = `bab3.aux'.
 
- (bab3_new.tex
+ (bab3.tex
 BAB III.
 File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
 <gambar/gambar-3_2(b).jpg>
@@ -1085,26 +1088,19 @@ File: gambar/rectangle.png Graphic file (type bmp)
 
 
 ]
-File: gambar/res_1.png Graphic file (type bmp)
-<gambar/res_1.png>
- [36]
-File: gambar/res_1.png Graphic file (type bmp)
-<gambar/res_1.png>
-File: gambar/brush.png Graphic file (type bmp)
-<gambar/brush.png>
 File: gambar/res_2.png Graphic file (type bmp)
 <gambar/res_2.png>
 File: gambar/diagram_penelitian.png Graphic file (type bmp)
 <gambar/diagram_penelitian.png>
+ [36]
 File: gambar/diagram_grabcut.png Graphic file (type bmp)
 <gambar/diagram_grabcut.png>
- [37]
 File: gambar/diagram_gmm.png Graphic file (type bmp)
 <gambar/diagram_gmm.png>
- [38]
+ [37]
 File: gambar/node_representasi.png Graphic file (type bmp)
 <gambar/node_representasi.png>
- (lstlang1.sty
+ [38] (lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1807,22 +1803,30 @@ File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
 <gambar/gambar-3_2(b).jpg>
 File: gambar/rectangle.png Graphic file (type bmp)
 <gambar/rectangle.png>
-File: gambar/res_1.png Graphic file (type bmp)
-<gambar/res_1.png>
-File: gambar/brush.png Graphic file (type bmp)
-<gambar/brush.png>
 File: gambar/res_2.png Graphic file (type bmp)
 <gambar/res_2.png>
- [67]) [68] [69
+ [67]) [68]
+\openout2 = `bab4.aux'.
+
+ (bab4.tex
+BAB IV.
+(lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)) [69
 
 
 
-] (template-skripsi.aux
-(kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3_new.aux))
+
+] [70
+
+
+
+] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux) (
+bab4.aux))
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 7EE18F22B38596E6F7E0AAA5D8C1D3DA;8411.
+(rerunfilecheck)             Checksum: 11F57924D95F62A076F567E3852A34A7;8498.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (77 pages, 359748 bytes).
+Output written on template-skripsi.xdv (78 pages, 362952 bytes).

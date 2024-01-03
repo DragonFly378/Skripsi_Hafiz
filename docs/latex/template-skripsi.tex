@@ -137,6 +137,29 @@
   \def\thelstlisting{\@arabic\c@chapter.\@arabic\c@lstlisting}}
 \makeatother
 
+%Create a new minipage environment where paragraphs have indents
+\newlength{\currentparindent}
+\newenvironment{minipageparindent}[2][c]
+  {\setlength{\currentparindent}{\parindent}% save the value
+   \noindent\begin{minipage}[#1]{#2}% open the minipage
+   \setlength{\parindent}{\currentparindent}% restore the value
+  }
+  {\end{minipage}}
+
+%Create an environment that creates a paragraph with a picture next to it, both being aligned at the top.
+\newenvironment{pictureparagraph}[1]    %argument is an 'includegraphics' command
+    {\newcommand\picturetoplace{#1}     % using variable directly gives an error
+    \begin{minipageparindent}[t]{0.7\textwidth} %
+    \vspace{0pt}    %Make sure that the top base is at the absolute top
+    }   
+    {
+    \end{minipageparindent}
+    \begin{minipage}[t]{0.3\textwidth}
+    \vspace{0pt}    %Make sure that the top base is at the absolute top of the minipage
+    \picturetoplace
+    \end{minipage}\\}
+
+
 
 %-----------------------------------------------------------------
 %Disini awal masukan untuk data proposal skripsi
@@ -175,6 +198,8 @@
 \begin{document}
 
 \cover{}
+\clearpage{}
+\setcounter{page}{1}
 %-----------------------------------------------------------------
 
 %-----------------------------------------------------------------
@@ -183,6 +208,7 @@
 % \include{pengesahan}
 \includepdf[pages=-]{Lembar_Pengesahan.pdf}
 \include{kata-pengantar}
+\addcontentsline{toc}{chapter}{KATA PENGANTAR}
 \singlespacing{}
 \tableofcontents{}
 \addcontentsline{toc}{chapter}{DAFTAR ISI}
@@ -198,8 +224,8 @@
 \onehalfspacing{}
 \include{bab1}
 \include{bab2}
-\include{bab3_new}
-% \include{bab4}
+\include{bab3}
+\include{bab4}
 % \include{bab5}
 
 %-----------------------------------------------------------------
