@@ -89,7 +89,7 @@ if __name__ == '__main__':
         filename = '2.jpg'
 
     img = cv.imread(filename)
-    img = cv.resize(img, (280, int(img.shape[0] * 280 / img.shape[1])))  # Resize the image to width 480 pixels
+    img = cv.resize(img, (320, int(img.shape[0] * 320 / img.shape[1])))  # Resize the image to width 480 pixels
     img2 = img.copy()                               # a copy of original image
     mask = np.zeros(img.shape[:2],dtype = np.uint8) # mask initialized to PR_BG
     output = np.zeros(img.shape,np.uint8)           # output image to be shown
@@ -140,6 +140,8 @@ if __name__ == '__main__':
         elif k == ord('n'): # segment the image
             print(""" For finer touchups, mark foreground and background after pressing keys 0-3
             and again press 'n' \n""")
+            print(rect)
+            rect = (154, 46, 301, 157)
             print(rect)
             bgdmodel = np.zeros((1,65),np.float64)
             fgdmodel = np.zeros((1,65),np.float64)

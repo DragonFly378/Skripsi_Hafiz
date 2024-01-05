@@ -31,6 +31,98 @@ serta menyamakan ukuran tiap sampel citra gambar, berikut \emph{source code} nya
 	\label{img:resize_gambar}
 \end{figure}
 
+Fungsi \texttt{setSizeImg()} dibuat untuk mengubah ukuran lebar piksel citra 
+menjadi 320 piksel, untuk mempertahankan rasionya, makan dibentuk dengan menghitung
+menggunakan rumus \texttt{aspect\_ratio} dimana tinggi gambar akan otomatis mengikuti lebar gambar 
+dengan perbandingan yang stabil.
+
+\section{Deteksi keliling luka menggunakan \emph{Grabcut}}
+Alur deteksi keliling luka menggunakan algoritma \emph{Grabcut} dilakukan melalui
+beberapa tahapan, setiap tahapan akan mengolah data input berupa citra gambar luka 
+yang disimpan menjadi \emph{array} multidimensi (lebar, tinggi, nilai RGB).
+Berikut adalah tahapannya:
+
+\subsection{Inisiasi kotak (\emph{Bounding Box})}
+
+Dalam segmentasi citra luka, dimulai dengan inisiasi kotak atau \emph{bounding box} 
+yang digambar mengelilingi area citra luka, berikut \emph{source code} nya:
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+		def drawing_rectangle(self):
+			print("mulai gambar kotak")
+			self.main_canvas.bind("<ButtonPress-1>", self.onClick_rect)
+			self.main_canvas.bind("<B1-Motion>", self.onDrag_rect)
+			self.main_canvas.bind("<ButtonRelease-1>", self.onRelease_rect)
+
+		def onClick_rect(self, event):
+			print("Keberadaan kotak: ",KOTAK["is_drawn"])
+			if KOTAK["is_drawn"] is not True:
+				KOTAK["titik_start"] = (event.x, event.y)
+			else:
+				print("kotak sudah ada")
+
+		def onDrag_rect(self, event):
+			if KOTAK["is_drawn"] is not True:
+				KOTAK["titik_akhir"] = (event.x, event.y)
+				self.update_image()
+
+		def onRelease_rect(self, event):
+			if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
+				KOTAK["coord"] = (self.get_rectangle_coords())
+				print("Koordinat Kotak: ", KOTAK["coord"])
+				KOTAK["titik_start"] = None
+				KOTAK["titik_akhir"] = None
+				KOTAK["is_drawn"] = True
+			print("Keberadaan kotak: ",KOTAK["is_drawn"])
+			print("Koordinat Kotak: ", KOTAK["coord"])
+
+		def get_rectangle_coords(self):
+			if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
+				x1, y1 = KOTAK["titik_start"]
+				x2, y2 = KOTAK["titik_akhir"]
+				return (x1, y1, x2, y2)
+			else:
+				return None
+
+		def drawing_rectangle(self):
+			print("mulai gambar kotak")
+			self.main_canvas.bind("<ButtonPress-1>", self.onClick_rect)
+			self.main_canvas.bind("<B1-Motion>", self.onDrag_rect)
+			self.main_canvas.bind("<ButtonRelease-1>", self.onRelease_rect)
+
+	\end{lstlisting}
+	\caption{\emph{source code} menggambar kotak pada area luka}
+	\label{img:inisiasi_rectangle}
+\end{figure}
+
+Ketika kotak sudah tergambar, koordinat dimasukkan kedalam variabel \texttt{KOTAK["coord"]}
+pada fungsi \texttt{onRelease\_rect()} yang mana \texttt{KOTAK["coord"]} berupa array 
+berisi x1, y1, x2, y2 yang akan digunakan untuk tahap selanjutnya.
+
+\subsection{Inisiasi piksel}
+Tahap selanjutnya adalah membuat salinan \emph{masking} pada citra gambar luka yang diubah
+menjadi gambar hitam, salinan dibuat dengan menggunakan \emph{library} \emph{Numpy}
+dengan target citra gambar luka. Berikut \emph{source code} nya:
+
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+			self.gambar = np.array(self.image)
+        self.gambar2 = self.gambar.copy()
+        print("ukuran gambar: ", self.gambar.shape)
+
+        # buat masking dari gambar awal
+        self.mask = np.zeros(self.gambar2.shape[:2], dtype=np.uint8)
+        self.mask2 = self.mask.copy()
+	\end{lstlisting}
+	\caption{\emph{source code} menggambar kotak pada area luka}
+	\label{img:mask_image}
+\end{figure}
+
+
+
+
 % Baris ini digunakan untuk membantu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan
 % oleh compiler LaTeX.

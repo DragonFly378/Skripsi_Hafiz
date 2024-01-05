@@ -59,7 +59,6 @@ class GrabCut:
         }
 
         
-
         self.komponen_piksel = np.zeros((self.baris, self.kolom), dtype=np.uint32)
         print('class grabcut berjalan')
         # print(self.baris)
@@ -112,7 +111,6 @@ class GrabCut:
         # ix, iy, x, y = 176, 47, 351, 189
         ix, iy, x, y = self.rect[0], self.rect[1], self.rect[2], self.rect[3]
 
-        # self.mask[iy:y, ix:x] = F_TF
         self.alpha[iy:y, ix:x] = F_TF
         self.trimap['TB'] = np.where(self.alpha == F_TB)
         self.trimap['TU'] = np.where(self.alpha == F_TF)

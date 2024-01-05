@@ -8,8 +8,9 @@ import numpy as np
 
 if __name__ == '__main__':
     root = Tk()
-    kategori = "luka_hitam"
-    img_name = "2.jpg"
-    image_path = "dataset_3/"+kategori+"/ready/"+img_name
-    tools = ImageEditing(root, image_path)
+    category = "luka_hitam"
+    img_name = "2"
+    extension = ".jpg"
+    image_path = "dataset_3/"+category+"/ready/"+img_name+extension
+    tools = ImageEditing(root, image_path, img_name, category)
     root.mainloop()

@@ -1,4 +1,5 @@
 import sys
+import os
 # from tkinter import ttk, filedialog, PhotoImage
 from tkinter import *
 from grabcut import GrabCut
@@ -35,10 +36,12 @@ BRUSH = {
 # print("titik kotak [ix, iy, x, y]: ",[ix, iy, x, y])
 
 class ImageEditing:
-    def __init__(self, root, image_path):
+    def __init__(self, root, image_path, image_name, category):
         self.root = root
         self.root.title("Image Segmentation using Grabcut")   
         self.image_path = image_path    
+        self.image_name = image_name
+        self.category = category
 
         # Create a frame for title labels
         self.title_frame = Frame(self.root)
@@ -147,12 +150,6 @@ class ImageEditing:
         if KOTAK["is_drawn"] is not True:
             KOTAK["titik_akhir"] = (event.x, event.y)
             self.update_image()
-        # else:
-        #     print("kotak sudah ada")
-        # if KOTAK["pos"]:
-        #     self.main_canvas.delete(KOTAK["pos"])
-        # x, y = KOTAK["titik_start"]
-        # KOTAK["pos"] = self.main_canvas.create_rectangle(x, y, event.x, event.y, outline=COLOR["yellow"], width=2)
 
     def onRelease_rect(self, event):
         if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
@@ -169,6 +166,7 @@ class ImageEditing:
         # Update the main canvas with image and annotations
         self.image = Image.open(self.image_path)
         self.image = self.image.resize((new_width, new_height))  # <-- untuk resize ukuran
+        self.image2 = self.image.copy()
         self.draw = ImageDraw.Draw(self.image)
         for coords in KOTAK["coord"]:
             self.draw.rectangle(coords, outline="yellow", width=2)
@@ -177,6 +175,10 @@ class ImageEditing:
         self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
     
     def update_result(self):
+        # Update main image with rect
+        # self.image_with_rect = Image.fromarray(self.photo)
+
+
         # Update mask canvas with segmentation
         self.mask_image = Image.fromarray(self.mask)
         self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
@@ -184,7 +186,7 @@ class ImageEditing:
         self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
 
         # Update image with segmentation
-        self.result_image = Image.composite(self.image, Image.new("RGB", self.image.size, "black"), self.mask_image)
+        self.result_image = Image.composite(self.image2, Image.new("RGB", self.image.size, "black"), self.mask_image)
         # self.result_image = Image.fromarray(self.mask)
         self.result_photo = ImageTk.PhotoImage(self.result_image)
         self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
@@ -205,11 +207,18 @@ class ImageEditing:
 
 
     def save_result_image(self):
-        result_filename = f"result_grabcut.png"
+        save_folder = f"results/{self.category}"
 
-        if result_filename:
-            self.result_image.save(result_filename)
-            print("Result image saved successfully:", result_filename)
+        # Create the folder if it doesn't exist
+        os.makedirs(save_folder, exist_ok=True)
+
+        result_filename = f"result_{self.image_name}.jpg"
+        main_rect_filename = f"image_{self.image_name}_rect.jpg"
+
+        self.result_image.save(os.path.join(save_folder, result_filename))
+        self.image.save(os.path.join(save_folder, main_rect_filename))
+
+        print("Result image saved successfully:")
 
     def reset_image(self):
         # Reset image and mask to initial state

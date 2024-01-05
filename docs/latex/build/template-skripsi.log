@@ -924,12 +924,12 @@ File: Lembar_Pengesahan.pdf Graphic file (type pdf)
 <use Lembar_Pengesahan.pdf, page 1>
 File: Lembar_Pengesahan.pdf Graphic file (type pdf)
 <use Lembar_Pengesahan.pdf, page 1>
- [1
+ [0
 
 ]
 \openout2 = `kata-pengantar.aux'.
 
- (kata-pengantar.tex [2
+ (kata-pengantar.tex [1
 
 
 ]
@@ -938,11 +938,11 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 46
  (ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ))
-Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--210
+Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
 [][] 
  []
 
-[3] (template-skripsi.toc [4
+[2] (template-skripsi.toc [3
 
 
 
@@ -950,15 +950,15 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--210
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
- [5] (template-skripsi.lof
+ [4] (template-skripsi.lof
 Missing character: There is no ∈ ("2208) in font ptmr8t!
-[6
+[5
 
 ])
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [7]
+ [6]
 \openout2 = `bab1.aux'.
 
  (bab1.tex
@@ -1812,21 +1812,21 @@ File: gambar/res_2.png Graphic file (type bmp)
 BAB IV.
 (lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)) [69
+) [69
 
 
 
 
-] [70
+] [70]) [71] [72
 
 
 
-] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux) (
-bab4.aux))
+] (template-skripsi.aux (kata-pengantar.aux)
+(bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux))
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 11F57924D95F62A076F567E3852A34A7;8498.
+(rerunfilecheck)             Checksum: ED0F53CDDA0CA91A98182578E09C7B57;9265.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (78 pages, 362952 bytes).
+Output written on template-skripsi.xdv (80 pages, 389628 bytes).
