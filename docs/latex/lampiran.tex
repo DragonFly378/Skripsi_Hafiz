@@ -1,711 +1,1084 @@
-\addcontentsline{toc}{chapter}{LAMPIRAN}
-\appendix 
-\chapter{Analisis Kebutuhan (\textit{User Requirement})}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/UR-1}	
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/UR-2}	
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/UR-3}	
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/UR-4}	
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/UR-5}	
-\end{figure}
+\appendix
 
-\chapter{Kuesioener \textit{User Accpetance Test} pada \textit{Admin}}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_awal}	
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_awal2}	
-\end{figure}
+\chapter{\emph{Source code} program}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_admin1}	
-\end{figure}
+\section{main.py}
+\begin{lstlisting}[language=Python, basicstyle=\tiny]
+import sys
+from image_editing import ImageEditing
+from tkinter import *
+from grabcut import GrabCut
+from PIL import Image, ImageTk, ImageMath, ImageDraw
+import numpy as np
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_admin2}	
-\end{figure}
+if __name__ == '__main__':
+    root = Tk()
+    category = "luka_hitam"
+    img_name = "2"
+    extension = ".jpg"
+    image_path = "dataset_3/"+category+"/"+img_name+extension
+    tools = ImageEditing(root, image_path, img_name, category)
+    root.mainloop()
+\end{lstlisting}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_admin3}	
-\end{figure}
+\section{image\_editing.py}
+\begin{lstlisting}[language=Python, basicstyle=\tiny]
+import sys
+import os
+from tkinter import *
+from grabcut import GrabCut
+from PIL import Image, ImageTk, ImageMath, ImageDraw
+import numpy as np
 
-\chapter{Kuesioener \textit{User Accpetance Test} pada Anggota}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_awal}	
-\end{figure}
+COLOR = {
+    'red' : [0, 0, 255],
+    'white' : [255, 255, 255],
+    'black' : [0, 0, 0],
+    'yellow' : "#FFFF00"
+}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_awal2}	
-\end{figure}
+F_BG = 0
+F_FG = 1
+F_PR_FG = 2
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_anggota}	
-\end{figure}
+KOTAK = {
+    "coord" : (),
+    "pos" : None,
+    "titik_start" : None,
+    "titik_akhir" : None,
+    'is_init' : False,
+    'is_drawn' : False,
+}
 
-\chapter{Kuesioener \textit{User Accpetance Test} pada Pengawas}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_awal}	
-\end{figure}
+BRUSH = {
+    "size" : 3,
+    'is_init' : False,
+    'is_drawn' : False,
+}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_awal2}	
-\end{figure}
+class ImageEditing:
+    def __init__(self, root, image_path, image_name, category):
+        self.root = root
+        self.root.title("Image Segmentation using Grabcut")   
+        self.image_path = image_path    
+        self.image_name = image_name
+        self.category = category
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{gambar/surat_pengawas}	
-\end{figure}
+        # Create a frame for title labels
+        self.title_frame = Frame(self.root)
+        self.title_frame.pack(side=TOP, fill=X)
 
-\chapter{Sampel Kode \textit{Controller Admin} pada Anggota}
-\begin{verbatim}
-		<?php		
-		defined('BASEPATH') OR 
-		exit('No direct script access allowed');
-				
-		class Anggota extends CI_Controller
-		{
-			public function __construct()
-			{
-				parent::__construct();
-				$this->load->model("anggota_model");
-				$this->load->library('form_validation');
-				if ($this->session->userdata('level') != 'admin') 
-				{
-					redirect(site_url('login'));
-				}
-			}
-			
-			public function index()
-			{
-				$id_anggota = $this->session->userdata("id_anggota");
-				$data["anggota"] = $this->anggota_model->getAll();
-				$this->load->view("admin/anggota/list", $data);
-			}
-			
-			public function cetak()
-			{
-				$this->load->library('excel');
-				$objPHPExcel=new PHPExcel();
-				$data["anggota"] = $this->anggota_model->getAll();
-				$this->load->view("admin/anggota/list_cetak", $data);
-				new PHPExcel_Writer_Excel2007($objPHPExcel);
-				header("Content-type: application/vnd-ms-excel");
-				header("Content-Disposition: attachment; 
-				filename=Laporan Anggota.xls");
-			}
-			
-			public function detail($id_anggota = null)
-			{
-				if (!isset($id_anggota)) redirect('admin/anggota/anggota');
-				$anggota = $this->anggota_model;
-				$data["anggota"] = $anggota->getById($id_anggota);
-				$this->load->view("admin/anggota/data_anggota", $data);
-			}
-				
-			public function add()
-			{
-				$anggota = $this->anggota_model;
-				$validation = $this->form_validation;
-				$validation->set_rules($anggota->rules());
-				if ($validation->run()) 
-				{
-					$anggota->save();
-					$this->session->set_flashdata('success', 'Berhasil disimpan');
-				}
-				$this->load->view("admin/anggota/tambah");
-			}
-			
-			public function edit($id_anggota = null)
-			{
-				if (!isset($id_anggota)) redirect('admin/anggota/anggota');		
-				$anggota = $this->anggota_model;
-				$validation = $this->form_validation;
-				$validation->set_rules($anggota->rules());
-				if ($validation->run()) 
-				{
-					$anggota->update();
-					$this->session->set_flashdata('success', 'Berhasil disimpan');
-				}
-				$data["anggota"] = $anggota->getById($id_anggota);
-				if (!$data["anggota"]) show_404();
-				$this->load->view("admin/anggota/edit", $data);
-			}
-			
-			public function putih($id_anggota)
-			{
-				$this->anggota_model->ganti_status($id_anggota);
-				redirect('admin/anggota/anggota');
-			}
-			
-			public function ganti($id_anggota)
-			{
-				$this->anggota_model->hapus_admin($id_anggota);
-				redirect('admin/anggota/kelola');
-			}
-			
-			public function gantiP($id_anggota)
-			{
-				$this->anggota_model->hapus_pengawas($id_anggota);
-				redirect('admin/anggota/kelolaP');
-			}
-			
-			public function terima($id_anggota)
-			{
-				$this->anggota_model->terima_status($id_anggota);
-				redirect('admin/anggota/anggota');
-			}
-			
-			public function baru($id_anggota)
-			{
-				$this->anggota_model->lanjut_periode($id_anggota);
-				redirect('admin/anggota/anggota');
-			}
-			
-			public function tambah_admin($id_anggota)
-			{
-				$this->anggota_model->NewAdmin($id_anggota);
-				redirect('admin/anggota/add_admin');
-			}
-			
-			public function tambah_pengawas($id_anggota)
-			{
-				$this->anggota_model->NewPengawas($id_anggota);
-				redirect('admin/anggota/add_pengawas');
-			}
-			
-			public function reset_pass($id_anggota)
-			{
-				$this->anggota_model->resetPass($id_anggota);
-				redirect('admin/anggota/anggota');
-			}
-			
-			public function delete($id_anggota=null)
-			{
-				if (!isset($id_anggota)) show_404();
-				
-				if ($this->anggota_model->delete($id_anggota)) 
-				{
-					redirect(site_url('admin/anggota/anggota'));
-				}
-			}
-			
-			public function pendaftar($status_user=0)
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] = 
-				$this->anggota_model->getByPendaftar($status_user);
-				$this->load->view('admin/anggota/pendaftar',$data);
-			}
-			
-			public function anggota($status_user=1)
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] =
-				 $this->anggota_model->getByAnggota($status_user);
-				$this->load->view('admin/anggota/list',$data);
-			}
-			
-			public function anggota_putih($status_user=2)
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] = 
-				$this->anggota_model->getByAP($status_user);
-				$this->load->view('admin/anggota/list_putih',$data);
-			}
-			
-			public function kelola($level='admin')
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] = 
-				$this->anggota_model->getByKelola($level);
-				$this->load->view('admin/anggota/data_admin',$data);
-			}
-			
-			public function kelolaP($level='pengawas')
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] = 
-				$this->anggota_model->getByKelolaP($level);
-				$this->load->view('admin/anggota/data_pengawas',$data);
-			}
-			
-			public function kelolasemua()
-			{
-				$this->load->view('admin/anggota/adminpengawas');
-			}
-			
-			public function add_admin($level = 'anggota', 
-			$status_user = 1)
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] = 
-				$this->anggota_model->getByNonAdmin($level,$status_user);
-				$this->load->view('admin/anggota/calon_admin',$data);
-			}
-			
-			public function add_pengawas($level = 'anggota', 
-			$status_user = 1)
-			{
-				$this->load->model('anggota_model');
-				$data['anggota'] = 
-				$this->anggota_model->getByNonPengawas($level,$status_user);
-				$this->load->view('admin/anggota/calon_pengawas',$data);
-			}
-		}
-\end{verbatim}
+        # Create a frame for canvases
+        self.canvas_frame = Frame(self.root)
+        self.canvas_frame.pack(side=TOP, fill=BOTH, expand=YES)  # Adjusted to fill both X and Y, expand
 
-\chapter{Sampel Kode Model \textit{Admin} pada Anggota}
-\begin{verbatim}
-		<?php 
-		defined('BASEPATH') OR 
-		exit('No direct script access allowed');
+        # Create a frame for buttons
+        self.button_frame = Frame(self.root)
+        self.button_frame.pack(side=BOTTOM, fill=BOTH)
+
+        # Laod image
+        self.image = Image.open(self.image_path)
+
+        # Resize ukuran gambar
+        self.setSizeImg() 
+        self.image = self.image.resize((new_width, new_height)) # <-- untuk resize ukuran
+
+        self.gambar = np.array(self.image)
+        self.gambar2 = self.gambar.copy()
+        print("ukuran gambar: ", self.gambar.shape)
+
+        # buat masking dari gambar awal
+        self.mask = np.zeros(self.gambar2.shape[:2], dtype=np.uint8)
+        self.mask2 = self.mask.copy()
+
+        self.LoadCanvas()
+
+    def LoadCanvas(self):    
+        # Make image as main canvas
+        main_title_label = Label(self.title_frame, text="Main Canvas", font=('Helvetica', 10, 'bold'))
+        self.photo = ImageTk.PhotoImage(self.image)
+        self.main_canvas = Canvas(self.canvas_frame, width=self.image.width, height=self.image.height)
+        self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
+
+        # Create mask canvas
+        mask_title_label = Label(self.title_frame, text="Mask Canvas", font=('Helvetica', 10, 'bold'))
+        self.mask_image = Image.fromarray(self.mask)
+        self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
+        self.mask_photo = ImageTk.PhotoImage(self.mask_image)
+        self.mask_canvas = Canvas(self.canvas_frame, width=self.image.width, height=self.image.height)
+        self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
+
+        # Create a result canvas for result display
+        result_title_label = Label(self.title_frame, text="Result Canvas", font=('Helvetica', 10, 'bold'))
+        self.result_image = Image.new("RGB", (self.image.width, self.image.height))
+        self.result_photo = ImageTk.PhotoImage(self.result_image)
+        self.result_canvas = Canvas(self.canvas_frame, width=self.image.width, height=self.image.height)
+        self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
+
+        
+        # Create the buttons with custom styles
+        self.draw_rect_button = Button(self.button_frame, text="Draw Rectangle", command=self.drawing_rectangle, bg='#4CAF50', fg='white', font=('Helvetica', 10))
+        self.segmentation_button = Button(self.button_frame, text="Segmentation Grabcut", command=self.segmentation_image, bg='#2196F3', fg='white', font=('Helvetica', 10))
+        self.save_button = Button(self.button_frame, text="Save Result", command=self.save_result_image, bg='#FFC107', fg='black', font=('Helvetica', 10))
+        self.reset_button = Button(self.button_frame, text="Restart Program", command=self.reset_image, bg='#607D8B', fg='white', font=('Helvetica', 10))
+        
+        # Display canvas
+        self.main_canvas.pack(side=LEFT)
+        main_title_label.pack(side=LEFT, padx=(10, 220))
+        self.mask_canvas.pack(side=LEFT)
+        mask_title_label.pack(side=LEFT, padx=(10, 220))
+        self.result_canvas.pack(side=LEFT)
+        result_title_label.pack(side=LEFT, padx=(10, 220))
+
+        # Display Buttons
+        self.draw_rect_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))
+        self.segmentation_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))
+        self.save_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))        
+        self.reset_button.pack(side=LEFT, expand=YES, fill=BOTH, padx=5, pady=(10, 10))
+
+    def setSizeImg(self):
+        global new_width, aspect_ratio, new_height
+        # set ukuran gambar
+        new_width = 320  # Atur ukuran hanya 480 px
+        aspect_ratio = self.image.width / self.image.height
+        new_height = int(new_width / aspect_ratio)
+
+    def drawing_brush(self):
+        print("mulai gambar brush")
+
+    def drawing_rectangle(self):
+        print("mulai gambar kotak")
+        self.main_canvas.bind("<ButtonPress-1>", self.onClick_rect)
+        self.main_canvas.bind("<B1-Motion>", self.onDrag_rect)
+        self.main_canvas.bind("<ButtonRelease-1>", self.onRelease_rect)
+
+    def onClick_rect(self, event):
+        print("Keberadaan kotak: ",KOTAK["is_drawn"])
+        if KOTAK["is_drawn"] is not True:
+            KOTAK["titik_start"] = (event.x, event.y)
+        else:
+            print("kotak sudah ada")
+
+
+    def onDrag_rect(self, event):
+        if KOTAK["is_drawn"] is not True:
+            KOTAK["titik_akhir"] = (event.x, event.y)
+            self.update_image()
+
+    def onRelease_rect(self, event):
+        if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
+            KOTAK["coord"] = (self.get_rectangle_coords())
+            print("Koordinat Kotak: ", KOTAK["coord"])
+            KOTAK["titik_start"] = None
+            KOTAK["titik_akhir"] = None
+            KOTAK["is_drawn"] = True
+        print("Keberadaan kotak: ",KOTAK["is_drawn"])
+        print("Koordinat Kotak: ", KOTAK["coord"])
+
+
+    def update_image(self):
+        # Update the main canvas with image and annotations
+        self.image = Image.open(self.image_path)
+        self.image = self.image.resize((new_width, new_height))  # <-- untuk resize ukuran
+        self.image2 = self.image.copy()
+        self.draw = ImageDraw.Draw(self.image)
+        for coords in KOTAK["coord"]:
+            self.draw.rectangle(coords, outline="yellow", width=2)
+        self.draw.rectangle(self.get_rectangle_coords(), outline="yellow", width=2)
+        self.photo = ImageTk.PhotoImage(self.image)
+        self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
+    
+    def update_result(self):
+
+		# Update mask canvas with segmentation
+        self.mask_image = Image.fromarray(self.mask)
+        self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
+        self.mask_photo = ImageTk.PhotoImage(self.mask_image)
+        self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
+
+        # Update image with segmentation
+        self.result_image = Image.composite(self.image2, Image.new("RGB", self.image.size, "black"), self.mask_image)
+        self.result_photo = ImageTk.PhotoImage(self.result_image)
+        self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
+   
+
+    def get_rectangle_coords(self):
+        if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
+            x1, y1 = KOTAK["titik_start"]
+            x2, y2 = KOTAK["titik_akhir"]
+            return (x1, y1, x2, y2)
+        else:
+            return None
+
+    def segmentation_image(self):
+        gc = GrabCut(self.gambar2, self.mask2, KOTAK["coord"])
+        self.mask = np.where((self.mask2 == F_FG) | (self.mask2 == F_PR_FG), 255, 0).astype('uint8')
+        self.update_result()
+
+
+    def save_result_image(self):
+        save_folder = f"results/{self.category}"
+
+        # Create the folder if it doesn't exist
+        os.makedirs(save_folder, exist_ok=True)
+
+        result_filename = f"result_{self.image_name}.jpg"
+        main_rect_filename = f"image_{self.image_name}_rect.jpg"
+
+        self.result_image.save(os.path.join(save_folder, result_filename))
+        self.image.save(os.path.join(save_folder, main_rect_filename))
+
+        print("Result image saved successfully:")
+
+    def reset_image(self):
+        # Reset image and mask to initial state
+        self.image = Image.open(self.image_path)
+        self.image = self.image.resize((new_width, new_height))  # <-- untuk resize ukuran
+        self.gambar = np.array(self.image)
+        self.gambar2 = self.gambar.copy()
+        self.mask = np.zeros(self.gambar2.shape[:2], dtype=np.uint8)
+        self.mask2 = self.mask.copy()
+
+        # Reset annotation variables
+        KOTAK["coord"] = ()
+        KOTAK["is_init"] = False
+        KOTAK["is_drawn"] = False
+
+        # Reload main canvas
+        self.photo = ImageTk.PhotoImage(self.image)
+        self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
+
+        # Clear the mask canvas
+        self.mask_image = Image.fromarray(self.mask)
+        self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
+        self.mask_photo = ImageTk.PhotoImage(self.mask_image)
+        self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
+
+        # Clear the result canvas
+        self.result_image = Image.new("RGB", (self.image.width, self.image.height))
+        self.result_photo = ImageTk.PhotoImage(self.result_image)
+        self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
+
+\end{lstlisting}
+
+\section{grabcut.py}
+\begin{lstlisting}[language=Python, basicstyle=\tiny]
+import numpy as np 
+from GMM import MixtureModel
+import igraph as ig
+from mincut import mincut_segmentation
+
+COLOR = {
+    'red' : [0, 0, 255],
+    'white' : [255, 255, 255],
+    'black' : [0, 0, 0],
+    'yellow' : [0, 255, 255]
+}
+
+F_TB = 0
+F_TF = 1
+\end{lstlisting}
+
+\section{GMM.py}
+\begin{lstlisting}[language=Python, basicstyle=\tiny]
+import numpy as np
+import random
+
+class MixtureModel:
+	def __init__(self, alpha, z, komponen_gmm, theta):
+		self.komponen_gmm = komponen_gmm
+		# print('z object: ', z.shape)
+		self.n_channels = z.shape[1]
+		# print(self.n_channels)
+		self.n_samples = np.zeros(self.komponen_gmm)
+
+		self.theta = theta
+		self.F_TB = 0
+		self.F_TF = 1
+
+	def init_gmm_rand(self, z, theta):
+		labels_k = []
+		for i in range(z.shape[0]):
+			labels_k.append(random.randint(0, self.komponen_gmm-1))
+		labels_k = np.array(labels_k)
+		# labels_k = np.array([random.randint(0, self.komponen_gmm-1) for i in range(z.shape[0])])
+		print('random labels selesai yaitu :')
+		print(labels_k)
+		print("banyaknya labels: ",labels_k.size)
+		self.count_params(z, labels_k, theta)
+
+	def count_params(self, z, labels_k, theta):
+		"""
+		Fungsi ini untuk menghitung nilai dari parameter dari GMM
+		Parameter fungsi :
+			1. z (target) : array, shape(n_samples, n_features rgb)
+			2. labels_k : nilai k untuk tiap piksel
+
+		hasil :
+			- nilai koefisien
+			- nilai mean
+			- nilai kovarians
+		"""
+		self.n_samples[:] = 0
+		theta['koefisien'][:] = 0   
+
+		variables_k, count = np.unique(labels_k, return_counts=True)
+		self.n_samples[variables_k] = count
+
+		for k in variables_k:
+			# print(k)
+			n_k = self.n_samples[k]
+
+			theta['koefisien'][k] = n_k / np.sum(self.n_samples)
+			theta['means'][k] = np.mean(z[k == labels_k], axis = 0)
+			theta['kovarians'][k] = np.cov(z[k == labels_k].T) 
+
+			# self.kovarians[k] = 0 if self.n_samples[k] <= 1 else np.cov(target[k == labels_k].T)
+			# print(tmp)
+
+	def assign_component(self, z, theta, komponen_gmm):
+		"""
+		Tahap assign gmm dengan menggunakan rumus 2.7
+		"""
+		print('target assign: \n', z.shape)
+		gauss_distribution = []
+
+		for k in range(komponen_gmm):
+			gauss_score = self.dis_mult(z, k, theta)
+			gauss_distribution.append(gauss_score)
+
+		gauss_distribution = np.array(gauss_distribution)
+		# print("karakter matriks res: ",gauss_distribution.shape)
+
+		gauss_distribution = gauss_distribution.T
+		print("karakter matriks res: ",gauss_distribution.shape)
+
+		return np.argmin(gauss_distribution, axis=1)
+
+	def dis_mult(self, z, k, theta):
+
+		result = np.zeros(z.shape[0])
+
+		if theta['koefisien'][k] > 0 :
+
+			diff = z - theta['means'][k]
+			# print('selisih:\n, ', diff[:10])
+			# print(theta['kovarians'][k])
+
+			inv_covariance = np.linalg.inv(theta['kovarians'][k])
+			mult  = np.einsum('ij,ij->i', diff, np.dot(inv_covariance, diff.T).T)
+			print('mult: ',mult)
+			result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][k])))
+		return result
+
+
+	def gauss_dist(self, zn, kn, theta):
+		diff = zn - theta['means'][kn]
+		# print('bahan kn, zn: ', kn, " ", zn)
+		# print('means: ', theta['means'][kn])
+		# print('selisih: , ', diff, '\n')
+
+		inv_covariance = np.linalg.inv(theta['kovarians'][kn])
+		mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T)
+		result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][kn])))
+
+		# print(inv_covariance)
+		# print('mult: ',mult)
+		# print('result gauss ', result)
+		return result
+
+	def gauss_dist_second(self, zn, kn, theta):
+		diff = zn - theta['means'][kn]
+		# print('bahan kn, zn: ', kn, " ", zn)
+		# print('means: ', theta['means'][kn])
+		# print('selisih: , ', diff, '\n')
+
+		inv_covariance = np.linalg.inv(theta['kovarians'][kn])
+		mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T)
+		result = (0.5 * (np.log(np.linalg.det(theta['kovarians'][kn])))) + (0.5 * mult)
+		# result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][kn])))
 		
-		class Anggota_model extends CI_Model
-		{
-			private $_table = "anggota";
-			public $id_anggota;
-			public $nama;
-			public $tgl_daftar;
-			public $nim;
-			public $tgl_lahir;
-			public $jabatan;
-			public $bagian;
-			public $fakultas;
-			public $prodi;
-			public $angkatan;
-			public $no_telp;
-			public $username;
-			public $email;
-			public $pass;
-			public $periode;
-		
-			public function rules()
-			{
-				return [
-				['field' => 'nama',
-				'label' => 'Nama',
-				'rules' => 'required'],
-				
-				['field' => 'tgl_daftar',
-				'label' => 'Tanggal Daftar',
-				'rules' => 'required'],
-				
-				['field' => 'nim',
-				'label' => 'NIM',
-				'rules' => 'numeric'],
-				
-				['field' => 'tgl_lahir',
-				'label' => 'Tanggal Lahir',
-				'rules' => 'required'],
-				
-				['field' => 'fakultas',
-				'label' => 'Fakultas',
-				'rules' => 'required'],
-				
-				['field' => 'prodi',
-				'label' => 'Program Studi',
-				'rules' => 'required'],
-				
-				['field' => 'angkatan',
-				'label' => 'Angkatan',
-				'rules' => 'required'],
-				
-				['field' => 'no_telp',
-				'label' => 'Nomor Telepon',
-				'rules' => 'numeric'],
-				
-				['field' => 'username',
-				'label' => 'Username',
-				'rules' => 'required'],
-				
-				['field' => 'email',
-				'label' => 'E-mail',
-				'rules' => 'required']
-				];
-			}
-			
-			public function getAll()
-			{
-				return $this->db->get($this->_table)->result();
-			}
-			
-			public function getById($id_anggota)
-			{
-				return $this->db->get_where($this->_table, 
-				["id_anggota" => $id_anggota])->row();
-			}
-			
-			public function save()
-			{
-				$post = $this->input->post();
-				$query = $this->db->get('anggota');
-				$kode1 = $query->num_rows()+1;
-				if($post["fakultas"] == 'Fakultas Ilmu Pendidikan' ) {
-					$kode2 = 'I';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Bahasa dan Seni' ) {
-					$kode2 = 'II';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Matematika dan Ilmu Pengetahuan Alam' ) {
-					$kode2 = 'III';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Ilmu Sosial' ) {
-					$kode2 = 'IV';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Teknik' ) {
-					$kode2 = 'V';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Ilmu Keolahragaan' ) {
-					$kode2 = 'VI';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Ekonomi' ) {
-					$kode2 = 'VII';
-				}
-				elseif($post["fakultas"] == 
-				'Fakultas Pendidikan Psikologi' ) {
-					$kode2 = 'VIII';
-				}
-				$kode4 = date('y', strtotime($post["tgl_daftar"]));
-				$this->id_anggota = $kode1.$kode2."KOPMA".$kode4;
-				$this->nama = $post["nama"];
-				$this->tgl_daftar = $post["tgl_daftar"];
-				$this->nim = $post["nim"];
-				$this->tgl_lahir = $post["tgl_lahir"];
-				$this->fakultas = $post["fakultas"];
-				$this->prodi = $post["prodi"];
-				$this->angkatan = $post["angkatan"];
-				$this->no_telp = $post["no_telp"];
-				$this->username = $post["username"];
-				$this->email = $post["email"];
-				$this->pass = $kode1.$kode2."KOPMA".$kode4;
-				$tahun = date('Y', strtotime($post["tgl_daftar"]));
-				$this->periode = $tahun;
-				$this->db->insert($this->_table, $this);
-			}
-				
-			public function ganti_status($id_anggota)
-			{
-				$data = array(
-				'status_user' => 2
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function terima_status($id_anggota)
-			{
-				$data = array(
-				'status_user' => 1
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function hapus_admin($id_anggota)
-			{
-				$data = array(
-				'level' => anggota
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function hapus_pengawas($id_anggota)
-			{
-				$data = array(
-				'level' => anggota
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function NewAdmin($id_anggota)
-			{
-			$data = array(
-			'level' => admin
-			);
-			
-			$this->db->where('id_anggota', $id_anggota);
-			return $this->db->update('anggota',$data);
-			}
-			
-			public function NewPengawas($id_anggota)
-			{
-				$data = array(
-				'level' => pengawas
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function resetPass($id_anggota)
-			{
-				$data = array(
-				'pass' => $id_anggota
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function lanjut_periode($id_anggota)
-			{
-				$anggota = $this->db->get_where("anggota", 
-				["id_anggota" => $id_anggota])->row();
-				$data = array(
-				'keuangan' => $anggota->keuangan + $anggota->simpanan_anggota,
-				'simpanan_anggota' => 0,
-				'total_transaksi' => 0,
-				'shu_transaksi' => 0,
-				'shu_simpanan' => 0,
-				'periode' => $anggota->periode + 1
-				);
-				$this->db->where('id_anggota', $id_anggota);
-				return $this->db->update('anggota',$data);
-			}
-			
-			public function update()
-			{
-				$post = $this->input->post();
-				$this->id_anggota = $post["id_anggota"];
-				$this->nama = $post["nama"];
-				$this->tgl_daftar = $post["tgl_daftar"];
-				$this->nim = $post["nim"];
-				$this->tgl_lahir = $post["tgl_lahir"];
-				$this->jabatan = $post["jabatan"];
-				$this->bagian = $post["bagian"];
-				$this->fakultas = $post["fakultas"];
-				$this->prodi = $post["prodi"];
-				$this->angkatan = $post["angkatan"];
-				$this->no_telp = $post["no_telp"];
-				$this->username = $post["username"];
-				$this->email = $post["email"];
-				$this->pass = $post["pass"];
-				$this->periode = $post["periode"];
-				$this->db->update($this->_table, $this, 
-				array('id_anggota' => $post['id_anggota']));
-			}
-			
-			public function delete($id_anggota)
-			{
-				return $this->db->delete($this->_table, 
-				array("id_anggota" => $id_anggota));
-			}
-			
-			public function getByPendaftar($status_user=0)
-			{
-				return $this->db->get_where($this->_table, 
-				["status_user" => $status_user])->result();
-			}
-			
-			public function getByAnggota($status_user=1)
-			{
-				return $this->db->get_where($this->_table, 
-				["status_user" => $status_user])->result();
-			}
-			
-			public function getByAP($status_user=2)
-			{
-				return $this->db->get_where($this->_table, 
-				["status_user" => $status_user])->result();
-			}
-			
-			public function getByKelola($level='admin')
-			{
-				return $this->db->get_where($this->_table, 
-				["level" => $level])->result();
-			}
-			
-			public function getByKelolaP($level='pengawass')
-			{
-				return $this->db->get_where($this->_table, 
-				["level" => $level])->result();
-			}
-			
-			public function getByNonAdmin($level='anggota', 
-			$status_user=1)
-			{
-				return $this->db->get_where($this->_table, 
-				["level" => $level, "status_user" => $status_user])->result();
-			}
-			
-			
-			
-			
-			
-			
-			public function getByNonPengawas($level='anggota', 
-			$status_user=1)
-			{
-				return $this->db->get_where($this->_table, 
-				["level" => $level, "status_user" => $status_user])->result();
-			}
-		}	
-\end{verbatim}
+		# print("diff shape: ", diff.shape)
+		# print("anu shape: ", np.dot(inv_covariance, diff.T).T.shape)
 
-\chapter{Sampel Kode \textit{View Admin} pada Daftar Anggota}
-\begin{verbatim}
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<?php $this->load->view("admin/_partials/head.php") ?>
-		</head>
-		<body id="page-top">
-			<?php $this->load->view("admin/_partials/navbar.php") ?>
-		<div id="wrapper">
-			<?php $this->load->view("admin/_partials/sidebar.php") ?>		
-			<div id="content-wrapper">		
-				<div class="container-fluid">		
-					<?php //$this->load->view("admin/_partials/breadcrumb.php") ?>		
-					<div class="card mb-3">
-						<div class="card-header">
-							<a href="<?php echo site_url('admin/anggota/add') ?>">
-							<i class="fas fa-plus"></i> Tambah Anggota</a>
-							<strong>|</strong>
-							<a href="<?php echo site_url('admin/anggota/cetak') ?>">
-							<i class="fas fa-print"></i> Cetak Data</a>
-						</div>
-							<div class="card-body">		
-								<div class="table-responsive">
-									<table class="table table-hover" id="dataTable" 
-									width="100%" cellspacing="0">
-										<thead>
-											<tr>
-											<th>Nama</th>
-											<th>Jabatan</th>
-											<th>Bagian</th>
-											<th>Prodi</th>
-											<th>Simpanan</th>
-											<th>Transaksi</th>
-											<th>Periode</th>
-											<th>Action</th>
-											</tr>
-										</thead>
-											<tbody>
-												<?php foreach ($anggota as $anggota):?>
-											<tr>
-											<td>
-												<?php echo $anggota->nama ?>
-											</td>
-											<td>
-												<?php echo $anggota->jabatan ?>
-											</td>
-											<td>
-												<?php echo $anggota->bagian ?>
-											</td>
-											<td>
-												<?php echo $anggota->prodi ?>
-											</td>
-												<?php echo $anggota->no_telp ?>
-											</td>
-											<td>
-												<?php echo $anggota->username ?>
-											</td>
-											<td>
-												<?php echo $anggota->email ?>
-												<?php echo $anggota->pass ?>
-											<td style="text-align:right;">
-												<?php echo $anggota->simpanan_anggota ?>
-											</td>
-											<td style="text-align:right;">
-												<?php echo $anggota->total_transaksi ?>
-											</td>
-											<td style="text-align:right;">
-												<?php echo $anggota->periode?>
-											</td>
-											<td>
-												<a href="<?php echo 
-												site_url('admin/anggota/detail/'.$anggota->id_anggota) ?>"
-												class="btn btn-small"><i class="fas fa-list-ul" 
-												data-toggle="tooltip" title="Detail"></i></a>
-												<a onclick="putihConfirm('<?php echo 
-												site_url('admin/anggota/putih/'.$anggota->id_anggota) ?>')"
-												href="#1!" class="btn btn-small text-success">
-												<i class="fas fa-hand-paper" data-toggle="tooltip" 
-												title="Putihkan"></i></a>
-												<a href="<?php echo 
-												site_url('admin/anggota/edit/'.$anggota->id_anggota
-												) ?>"
-												class="btn btn-small"><i class="fas fa-edit" 
-												data-toggle="tooltip" title="Sunting"></i></a>
-												<a onclick="resetConfirm('<?php 
-												echo site_url('admin/anggota/reset_pass/'.$anggota->id_anggota)
-												 ?>')"
-												href="#2!" class="btn btn-small text-warning">
-												<i class="fas fa-sync" data-toggle="tooltip" 
-												title="Reset Password"></i></a>
-												<a onclick="baruConfirm('<?php echo 
-												site_url('admin/anggota/baru/'.$anggota->id_anggota) ?>')"
-												href="#2!" class="btn btn-small text-success">
-												<i class="fas fa-external-link-square-alt" 
-												data-toggle="tooltip" title="Lanjut Periode"></i></a>
-												<a onclick="deleteConfirm('<?php echo 
-												site_url('admin/anggota/delete/'.$anggota->id_anggota) ?>')"
-												href="#!" class="btn btn-small text-danger">
-												<i class="fas fa-trash" data-toggle="tooltip" 
-												title="Hapus"></i></a>
-											</td>
-											</tr>
-												<?php endforeach; ?>
-												</tbody>
-									</table>
-								</div>
-							</div>
-						</div>		
-					</div>
-		<?php $this->load->view("admin/_partials/scrolltop.php") ?>
-		<?php $this->load->view("admin/_partials/modal.php") ?>
-		<?php $this->load->view("admin/_partials/js.php") ?>
-		<script>
-			function deleteConfirm(url){
-				$('#btn-delete').attr('href', url);
-				$('#deleteModal').modal();
-			}
-			function putihConfirm(url){
-				$('#btn-putih').attr('href', url);
-				$('#putihModal').modal();
-			}
-			function resetConfirm(url){
-				$('#btn-reset').attr('href', url);
-				$('#resetModal').modal();
-			}
-			function baruConfirm(url){
-				$('#btn-baru').attr('href', url);
-				$('#baruModal').modal();
-			}
-				$(document).ready(function(){
-				$('[data-toggle="tooltip"]').tooltip();
-			});
-			</script>		
-		</body>		
-		</html>		
-\end{verbatim}
+		# print(inv_covariance)
+		# print('mult: ',mult)
+		# print('result gauss ', result)
+		return result
+
+
+	def count_D_formula(self, z, komponen_gmm, theta):
+		gauss_distribution = []
+		# print(theta)
+		for k in range(komponen_gmm):
+			tmp_gauss_distribution = self.dis_mult(z, k, theta)
+			gauss_distribution.append(tmp_gauss_distribution)
+		gauss_distribution = np.array(gauss_distribution)
+		print("gauss shape: ", gauss_distribution.shape)
+		# print("koef shape: ", self.theta['koefisien'].shape)
+
+		return -np.log(np.dot(self.theta['koefisien'], gauss_distribution))
+
+	def d_calc_old(self, alpha, k, z, theta):
+		idx_TU = np.where(alpha.reshape(-1) == self.F_TF)
+
+		print("panjang: ", z.reshape(-1, 3)[idx_TU].shape)
+
+		gauss_distrib = []
+
+		# cara 1
+		# for kn in range(self.komponen_gmm):
+		#     gauss_res = []
+		#     for zn in z.reshape(-1, 3)[idx_TU]:
+		#         tmp_res = self.gauss_dist(zn, kn, theta)
+		#         gauss_res.append(tmp_res)
+		#     gauss_distrib.append(gauss_res)
+		# gauss_distrib = np.array(gauss_distrib)
+		# print("hasilnya hadeh: ", gauss_distrib.shape)
+		
+		# cara 2
+		for kn in range(self.komponen_gmm):
+			tmp_d_res = []
+			for zn in z.reshape(-1, 3)[idx_TU]:
+				tmp_gauss = self.gauss_dist_second(zn, kn, theta)
+				# print(tmp_gauss)
+				tmp_d = -np.log(theta['koefisien'][kn]) + tmp_gauss
+				tmp_d_res.append(tmp_d)
+			gauss_distrib.append(tmp_d_res)
+		gauss_distrib = np.array(gauss_distrib)
+		result = np.sum(gauss_distrib, axis=0)
+
+		# result = -np.log(np.dot(theta['koefisien'], gauss_distrib))
+		# result = -np.log(theta['koefisien']) - np.log(gauss_distrib)
+
+		return result
+		
+	def d_calc(self, zn, kn, theta):
+		gauss_res1 = self.gauss_dist_second(zn, kn, theta)
+		gauss_res = self.gauss_dist(zn, kn, theta)
+
+		# print(gauss_res)
+		d_res1 = -np.log(theta['koefisien'][kn]) + gauss_res1
+		# d_res = -np.log(np.dot(theta['koefisien'][kn], gauss_res))
+
+		# print("dres1: ", d_res1)
+		# exit()
+		return d_res1
+	
+\end{lstlisting}
+
+\chapter{Tabel pengolahan data citra input}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka hitam}
+	\label{tabel_input}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+		
+		& &  &  \\
+		1 & 
+		luka\_hitam/2.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/2.jpg}&
+		375x292\\
+		\hline
+		
+		& &  &  \\
+		2 & 
+		luka\_hitam/4.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/4.jpg}&
+		295x292\\
+		\hline
+		
+		& &  &  \\
+		3 & 
+		luka\_hitam/5.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/5.jpg}&
+		512x283\\
+		\hline
+		
+		& &  &  \\
+		4& 
+		luka\_hitam/6.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/6.jpg}&
+		350x263\\
+		\hline
+		
+		& &  &  \\
+		5& 
+		luka\_hitam/7.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/7.jpg}&
+		150x115\\
+		\hline
+		
+		& &  &  \\
+		6& 
+		luka\_hitam/8.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/8.jpg}&
+		350x263\\
+		\hline
+		
+		& &  &  \\
+		7& 
+		luka\_hitam/14.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/14.jpg}&
+		275x183\\
+		\hline
+
+		& &  &  \\
+		8 & 
+		luka\_hitam/15.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/15.jpg}&
+		512x308\\
+		\hline
+		
+		& &  &  \\
+		9 & 
+		luka\_hitam/17.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/17.jpg}&
+		283x247\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka hitam - lanjutan}
+	\label{tabel_input_2}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+		
+		& &  &  \\
+		10 & 
+		luka\_hitam/18.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/18.jpg}&
+		168x168\\
+		\hline
+		
+		& &  &  \\
+		11& 
+		luka\_hitam/19.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/19.jpg}&
+		512x374\\
+		\hline
+		
+		& &  &  \\
+		12& 
+		luka\_hitam/20.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/20.jpg}&
+		512x397\\
+		\hline
+		
+		& &  &  \\
+		13& 
+		luka\_hitam/22.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/22.jpg}&
+		390x276\\
+		\hline
+		
+		& &  &  \\
+		14& 
+		luka\_hitam/26.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/26.jpg}&
+		512x395\\
+		\hline
+
+		& &  &  \\
+		15 & 
+		luka\_hitam/27.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/27.jpg}&
+		512x415\\
+		\hline
+		
+		& &  &  \\
+		16 & 
+		luka\_hitam/28.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/28.jpg}&
+		234x216\\
+		\hline
+		
+		& &  &  \\
+		17 & 
+		luka\_hitam/29.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/29.jpg}&
+		512x395\\
+		\hline
+	
+		& &  &  \\
+		18& 
+		luka\_hitam/33.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/33.jpg}&
+		375x250\\
+		\hline
+
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka hitam - lanjutan}
+	\label{tabel_input_3}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+
+		& &  &  \\
+		19& 
+		luka\_hitam/37.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/37.jpg}&
+		350x263\\
+		\hline
+		
+		& &  &  \\
+		20& 
+		luka\_hitam/40.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/40.jpg}&
+		262x192\\
+		\hline
+		
+		& &  &  \\
+		21& 
+		luka\_hitam/41.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/41.jpg}&
+		361x270\\
+		\hline
+
+		& &  &  \\
+		22 & 
+		luka\_hitam/16.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/16.jpg}&
+		512x418\\
+		\hline
+		
+		& &  &  \\
+		23 & 
+		luka\_hitam/31.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/31.jpg}&
+		383x512\\
+		\hline
+		
+		& &  &  \\
+		24 & 
+		luka\_hitam/39.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/39.jpg}&
+		512x450\\
+		\hline
+
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka kuning}
+	\label{tabel_input_5}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+		
+		& &  &  \\
+		1 & 
+		luka\_kuning/13.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/13.jpg}&
+		266x189\\
+		\hline
+		
+		& &  &  \\
+		2& 
+		luka\_kuning/17.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/17.jpg}&
+		259x194\\
+		\hline
+		
+		& &  &  \\
+		3& 
+		luka\_kuning/18.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/18.jpg}&
+		265x190\\
+		\hline
+		
+		& &  &  \\
+		4& 
+		luka\_kuning/19.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/19.jpg}&
+		120x151\\
+		\hline
+		
+		& &  &  \\
+		5& 
+		luka\_kuning/21.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/21.jpg}&
+		357x242\\
+		\hline
+		
+		& &  &  \\
+		6& 
+		luka\_kuning/23.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/23.jpg}&
+		500x333\\
+		\hline
+		
+		& &  &  \\
+		7& 
+		luka\_kuning/25.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/25.jpg}&
+		288x216\\
+		\hline
+				
+		& &  &  \\
+		8 & 
+		luka\_kuning/34.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/34.jpg}&
+		500x385\\
+		\hline
+		
+		& &  &  \\
+		9& 
+		luka\_kuning/35.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/35.jpg}&
+		242x208\\
+		\hline
+		
+		& &  &  \\
+		10& 
+		luka\_kuning/38.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/38.jpg}&
+		512x367\\
+		\hline
+
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka kuning - lanjutan}
+	\label{tabel_input_6}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+		
+		& &  &  \\
+		11& 
+		luka\_kuning/42.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/42.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		12& 
+		luka\_kuning/3.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/3.jpg}&
+		220x157\\
+		\hline
+		
+		& &  &  \\
+		13& 
+		luka\_kuning/12.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/12.jpg}&
+		500x333\\
+		\hline
+		
+		& &  &  \\
+		14& 
+		luka\_kuning/10.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/10.jpg}&
+		276x183\\
+		\hline
+				
+		& &  &  \\
+		15 & 
+		luka\_kuning/16.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/16.jpg}&
+		346x270\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka merah}
+	\label{tabel_input_8}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+		
+		& &  &  \\
+		1 & 
+		luka\_merah/16.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/16.jpg}&
+		309x231\\
+		\hline
+		
+		& &  &  \\
+		2& 
+		luka\_merah/17.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/17.jpg}&
+		328x218\\
+		\hline
+		
+		& &  &  \\
+		3& 
+		luka\_merah/22.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/22.jpg}&
+		512x396\\
+		\hline
+		
+		& &  &  \\
+		4& 
+		luka\_merah/24.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/24.jpg}&
+		302x308\\
+		\hline
+		
+		& &  &  \\
+		5& 
+		luka\_merah/25.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/25.jpg}&
+		512x507\\
+		\hline
+		
+		& &  &  \\
+		6& 
+		luka\_merah/30.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/30.jpg}&
+		260x194\\
+		\hline
+		
+		& &  &  \\
+		7& 
+		luka\_merah/32.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/32.jpg}&
+		236x178\\
+		\hline
+
+			
+		& &  &  \\
+		8 & 
+		luka\_merah/33.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/33.jpg}&
+		226x223\\
+		\hline
+		
+		& &  &  \\
+		9& 
+		luka\_merah/37.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/37.jpg}&
+		260x194\\
+		\hline
+		
+		& &  &  \\
+		10& 
+		luka\_merah/39.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/39.jpg}&
+		185x139\\
+		\hline
+
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka merah - lanjutan}
+	\label{tabel_input_9}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+		
+		& &  &  \\
+		11& 
+		luka\_merah/42.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/42.jpg}&
+		350x354\\
+		\hline
+		
+		& &  &  \\
+		12& 
+		luka\_merah/44.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/44.jpg}&
+		512x363\\
+		\hline
+		
+		& &  &  \\
+		13& 
+		luka\_merah/2.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/2.jpg}&
+		288x512\\
+		\hline
+		
+		& &  &  \\
+		14& 
+		luka\_merah/3.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/3.jpg}&
+		384x512\\
+		\hline
+
+		& &  &  \\
+		15 & 
+		luka\_merah/4.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/4.jpg}&
+		384x512\\
+		\hline
+		
+		& &  &  \\
+		16& 
+		luka\_merah/6.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/6.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		17& 
+		luka\_merah/7.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/7.jpg}&
+		512x341\\
+		\hline
+		
+		& &  &  \\
+		18& 
+		luka\_merah/8.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/8.jpg}&
+		512x384\\
+		\hline
+		
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka merah - lanjutan}
+	\label{tabel_input_10}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+			
+		& &  &  \\
+		19& 
+		luka\_merah/9.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/9.jpg}&
+		288x512\\
+		\hline
+		
+		& &  &  \\
+		20& 
+		luka\_merah/10.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/10.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		21& 
+		luka\_merah/11.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/11.jpg}&
+		512x384\\
+		\hline
+
+		& &  &  \\
+		22 & 
+		luka\_merah/12.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/12.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		23& 
+		luka\_merah/14.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/14.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		24& 
+		luka\_merah/18.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/18.jpg}&
+		512x382\\
+		\hline
+		
+		& &  &  \\
+		25& 
+		luka\_merah/19.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/19.jpg}&
+		512x458\\
+		\hline
+		
+		& &  &  \\
+		26& 
+		luka\_merah/20.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/20.jpg}&
+		408x360\\
+		\hline
+
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil pengolahan data citra input luka merah - lanjutan}
+	\label{tabel_input_12}
+	\begin{tabular}{|m{0.2in}|m{1.2in}|m{0.7in}|m{0.7in}|}
+		\hline
+		\textbf{No} & \textbf{File} & \textbf{Citra} & \textbf{resolusi} \\
+		\hline
+
+		& &  &  \\
+		27& 
+		luka\_merah/23.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/23.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		28& 
+		luka\_merah/26.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/26.jpg}&
+		512x464\\
+		\hline
+		
+		& &  &  \\
+		29 & 
+		luka\_merah/29.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/29.jpg}&
+		328x218\\
+		\hline
+		
+		& &  &  \\
+		29& 
+		luka\_merah/35.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/35.jpg}&
+		261x295\\
+		\hline
+		
+		& &  &  \\
+		30& 
+		luka\_merah/36.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/36.jpg}&
+		295x194\\
+		\hline
+		
+		& &  &  \\
+		31& 
+		luka\_merah/38.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/38.jpg}&
+		512x384\\
+		\hline
+		
+		& &  &  \\
+		32& 
+		luka\_merah/20.jpg &
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/20.jpg}&
+		408x360\\
+		\hline
+	\end{tabular}
+\end{table}

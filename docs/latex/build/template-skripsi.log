@@ -781,7 +781,7 @@ LaTeX Font Info:    Trying to load font information for T1+ptm on input line 19
 (t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux)
-(bab3.aux) (bab4.aux))
+(bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
 \openout1 = `template-skripsi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 198.
@@ -958,7 +958,13 @@ Missing character: There is no ∈ ("2208) in font ptmr8t!
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [6]
+ [6] (template-skripsi.lot)
+\tf@lot=\write7
+\openout7 = `template-skripsi.lot'.
+
+ [7
+
+]
 \openout2 = `bab1.aux'.
 
  (bab1.tex
@@ -1817,16 +1823,485 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 
 
 
-] [70]) [71] [72
+] [70]) [71]
+\openout2 = `bab5.aux'.
+
+ (bab5.tex
+BAB V.
+) [72
 
 
 
-] (template-skripsi.aux (kata-pengantar.aux)
-(bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux))
+
+] [73
+
+
+
+]
+\openout2 = `lampiran.aux'.
+
+ (lampiran.tex
+LAMPIRAN A.
+[74
+
+
+] [75] [76] [77] [78] [79]
+LAMPIRAN B.
+File: gambar/dataset_citra/luka_hitam/bahan/2.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/2.jpg>
+File: gambar/dataset_citra/luka_hitam/bahan/4.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/4.jpg>
+File: gambar/dataset_citra/luka_hitam/bahan/5.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/5.jpg>
+File: gambar/dataset_citra/luka_hitam/bahan/6.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/6.jpg>
+File: gambar/dataset_citra/luka_hitam/bahan/7.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/7.jpg>
+File: gambar/dataset_citra/luka_hitam/bahan/8.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/8.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 526--526
+[]|\T1/ptm/m/n/12 luka_hitam/14.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/14.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/14.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 533--533
+[]|\T1/ptm/m/n/12 luka_hitam/15.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/15.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/15.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 540--540
+[]|\T1/ptm/m/n/12 luka_hitam/17.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/17.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/17.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 558--558
+[]|\T1/ptm/m/n/12 luka_hitam/18.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/18.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/18.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 565--565
+[]|\T1/ptm/m/n/12 luka_hitam/19.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/19.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/19.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 572--572
+[]|\T1/ptm/m/n/12 luka_hitam/20.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/20.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/20.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 579--579
+[]|\T1/ptm/m/n/12 luka_hitam/22.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/22.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/22.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 586--586
+[]|\T1/ptm/m/n/12 luka_hitam/26.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/26.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/26.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 593--593
+[]|\T1/ptm/m/n/12 luka_hitam/27.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/27.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/27.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 600--600
+[]|\T1/ptm/m/n/12 luka_hitam/28.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/28.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/28.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 607--607
+[]|\T1/ptm/m/n/12 luka_hitam/29.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/29.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/29.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 614--614
+[]|\T1/ptm/m/n/12 luka_hitam/33.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/33.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/33.jpg>
+[80
+
+]
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 633--633
+[]|\T1/ptm/m/n/12 luka_hitam/37.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/37.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/37.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 640--640
+[]|\T1/ptm/m/n/12 luka_hitam/40.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/40.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/40.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 647--647
+[]|\T1/ptm/m/n/12 luka_hitam/41.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/41.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/41.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 654--654
+[]|\T1/ptm/m/n/12 luka_hitam/16.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/16.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/16.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 661--661
+[]|\T1/ptm/m/n/12 luka_hitam/31.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/31.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/31.jpg>
+
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 668--668
+[]|\T1/ptm/m/n/12 luka_hitam/39.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_hitam/bahan/39.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_hitam/bahan/39.jpg>
+[81]
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 688--688
+[]|\T1/ptm/m/n/12 luka_kuning/13.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/13.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/13.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 695--695
+[]|\T1/ptm/m/n/12 luka_kuning/17.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/17.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/17.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 702--702
+[]|\T1/ptm/m/n/12 luka_kuning/18.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/18.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/18.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 709--709
+[]|\T1/ptm/m/n/12 luka_kuning/19.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/19.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/19.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 716--716
+[]|\T1/ptm/m/n/12 luka_kuning/21.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/21.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/21.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 723--723
+[]|\T1/ptm/m/n/12 luka_kuning/23.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/23.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/23.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 730--730
+[]|\T1/ptm/m/n/12 luka_kuning/25.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/25.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/25.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 737--737
+[]|\T1/ptm/m/n/12 luka_kuning/34.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/34.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/34.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 744--744
+[]|\T1/ptm/m/n/12 luka_kuning/35.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/35.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/35.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 751--751
+[]|\T1/ptm/m/n/12 luka_kuning/38.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/38.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/38.jpg>
+[82]
+Overfull \vbox (4.72025pt too high) has occurred while \output is active []
+
+
+[83]
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 771--771
+[]|\T1/ptm/m/n/12 luka_kuning/42.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/42.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/42.jpg>
+
+Overfull \hbox (0.94766pt too wide) in paragraph at lines 778--778
+[]|\T1/ptm/m/n/12 luka_kuning/3.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/3.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/3.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 785--785
+[]|\T1/ptm/m/n/12 luka_kuning/12.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/12.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/12.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 792--792
+[]|\T1/ptm/m/n/12 luka_kuning/10.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/10.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/10.jpg>
+
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 799--799
+[]|\T1/ptm/m/n/12 luka_kuning/16.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_kuning/bahan/16.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_kuning/bahan/16.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 818--818
+[]|\T1/ptm/m/n/12 luka_merah/16.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/16.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/16.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 825--825
+[]|\T1/ptm/m/n/12 luka_merah/17.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/17.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/17.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 832--832
+[]|\T1/ptm/m/n/12 luka_merah/22.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/22.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/22.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 839--839
+[]|\T1/ptm/m/n/12 luka_merah/24.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/24.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/24.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 846--846
+[]|\T1/ptm/m/n/12 luka_merah/25.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/25.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/25.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 853--853
+[]|\T1/ptm/m/n/12 luka_merah/30.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/30.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/30.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 860--860
+[]|\T1/ptm/m/n/12 luka_merah/32.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/32.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/32.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 868--868
+[]|\T1/ptm/m/n/12 luka_merah/33.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/33.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/33.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 875--875
+[]|\T1/ptm/m/n/12 luka_merah/37.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/37.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/37.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 882--882
+[]|\T1/ptm/m/n/12 luka_merah/39.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/39.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/39.jpg>
+[84]
+Overfull \vbox (20.16275pt too high) has occurred while \output is active []
+
+
+[85]
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 901--901
+[]|\T1/ptm/m/n/12 luka_merah/42.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/42.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/42.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 908--908
+[]|\T1/ptm/m/n/12 luka_merah/44.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/44.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/44.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/2.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/2.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/3.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/3.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/4.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/4.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/6.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/6.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/7.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/7.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/8.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/8.jpg>
+File: gambar/dataset_citra/luka_merah/bahan/9.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/9.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 976--976
+[]|\T1/ptm/m/n/12 luka_merah/10.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/10.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/10.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 983--983
+[]|\T1/ptm/m/n/12 luka_merah/11.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/11.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/11.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 990--990
+[]|\T1/ptm/m/n/12 luka_merah/12.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/12.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/12.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 997--997
+[]|\T1/ptm/m/n/12 luka_merah/14.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/14.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/14.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1004--1004
+[]|\T1/ptm/m/n/12 luka_merah/18.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/18.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/18.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1011--1011
+[]|\T1/ptm/m/n/12 luka_merah/19.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/19.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/19.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1018--1018
+[]|\T1/ptm/m/n/12 luka_merah/20.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/20.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/20.jpg>
+[86]
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1037--1037
+[]|\T1/ptm/m/n/12 luka_merah/23.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/23.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/23.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1044--1044
+[]|\T1/ptm/m/n/12 luka_merah/26.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/26.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/26.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1051--1051
+[]|\T1/ptm/m/n/12 luka_merah/29.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/29.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/29.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1058--1058
+[]|\T1/ptm/m/n/12 luka_merah/35.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/35.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/35.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1065--1065
+[]|\T1/ptm/m/n/12 luka_merah/36.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/36.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/36.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1072--1072
+[]|\T1/ptm/m/n/12 luka_merah/38.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/38.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/38.jpg>
+
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1079--1079
+[]|\T1/ptm/m/n/12 luka_merah/20.jpg| 
+ []
+
+File: gambar/dataset_citra/luka_merah/bahan/20.jpg Graphic file (type bmp)
+<gambar/dataset_citra/luka_merah/bahan/20.jpg>
+) [87] [88] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux)
+(bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: ED0F53CDDA0CA91A98182578E09C7B57;9265.
+(rerunfilecheck)             Checksum: D68B4472E75F17D3DBBF4EE597ECAD70;10492.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (80 pages, 389628 bytes).
+Output written on template-skripsi.xdv (97 pages, 621884 bytes).

@@ -4,37 +4,40 @@
 \addvspace {10\p@ }
 \babel@toc {bahasa}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Spektrum cahaya, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{10}{figure.caption.5}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Penyerapan cahaya yang ditangkap oleh mata dalam bentuk panjang gelombang, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{10}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Gambar citra berwarna, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{11}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces 24 bit kubus warna RGB, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{12}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Contoh distribusi tiga fungsi gaussian 1 dimensi dengan parameter K = 3, (\blx@tocontentsinit {0}\cite {Power:2002})\relax }}{13}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Contoh pelabelan gambar. citra (a) adalah himpunan piksel P dengan intensitas teramati Ip untuk setiap \(p \in P.\) Pelabelan L yang ditunjukkan pada (b) memberikan beberapa label Lp ∈ {0, 1, 2} untuk setiap piksel \(p \in P.\) \relax }}{18}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Contoh graf berkapasitas terarah. (\blx@tocontentsinit {0}\cite {Boykov:2004}) \relax }}{19}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Contoh (\emph {graph cut})/\emph {flow} dalam konteks segmentasi gambar. (a) menunjukkan \emph {maximum flow} dari s ke t. Faktanya, ini menjenuhkan tepi \emph {graph} yang sesuai dengan batas \emph {minimum cut} di (b). (\blx@tocontentsinit {0}\cite {Boykov:2004}) \relax }}{20}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Contoh pencarian pohon \(S\) (\emph {node} merah) dan \(T\) (\emph {node} biru) (\blx@tocontentsinit {0}\cite {Boykov:2004}) \relax }}{21}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Perbandingan beberapa \emph {matting tools} dan segmentasi. (\blx@tocontentsinit {0}\cite {Rother:2004}) \relax }}{30}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Segmentasi gambar di \emph {GrabCut} (\blx@tocontentsinit {0}\cite {Rother:2004}) \relax }}{33}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Konvergensi minimalisasi iteratif untuk data gambar \ref {gambar:2.5}(f). (a) Energi E untuk contoh llama konvergen selama 12 iterasi dengan K = 5, komponen campuran digunakan untuk latar belakang (merah) dan latar depan (biru) (\blx@tocontentsinit {0}\cite {Rother:2004}). \relax }}{33}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Pengeditan pengguna. Setelah interaksi pengguna awal dan segmentasi (baris atas), pengeditan pengguna lebih lanjut (gambar \ref {gambar:2.6}) diperlukan. (\blx@tocontentsinit {0}\cite {Rother:2004}) \relax }}{34}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Spektrum cahaya, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Penyerapan cahaya yang ditangkap oleh mata dalam bentuk panjang gelombang, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gambar citra berwarna, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 24 bit kubus warna RGB, (\blx@tocontentsinit {0}\cite {Gonzalez:2018})\relax }}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Contoh distribusi tiga fungsi gaussian 1 dimensi dengan parameter K = 3, (\blx@tocontentsinit {0}\cite {Power:2002})\relax }}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Contoh pelabelan gambar. citra (a) adalah himpunan piksel P dengan intensitas teramati Ip untuk setiap \(p \in P.\) Pelabelan L yang ditunjukkan pada (b) memberikan beberapa label Lp ∈ {0, 1, 2} untuk setiap piksel \(p \in P.\) \relax }}{18}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Contoh graf berkapasitas terarah. (\blx@tocontentsinit {0}\cite {Boykov:2004}) \relax }}{19}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Contoh (\emph {graph cut})/\emph {flow} dalam konteks segmentasi gambar. (a) menunjukkan \emph {maximum flow} dari s ke t. Faktanya, ini menjenuhkan tepi \emph {graph} yang sesuai dengan batas \emph {minimum cut} di (b). (\blx@tocontentsinit {0}\cite {Boykov:2004}) \relax }}{20}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Contoh pencarian pohon \(S\) (\emph {node} merah) dan \(T\) (\emph {node} biru) (\blx@tocontentsinit {0}\cite {Boykov:2004}) \relax }}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Perbandingan beberapa \emph {matting tools} dan segmentasi. (\blx@tocontentsinit {0}\cite {Rother:2004}) \relax }}{30}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Segmentasi gambar di \emph {GrabCut} (\blx@tocontentsinit {0}\cite {Rother:2004}) \relax }}{33}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Konvergensi minimalisasi iteratif untuk data gambar \ref {gambar:2.5}(f). (a) Energi E untuk contoh llama konvergen selama 12 iterasi dengan K = 5, komponen campuran digunakan untuk latar belakang (merah) dan latar depan (biru) (\blx@tocontentsinit {0}\cite {Rother:2004}). \relax }}{33}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Pengeditan pengguna. Setelah interaksi pengguna awal dan segmentasi (baris atas), pengeditan pengguna lebih lanjut (gambar \ref {gambar:2.6}) diperlukan. (\blx@tocontentsinit {0}\cite {Rother:2004}) \relax }}{34}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces (a) Data citra luka 2.png, (b) Inisasi kotak pembatas \relax }}{35}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Hasil segmentasi dengan \emph {GrabCut}\relax }}{36}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram alir penelitian\relax }}{37}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram alir metode \emph {GrabCut}\relax }}{37}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram alir tahap \emph {Gaussian Mixture Models}\relax }}{38}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Representasi \emph {node} terhadap piksel pada gambar\relax }}{39}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Komponen yang ada pada sebuah \emph {node}\relax }}{40}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces \emph {Linkedlist} terdiri dari susunan \emph {node}\relax }}{40}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Representasi struktur data \emph {tree}\relax }}{42}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Ilustrasi graf terhadap piksel\relax }}{44}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Garis berwarna hijau menunjukkan \emph {path} s-a-h-i-t\relax }}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces (a)Data citra format .xcf, (b) \emph {layer} citra (luka), (c) \emph {layer} region, (d)path \relax }}{63}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Proses \emph {resize} citra gambar luka dengan ukuran 0.5 dari ukuran awal\relax }}{63}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Inisiasi area objek luka dengan \emph {bounding box}\relax }}{64}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Contoh graf berkapasitas terarah. \relax }}{66}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces (a) Data citra luka 2.png, (b) \emph {Bounding box} area luka, (c) Hasil segmentasi citra \relax }}{67}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces (a) Data citra luka 2.png, (b) Inisasi kotak pembatas \relax }}{35}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Hasil segmentasi dengan \emph {GrabCut}\relax }}{36}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram alir penelitian\relax }}{37}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram alir metode \emph {GrabCut}\relax }}{37}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram alir tahap \emph {Gaussian Mixture Models}\relax }}{38}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Representasi \emph {node} terhadap piksel pada gambar\relax }}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Komponen yang ada pada sebuah \emph {node}\relax }}{40}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \emph {Linkedlist} terdiri dari susunan \emph {node}\relax }}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Representasi struktur data \emph {tree}\relax }}{42}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ilustrasi graf terhadap piksel\relax }}{44}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Garis berwarna hijau menunjukkan \emph {path} s-a-h-i-t\relax }}{45}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces (a)Data citra format .xcf, (b) \emph {layer} citra (luka), (c) \emph {layer} region, (d)path \relax }}{63}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Proses \emph {resize} citra gambar luka dengan ukuran 0.5 dari ukuran awal\relax }}{63}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Inisiasi area objek luka dengan \emph {bounding box}\relax }}{64}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Contoh graf berkapasitas terarah. \relax }}{66}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces (a) Data citra luka 2.png, (b) \emph {Bounding box} area luka, (c) Hasil segmentasi citra \relax }}{67}{figure.caption.34}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \emph {source code} mengubah ukuran lebar citra menjadi 320 piksel\relax }}{69}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code} menggambar kotak pada area luka\relax }}{70}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {source code} menggambar kotak pada area luka\relax }}{71}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \emph {source code} mengubah ukuran lebar citra menjadi 320 piksel\relax }}{69}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code} menggambar kotak pada area luka\relax }}{70}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {source code} menggambar kotak pada area luka\relax }}{71}{figure.caption.37}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
