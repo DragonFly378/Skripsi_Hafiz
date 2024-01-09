@@ -72,7 +72,7 @@ class MixtureModel:
         # print('koefisien: ', theta['koefisien'])
         # print('means: ', theta['means'])
         # print('kovarians: ', theta['kovarians'])
-        print('\n')
+        # print('\n')
         # print('theta: ', theta)
         # print(np.sum(self.n_k_samples))
 
@@ -135,7 +135,7 @@ class MixtureModel:
         # print('selisih: , ', diff, '\n')
 
         inv_covariance = np.linalg.inv(theta['kovarians'][kn])
-        mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T)
+        mult  = np.einsum('ij,ij->i', diff, np.dot(inv_covariance, diff.T).T)
         result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][kn])))
 
         # print(inv_covariance)
@@ -144,14 +144,16 @@ class MixtureModel:
         return result
 
     def gauss_dist_second(self, zn, kn, theta):
-        diff = zn - theta['means'][kn]
         # print('bahan kn, zn: ', kn, " ", zn)
         # print('means: ', theta['means'][kn])
-        # print('selisih: , ', diff, '\n')
 
+        diff = zn - theta['means'][kn]
         inv_covariance = np.linalg.inv(theta['kovarians'][kn])
-        mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T)
-        result = (0.5 * (np.log(np.linalg.det(theta['kovarians'][kn])))) + (0.5 * mult)
+        # mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T) # <-- kode asal
+        # mult  = np.dot(np.dot(diff, inv_covariance), diff.T)
+        mult = np.sum(diff * np.dot(diff, inv_covariance.T), axis=1)
+        # mult = np.einsum('ij,ji->i', diff, np.dot(inv_covariance, diff.T))
+        result = 0.5 * (np.log(np.linalg.det(theta['kovarians'][kn]))) + 0.5 * mult
         # result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][kn])))
       
         # print("diff shape: ", diff.shape)
@@ -175,43 +177,10 @@ class MixtureModel:
 
         return -np.log(np.dot(self.theta['koefisien'], gauss_distribution))
 
-    def d_calc_old(self, alpha, k, z, theta):
-        idx_TU = np.where(alpha.reshape(-1) == self.F_TF)
-
-        print("panjang: ", z.reshape(-1, 3)[idx_TU].shape)
-
-        gauss_distrib = []
-
-        # cara 1
-        # for kn in range(self.komponen_gmm):
-        #     gauss_res = []
-        #     for zn in z.reshape(-1, 3)[idx_TU]:
-        #         tmp_res = self.gauss_dist(zn, kn, theta)
-        #         gauss_res.append(tmp_res)
-        #     gauss_distrib.append(gauss_res)
-        # gauss_distrib = np.array(gauss_distrib)
-        # print("hasilnya hadeh: ", gauss_distrib.shape)
-        
-        # cara 2
-        for kn in range(self.komponen_gmm):
-            tmp_d_res = []
-            for zn in z.reshape(-1, 3)[idx_TU]:
-                tmp_gauss = self.gauss_dist_second(zn, kn, theta)
-                # print(tmp_gauss)
-                tmp_d = -np.log(theta['koefisien'][kn]) + tmp_gauss
-                tmp_d_res.append(tmp_d)
-            gauss_distrib.append(tmp_d_res)
-        gauss_distrib = np.array(gauss_distrib)
-        result = np.sum(gauss_distrib, axis=0)
-
-        # result = -np.log(np.dot(theta['koefisien'], gauss_distrib))
-        # result = -np.log(theta['koefisien']) - np.log(gauss_distrib)
-
-        return result
-        
+ 
     def d_calc(self, zn, kn, theta):
         gauss_res1 = self.gauss_dist_second(zn, kn, theta)
-        gauss_res = self.gauss_dist(zn, kn, theta)
+        # gauss_res = self.gauss_dist(zn, kn, theta)
 
         # print(gauss_res)
         d_res1 = -np.log(theta['koefisien'][kn]) + gauss_res1

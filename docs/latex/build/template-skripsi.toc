@@ -71,4 +71,5 @@
 \contentsline {section}{\numberline {1.2}image\_editing.py}{74}{section.A.2}%
 \contentsline {section}{\numberline {1.3}grabcut.py}{77}{section.A.3}%
 \contentsline {section}{\numberline {1.4}GMM.py}{77}{section.A.4}%
-\contentsline {chapter}{\numberline {B}Tabel pengolahan data citra input}{80}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Tabel pengolahan data citra input}{79}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Tabel hasil deteksi keliling luka menggunakan \emph {Grabcut}}{88}{appendix.C}%

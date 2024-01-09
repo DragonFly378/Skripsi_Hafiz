@@ -109,9 +109,9 @@ class GrabCut:
         print("\nInisasi piksel", self.rect)
         # ix, iy, x, y = 134, 41, 263, 136
         # ix, iy, x, y = 176, 47, 351, 189
-        ix, iy, x, y = self.rect[0], self.rect[1], self.rect[2], self.rect[3]
+        # ix, iy, x, y = self.rect[0], self.rect[1], self.rect[2], self.rect[3]
 
-        self.alpha[iy:y, ix:x] = F_TF
+        self.alpha[self.rect[1]:self.rect[1] + self.rect[3],self.rect[0]:self.rect[0] + self.rect[2]] = F_TF
         self.trimap['TB'] = np.where(self.alpha == F_TB)
         self.trimap['TU'] = np.where(self.alpha == F_TF)
         # print("trimap TU: ", self.trimap['TU'])
@@ -184,31 +184,22 @@ class GrabCut:
 
         
         # Cara kedua
-        # self.count_fg = []
-        # self.count_bg = []
+        # self.D_count_fg = []
+        # self.D_count_bg = []
+
         # for kn in range(self.komponen_gmm):
-        #     d_res_fg = np.zeros(len(self.gambar.reshape(-1, 3)[idx_TU]))
-        #     d_res_bg = np.zeros(len(self.gambar.reshape(-1, 3)[idx_TU]))
-        #     i = 0
-        #     for zn in self.gambar.reshape(-1, 3)[idx_TU]:
-        #         tmp_d_fg = self.gmm_fg.d_calc(zn, kn, self.theta['TU'])
-        #         # print(tmp_d_fg)
-        #         # exit()
-        #         tmp_d_bg = self.gmm_bg.d_calc(zn, kn, self.theta['TB'])
-        #         d_res_fg[i] = tmp_d_fg
-        #         d_res_bg[i] = tmp_d_bg
-        #         i += 1
-        #     self.count_fg.append(d_res_fg)
-        #     self.count_bg.append(d_res_bg)
+        #     zn = self.gambar.reshape(-1, 3)[idx_TU]
 
-        # self.count_fg = np.array(self.count_fg)
-        # self.count_bg = np.array(self.count_bg)
-        # self.U_count_fg = np.sum(self.count_fg, axis=0)
-        # self.U_count_bg = np.sum(self.count_bg, axis=0)
+        #     tmp_d_fg = self.gmm_fg.d_calc(zn, kn, self.theta['TU'])
+        #     tmp_d_bg = self.gmm_bg.d_calc(zn, kn, self.theta['TB'])
 
-        # Cara ketiga
-        # self.U_count_fg = self.gmm_fg.d_calc_old(self.alpha, self.komponen_gmm, self.gambar, self.theta['TU'])
-        # self.U_count_bg = self.gmm_bg.d_calc_old(self.alpha, self.komponen_gmm, self.gambar, self.theta['TB'])
+        #     self.D_count_fg.append(tmp_d_fg)
+        #     self.D_count_bg.append(tmp_d_bg)
+
+        # self.D_count_fg = np.array(self.D_count_fg)
+        # self.D_count_bg = np.array(self.D_count_bg)
+        # self.U_count_fg = np.sum(self.D_count_fg, axis=0)
+        # self.U_count_bg = np.sum(self.D_count_bg, axis=0)
 
         print("D fg count: ", self.U_count_fg.shape)
         print("D bg count: ", self.U_count_bg.shape)

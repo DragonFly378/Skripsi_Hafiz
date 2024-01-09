@@ -52,7 +52,6 @@ class mincut_segmentation:
             # Phase 6 from paper     
             # self.node_a = self.G_0.vs[0].index
 
-
             # for_progress_bar = tqdm(range(self.n_nodes), desc="Inner Loop", unit="Iteration")
             print(node)
             for node in range(self.n_nodes):

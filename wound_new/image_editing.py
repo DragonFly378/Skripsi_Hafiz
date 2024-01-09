@@ -73,9 +73,6 @@ class ImageEditing:
         
         self.LoadCanvas()
 
-
-
-
     def LoadCanvas(self):    
 
         # Make image as main canvas
@@ -110,8 +107,8 @@ class ImageEditing:
         self.main_canvas.pack(side=LEFT)
         main_title_label.pack(side=LEFT, padx=(10, 220))
 
-        # self.mask_canvas.pack(side=LEFT)
-        # mask_title_label.pack(side=LEFT, padx=(10, 220))
+        self.mask_canvas.pack(side=LEFT)
+        mask_title_label.pack(side=LEFT, padx=(10, 220))
 
         self.result_canvas.pack(side=LEFT)
         result_title_label.pack(side=LEFT, padx=(10, 220))
@@ -153,13 +150,13 @@ class ImageEditing:
 
     def onRelease_rect(self, event):
         if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
-            KOTAK["coord"] = (self.get_rectangle_coords())
-            print("Koordinat Kotak: ", KOTAK["coord"])
+            KOTAK["coord"] = self.rect
             KOTAK["titik_start"] = None
             KOTAK["titik_akhir"] = None
             KOTAK["is_drawn"] = True
         print("Keberadaan kotak: ",KOTAK["is_drawn"])
         print("Koordinat Kotak: ", KOTAK["coord"])
+
 
 
     def update_image(self):
@@ -175,9 +172,6 @@ class ImageEditing:
         self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
     
     def update_result(self):
-        # Update main image with rect
-        # self.image_with_rect = Image.fromarray(self.photo)
-
 
         # Update mask canvas with segmentation
         self.mask_image = Image.fromarray(self.mask)
@@ -196,6 +190,7 @@ class ImageEditing:
         if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
             x1, y1 = KOTAK["titik_start"]
             x2, y2 = KOTAK["titik_akhir"]
+            self.rect = (min(x1, x2), min(y1, y2), abs(x1-x2), abs(y1-y2))
             return (x1, y1, x2, y2)
         else:
             return None
@@ -207,16 +202,24 @@ class ImageEditing:
 
 
     def save_result_image(self):
+        save_to_tulisan = f"../docs/latex/gambar/hasil_segmentasi/{self.category}"
         save_folder = f"results/{self.category}"
 
         # Create the folder if it doesn't exist
         os.makedirs(save_folder, exist_ok=True)
+        os.makedirs(save_to_tulisan, exist_ok=True)
 
         result_filename = f"result_{self.image_name}.jpg"
+        mask_filename = f"mask_{self.image_name}.jpg"
         main_rect_filename = f"image_{self.image_name}_rect.jpg"
 
-        self.result_image.save(os.path.join(save_folder, result_filename))
+        self.image.save(os.path.join(save_to_tulisan, main_rect_filename))
+        self.mask_image.save(os.path.join(save_to_tulisan, mask_filename))
+        self.result_image.save(os.path.join(save_to_tulisan, result_filename))
+        
         self.image.save(os.path.join(save_folder, main_rect_filename))
+        self.mask_image.save(os.path.join(save_folder, mask_filename))
+        self.result_image.save(os.path.join(save_folder, result_filename))
 
         print("Result image saved successfully:")
 

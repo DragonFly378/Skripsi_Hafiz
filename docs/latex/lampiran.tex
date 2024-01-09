@@ -288,59 +288,37 @@ import random
 class MixtureModel:
 	def __init__(self, alpha, z, komponen_gmm, theta):
 		self.komponen_gmm = komponen_gmm
-		# print('z object: ', z.shape)
 		self.n_channels = z.shape[1]
-		# print(self.n_channels)
 		self.n_samples = np.zeros(self.komponen_gmm)
 
 		self.theta = theta
 		self.F_TB = 0
 		self.F_TF = 1
 
+
 	def init_gmm_rand(self, z, theta):
 		labels_k = []
 		for i in range(z.shape[0]):
 			labels_k.append(random.randint(0, self.komponen_gmm-1))
 		labels_k = np.array(labels_k)
-		# labels_k = np.array([random.randint(0, self.komponen_gmm-1) for i in range(z.shape[0])])
-		print('random labels selesai yaitu :')
-		print(labels_k)
-		print("banyaknya labels: ",labels_k.size)
 		self.count_params(z, labels_k, theta)
 
 	def count_params(self, z, labels_k, theta):
-		"""
-		Fungsi ini untuk menghitung nilai dari parameter dari GMM
-		Parameter fungsi :
-			1. z (target) : array, shape(n_samples, n_features rgb)
-			2. labels_k : nilai k untuk tiap piksel
-
-		hasil :
-			- nilai koefisien
-			- nilai mean
-			- nilai kovarians
-		"""
 		self.n_samples[:] = 0
 		theta['koefisien'][:] = 0   
+
 
 		variables_k, count = np.unique(labels_k, return_counts=True)
 		self.n_samples[variables_k] = count
 
 		for k in variables_k:
-			# print(k)
 			n_k = self.n_samples[k]
 
 			theta['koefisien'][k] = n_k / np.sum(self.n_samples)
 			theta['means'][k] = np.mean(z[k == labels_k], axis = 0)
 			theta['kovarians'][k] = np.cov(z[k == labels_k].T) 
 
-			# self.kovarians[k] = 0 if self.n_samples[k] <= 1 else np.cov(target[k == labels_k].T)
-			# print(tmp)
-
 	def assign_component(self, z, theta, komponen_gmm):
-		"""
-		Tahap assign gmm dengan menggunakan rumus 2.7
-		"""
 		print('target assign: \n', z.shape)
 		gauss_distribution = []
 
@@ -349,121 +327,59 @@ class MixtureModel:
 			gauss_distribution.append(gauss_score)
 
 		gauss_distribution = np.array(gauss_distribution)
-		# print("karakter matriks res: ",gauss_distribution.shape)
-
 		gauss_distribution = gauss_distribution.T
-		print("karakter matriks res: ",gauss_distribution.shape)
 
 		return np.argmin(gauss_distribution, axis=1)
 
 	def dis_mult(self, z, k, theta):
 
 		result = np.zeros(z.shape[0])
-
 		if theta['koefisien'][k] > 0 :
 
 			diff = z - theta['means'][k]
-			# print('selisih:\n, ', diff[:10])
-			# print(theta['kovarians'][k])
 
 			inv_covariance = np.linalg.inv(theta['kovarians'][k])
 			mult  = np.einsum('ij,ij->i', diff, np.dot(inv_covariance, diff.T).T)
-			print('mult: ',mult)
 			result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][k])))
 		return result
 
 
 	def gauss_dist(self, zn, kn, theta):
 		diff = zn - theta['means'][kn]
-		# print('bahan kn, zn: ', kn, " ", zn)
-		# print('means: ', theta['means'][kn])
-		# print('selisih: , ', diff, '\n')
 
 		inv_covariance = np.linalg.inv(theta['kovarians'][kn])
-		mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T)
+		mult  = np.einsum('ij,ij->i', diff, np.dot(inv_covariance, diff.T).T)
 		result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][kn])))
 
-		# print(inv_covariance)
-		# print('mult: ',mult)
-		# print('result gauss ', result)
 		return result
 
 	def gauss_dist_second(self, zn, kn, theta):
+
 		diff = zn - theta['means'][kn]
-		# print('bahan kn, zn: ', kn, " ", zn)
-		# print('means: ', theta['means'][kn])
-		# print('selisih: , ', diff, '\n')
-
 		inv_covariance = np.linalg.inv(theta['kovarians'][kn])
-		mult  = np.dot( diff, np.dot(inv_covariance, diff.T).T)
-		result = (0.5 * (np.log(np.linalg.det(theta['kovarians'][kn])))) + (0.5 * mult)
-		# result = np.exp(-.5 * mult) / (np.sqrt(2 * np.pi) * np.sqrt(np.linalg.det(theta['kovarians'][kn])))
-		
-		# print("diff shape: ", diff.shape)
-		# print("anu shape: ", np.dot(inv_covariance, diff.T).T.shape)
 
-		# print(inv_covariance)
-		# print('mult: ',mult)
-		# print('result gauss ', result)
+		mult = np.sum(diff * np.dot(diff, inv_covariance.T), axis=1)
+		result = 0.5 * (np.log(np.linalg.det(theta['kovarians'][kn]))) + 0.5 * mult
+
 		return result
 
 
 	def count_D_formula(self, z, komponen_gmm, theta):
 		gauss_distribution = []
-		# print(theta)
 		for k in range(komponen_gmm):
 			tmp_gauss_distribution = self.dis_mult(z, k, theta)
 			gauss_distribution.append(tmp_gauss_distribution)
 		gauss_distribution = np.array(gauss_distribution)
 		print("gauss shape: ", gauss_distribution.shape)
-		# print("koef shape: ", self.theta['koefisien'].shape)
 
 		return -np.log(np.dot(self.theta['koefisien'], gauss_distribution))
 
-	def d_calc_old(self, alpha, k, z, theta):
-		idx_TU = np.where(alpha.reshape(-1) == self.F_TF)
-
-		print("panjang: ", z.reshape(-1, 3)[idx_TU].shape)
-
-		gauss_distrib = []
-
-		# cara 1
-		# for kn in range(self.komponen_gmm):
-		#     gauss_res = []
-		#     for zn in z.reshape(-1, 3)[idx_TU]:
-		#         tmp_res = self.gauss_dist(zn, kn, theta)
-		#         gauss_res.append(tmp_res)
-		#     gauss_distrib.append(gauss_res)
-		# gauss_distrib = np.array(gauss_distrib)
-		# print("hasilnya hadeh: ", gauss_distrib.shape)
-		
-		# cara 2
-		for kn in range(self.komponen_gmm):
-			tmp_d_res = []
-			for zn in z.reshape(-1, 3)[idx_TU]:
-				tmp_gauss = self.gauss_dist_second(zn, kn, theta)
-				# print(tmp_gauss)
-				tmp_d = -np.log(theta['koefisien'][kn]) + tmp_gauss
-				tmp_d_res.append(tmp_d)
-			gauss_distrib.append(tmp_d_res)
-		gauss_distrib = np.array(gauss_distrib)
-		result = np.sum(gauss_distrib, axis=0)
-
-		# result = -np.log(np.dot(theta['koefisien'], gauss_distrib))
-		# result = -np.log(theta['koefisien']) - np.log(gauss_distrib)
-
-		return result
-		
+	
 	def d_calc(self, zn, kn, theta):
 		gauss_res1 = self.gauss_dist_second(zn, kn, theta)
-		gauss_res = self.gauss_dist(zn, kn, theta)
 
-		# print(gauss_res)
 		d_res1 = -np.log(theta['koefisien'][kn]) + gauss_res1
-		# d_res = -np.log(np.dot(theta['koefisien'][kn], gauss_res))
 
-		# print("dres1: ", d_res1)
-		# exit()
 		return d_res1
 	
 \end{lstlisting}
@@ -482,63 +398,63 @@ class MixtureModel:
 		& &  &  \\
 		1 & 
 		luka\_hitam/2.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/2.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/2.jpg}&
 		375x292\\
 		\hline
 		
 		& &  &  \\
 		2 & 
 		luka\_hitam/4.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/4.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/4.jpg}&
 		295x292\\
 		\hline
 		
 		& &  &  \\
 		3 & 
 		luka\_hitam/5.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/5.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/5.jpg}&
 		512x283\\
 		\hline
 		
 		& &  &  \\
 		4& 
 		luka\_hitam/6.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/6.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/6.jpg}&
 		350x263\\
 		\hline
 		
 		& &  &  \\
 		5& 
 		luka\_hitam/7.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/7.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/7.jpg}&
 		150x115\\
 		\hline
 		
 		& &  &  \\
 		6& 
 		luka\_hitam/8.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/8.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/8.jpg}&
 		350x263\\
 		\hline
 		
 		& &  &  \\
 		7& 
 		luka\_hitam/14.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/14.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/14.jpg}&
 		275x183\\
 		\hline
 
 		& &  &  \\
 		8 & 
 		luka\_hitam/15.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/15.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/15.jpg}&
 		512x308\\
 		\hline
 		
 		& &  &  \\
 		9 & 
 		luka\_hitam/17.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/17.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/17.jpg}&
 		283x247\\
 		\hline
 	\end{tabular}
@@ -556,63 +472,63 @@ class MixtureModel:
 		& &  &  \\
 		10 & 
 		luka\_hitam/18.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/18.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/18.jpg}&
 		168x168\\
 		\hline
 		
 		& &  &  \\
 		11& 
 		luka\_hitam/19.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/19.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/19.jpg}&
 		512x374\\
 		\hline
 		
 		& &  &  \\
 		12& 
 		luka\_hitam/20.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/20.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/20.jpg}&
 		512x397\\
 		\hline
 		
 		& &  &  \\
 		13& 
 		luka\_hitam/22.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/22.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/22.jpg}&
 		390x276\\
 		\hline
 		
 		& &  &  \\
 		14& 
 		luka\_hitam/26.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/26.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/26.jpg}&
 		512x395\\
 		\hline
 
 		& &  &  \\
 		15 & 
 		luka\_hitam/27.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/27.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/27.jpg}&
 		512x415\\
 		\hline
 		
 		& &  &  \\
 		16 & 
 		luka\_hitam/28.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/28.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/28.jpg}&
 		234x216\\
 		\hline
 		
 		& &  &  \\
 		17 & 
 		luka\_hitam/29.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/29.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/29.jpg}&
 		512x395\\
 		\hline
 	
 		& &  &  \\
 		18& 
 		luka\_hitam/33.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/33.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/33.jpg}&
 		375x250\\
 		\hline
 
@@ -631,48 +547,47 @@ class MixtureModel:
 		& &  &  \\
 		19& 
 		luka\_hitam/37.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/37.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/37.jpg}&
 		350x263\\
 		\hline
 		
 		& &  &  \\
 		20& 
 		luka\_hitam/40.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/40.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/40.jpg}&
 		262x192\\
 		\hline
 		
 		& &  &  \\
 		21& 
 		luka\_hitam/41.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/41.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/41.jpg}&
 		361x270\\
 		\hline
 
 		& &  &  \\
 		22 & 
 		luka\_hitam/16.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/16.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/16.jpg}&
 		512x418\\
 		\hline
 		
 		& &  &  \\
 		23 & 
 		luka\_hitam/31.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/31.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/31.jpg}&
 		383x512\\
 		\hline
 		
 		& &  &  \\
 		24 & 
 		luka\_hitam/39.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/bahan/39.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_hitam/39.jpg}&
 		512x450\\
 		\hline
 
 	\end{tabular}
 \end{table}
-
 
 \begin{table}[H]
 	\centering
@@ -686,76 +601,75 @@ class MixtureModel:
 		& &  &  \\
 		1 & 
 		luka\_kuning/13.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/13.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/13.jpg}&
 		266x189\\
 		\hline
 		
 		& &  &  \\
 		2& 
 		luka\_kuning/17.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/17.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/17.jpg}&
 		259x194\\
 		\hline
 		
 		& &  &  \\
 		3& 
 		luka\_kuning/18.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/18.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/18.jpg}&
 		265x190\\
 		\hline
 		
 		& &  &  \\
 		4& 
 		luka\_kuning/19.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/19.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/19.jpg}&
 		120x151\\
 		\hline
 		
 		& &  &  \\
 		5& 
 		luka\_kuning/21.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/21.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/21.jpg}&
 		357x242\\
 		\hline
 		
 		& &  &  \\
 		6& 
 		luka\_kuning/23.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/23.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/23.jpg}&
 		500x333\\
 		\hline
 		
 		& &  &  \\
 		7& 
 		luka\_kuning/25.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/25.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/25.jpg}&
 		288x216\\
 		\hline
 				
 		& &  &  \\
 		8 & 
 		luka\_kuning/34.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/34.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/34.jpg}&
 		500x385\\
 		\hline
 		
 		& &  &  \\
 		9& 
 		luka\_kuning/35.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/35.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/35.jpg}&
 		242x208\\
 		\hline
 		
 		& &  &  \\
 		10& 
 		luka\_kuning/38.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/38.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/38.jpg}&
 		512x367\\
 		\hline
 
 	\end{tabular}
 \end{table}
-
 
 \begin{table}[H]
 	\centering
@@ -769,40 +683,39 @@ class MixtureModel:
 		& &  &  \\
 		11& 
 		luka\_kuning/42.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/42.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/42.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		12& 
 		luka\_kuning/3.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/3.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/3.jpg}&
 		220x157\\
 		\hline
 		
 		& &  &  \\
 		13& 
 		luka\_kuning/12.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/12.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/12.jpg}&
 		500x333\\
 		\hline
 		
 		& &  &  \\
 		14& 
 		luka\_kuning/10.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/10.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/10.jpg}&
 		276x183\\
 		\hline
 				
 		& &  &  \\
 		15 & 
 		luka\_kuning/16.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/bahan/16.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_kuning/16.jpg}&
 		346x270\\
 		\hline
 	\end{tabular}
 \end{table}
-
 
 \begin{table}[H]
 	\centering
@@ -816,49 +729,49 @@ class MixtureModel:
 		& &  &  \\
 		1 & 
 		luka\_merah/16.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/16.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/16.jpg}&
 		309x231\\
 		\hline
 		
 		& &  &  \\
 		2& 
 		luka\_merah/17.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/17.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/17.jpg}&
 		328x218\\
 		\hline
 		
 		& &  &  \\
 		3& 
 		luka\_merah/22.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/22.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/22.jpg}&
 		512x396\\
 		\hline
 		
 		& &  &  \\
 		4& 
 		luka\_merah/24.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/24.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/24.jpg}&
 		302x308\\
 		\hline
 		
 		& &  &  \\
 		5& 
 		luka\_merah/25.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/25.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/25.jpg}&
 		512x507\\
 		\hline
 		
 		& &  &  \\
 		6& 
 		luka\_merah/30.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/30.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/30.jpg}&
 		260x194\\
 		\hline
 		
 		& &  &  \\
 		7& 
 		luka\_merah/32.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/32.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/32.jpg}&
 		236x178\\
 		\hline
 
@@ -866,21 +779,21 @@ class MixtureModel:
 		& &  &  \\
 		8 & 
 		luka\_merah/33.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/33.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/33.jpg}&
 		226x223\\
 		\hline
 		
 		& &  &  \\
 		9& 
 		luka\_merah/37.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/37.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/37.jpg}&
 		260x194\\
 		\hline
 		
 		& &  &  \\
 		10& 
 		luka\_merah/39.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/39.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/39.jpg}&
 		185x139\\
 		\hline
 
@@ -899,56 +812,56 @@ class MixtureModel:
 		& &  &  \\
 		11& 
 		luka\_merah/42.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/42.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/42.jpg}&
 		350x354\\
 		\hline
 		
 		& &  &  \\
 		12& 
 		luka\_merah/44.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/44.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/44.jpg}&
 		512x363\\
 		\hline
 		
 		& &  &  \\
 		13& 
 		luka\_merah/2.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/2.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/2.jpg}&
 		288x512\\
 		\hline
 		
 		& &  &  \\
 		14& 
 		luka\_merah/3.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/3.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/3.jpg}&
 		384x512\\
 		\hline
 
 		& &  &  \\
 		15 & 
 		luka\_merah/4.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/4.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/4.jpg}&
 		384x512\\
 		\hline
 		
 		& &  &  \\
 		16& 
 		luka\_merah/6.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/6.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/6.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		17& 
 		luka\_merah/7.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/7.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/7.jpg}&
 		512x341\\
 		\hline
 		
 		& &  &  \\
 		18& 
 		luka\_merah/8.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/8.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/8.jpg}&
 		512x384\\
 		\hline
 		
@@ -967,56 +880,56 @@ class MixtureModel:
 		& &  &  \\
 		19& 
 		luka\_merah/9.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/9.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/9.jpg}&
 		288x512\\
 		\hline
 		
 		& &  &  \\
 		20& 
 		luka\_merah/10.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/10.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/10.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		21& 
 		luka\_merah/11.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/11.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/11.jpg}&
 		512x384\\
 		\hline
 
 		& &  &  \\
 		22 & 
 		luka\_merah/12.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/12.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/12.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		23& 
 		luka\_merah/14.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/14.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/14.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		24& 
 		luka\_merah/18.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/18.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/18.jpg}&
 		512x382\\
 		\hline
 		
 		& &  &  \\
 		25& 
 		luka\_merah/19.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/19.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/19.jpg}&
 		512x458\\
 		\hline
 		
 		& &  &  \\
 		26& 
 		luka\_merah/20.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/20.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/20.jpg}&
 		408x360\\
 		\hline
 
@@ -1035,50 +948,191 @@ class MixtureModel:
 		& &  &  \\
 		27& 
 		luka\_merah/23.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/23.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/23.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		28& 
 		luka\_merah/26.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/26.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/26.jpg}&
 		512x464\\
 		\hline
 		
 		& &  &  \\
 		29 & 
 		luka\_merah/29.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/29.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/29.jpg}&
 		328x218\\
 		\hline
 		
 		& &  &  \\
 		29& 
 		luka\_merah/35.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/35.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/35.jpg}&
 		261x295\\
 		\hline
 		
 		& &  &  \\
 		30& 
 		luka\_merah/36.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/36.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/36.jpg}&
 		295x194\\
 		\hline
 		
 		& &  &  \\
 		31& 
 		luka\_merah/38.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/38.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/38.jpg}&
 		512x384\\
 		\hline
 		
 		& &  &  \\
 		32& 
 		luka\_merah/20.jpg &
-		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/bahan/20.jpg}&
+		\includegraphics[width=0.7in]{gambar/dataset_citra/luka_merah/20.jpg}&
 		408x360\\
 		\hline
+	\end{tabular}
+\end{table}
+
+\chapter{Tabel hasil deteksi keliling luka menggunakan \emph{Grabcut}}
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil deteksi keliling luka menggunakan \emph{Grabcut}}
+	\label{tabel_hasil_1}
+	\begin{tabular}{|m{1.1in}|m{1.1in}|m{1.1in}|m{1.1in}|m{0.7in}|}
+		\hline
+		\textbf{Inisialisasi Bounding Box} & \textbf{Hasil Segmentasi} & \textbf{Hasil Citra Referensi} & \textbf{Area Segmentasi} & \textbf{Akurasi} \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_2_rect.jpg} \fontsize{8}{12}{(153,48,299,158)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_2.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_2_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_2.jpg}&
+		98,1 \% \\
+		\hline
+
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_4_rect.jpg} \fontsize{8}{12}{(60, 89, 162, 153)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_4.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_4_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_4.jpg}&
+		93.3 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_5_rect.jpg} \fontsize{8}{12}{(68, 48, 115, 106)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_5.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_5_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_5.jpg}&
+		98.0 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg} \fontsize{8}{12}{(83, 97, 130, 97)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_6.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_6_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_6.jpg}&
+		99,6 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_7_rect.jpg} \fontsize{8}{12}{(100, 50, 117, 142)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_7.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_7_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_7.jpg}&
+		99,4 \% \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil deteksi keliling luka menggunakan \emph{Grabcut}}
+	\label{tabel_hasil_2}
+	\begin{tabular}{|m{1.1in}|m{1.1in}|m{1.1in}|m{1.1in}|m{0.7in}|}
+		\hline
+		\textbf{Inisialisasi Bounding Box} & \textbf{Hasil Segmentasi} & \textbf{Hasil Citra Referensi} & \textbf{Area Segmentasi} & \textbf{Akurasi} \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg} \fontsize{8}{12}{(114, 104, 157, 108)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_8.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_8_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_8.jpg}&
+		64,4 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_14_rect.jpg} \fontsize{8}{12}{(98, 43, 116, 121)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_14.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_14_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_14.jpg}&
+		90,6 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_15_rect.jpg} \fontsize{8}{12}{(89, 10, 140, 171)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_15.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_15_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_15.jpg}&
+		95,7 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_17_rect.jpg} \fontsize{8}{12}{(28, 34, 208, 213)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_17.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_17_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_17.jpg}&
+		90,3 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_18_rect.jpg} \fontsize{8}{12}{(50, 59, 219, 201)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_18.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_18_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_18.jpg}&
+		88,1 \% \\
+		\hline
+
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Visualisasi hasil deteksi keliling luka menggunakan \emph{Grabcut}}
+	\label{tabel_hasil_3}
+	\begin{tabular}{|m{1.1in}|m{1.1in}|m{1.1in}|m{1.1in}|m{0.7in}|}
+		\hline
+		\textbf{Inisialisasi Bounding Box} & \textbf{Hasil Segmentasi} & \textbf{Hasil Citra Referensi} & \textbf{Area Segmentasi} & \textbf{Akurasi} \\
+		\hline
+
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_19_rect.jpg} \fontsize{8}{12}{(107, 82, 147, 104)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_19.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_19_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_19.jpg}&
+		97.6 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg} \fontsize{8}{12}{(51, 107, 168, 101)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_20.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_20_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_20.jpg}&
+		82,9 \% \\
+		\hline
+		
+		&  &  & \\
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg} \fontsize{8}{12}{(63, 67, 186, 98)}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_22.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/result_22_cv.jpg}&
+		\includegraphics[width=1.1in]{gambar/hasil_segmentasi/luka_hitam/mask_22.jpg}&
+		85,2 \% \\
+		\hline
+		
 	\end{tabular}
 \end{table}
