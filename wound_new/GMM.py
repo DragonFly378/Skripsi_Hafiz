@@ -179,8 +179,8 @@ class MixtureModel:
 
  
     def d_calc(self, zn, kn, theta):
-        gauss_res1 = self.gauss_dist_second(zn, kn, theta)
-        # gauss_res = self.gauss_dist(zn, kn, theta)
+        # gauss_res1 = self.gauss_dist_second(zn, kn, theta)
+        gauss_res1 = self.gauss_dist(zn, kn, theta)
 
         # print(gauss_res)
         d_res1 = -np.log(theta['koefisien'][kn]) + gauss_res1

@@ -9,7 +9,7 @@ import numpy as np
 if __name__ == '__main__':
     root = Tk()
     category = "luka_hitam"
-    img_name = "33"
+    img_name = "39"
     extension = ".jpg"
     image_path = "dataset_3/"+category+"/bahan/"+img_name+extension
     tools = ImageEditing(root, image_path, img_name, category)

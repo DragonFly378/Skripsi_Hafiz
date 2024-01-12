@@ -3,7 +3,7 @@ import os
 # from tkinter import ttk, filedialog, PhotoImage
 from tkinter import *
 from grabcut import GrabCut
-from PIL import Image, ImageTk, ImageMath, ImageDraw
+from PIL import Image, ImageTk, ImageOps, ImageDraw
 import numpy as np
 
 COLOR = {
@@ -184,7 +184,10 @@ class ImageEditing:
         # self.result_image = Image.fromarray(self.mask)
         self.result_photo = ImageTk.PhotoImage(self.result_image)
         self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
-   
+
+        # Get mask r(negative) from original mask
+        self.mask_negative = self.invert_mask(self.mask_image)
+
 
     def get_rectangle_coords(self):
         if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
@@ -200,6 +203,15 @@ class ImageEditing:
         self.mask = np.where((self.mask2 == F_FG) | (self.mask2 == F_PR_FG), 255, 0).astype('uint8')
         self.update_result()
 
+    def invert_mask(self, image_mask):
+        # Convert the image to grayscale
+        gray_image = ImageOps.grayscale(image_mask)
+
+        # Invert the grayscale image to create a negative
+        negative_image = ImageOps.invert(gray_image)
+
+        return negative_image
+
 
     def save_result_image(self):
         save_to_tulisan = f"../docs/latex/gambar/hasil_segmentasi/{self.category}"
@@ -211,14 +223,17 @@ class ImageEditing:
 
         result_filename = f"result_{self.image_name}.jpg"
         mask_filename = f"mask_{self.image_name}.jpg"
+        mask_negative_filename = f"mask_r_{self.image_name}.jpg"
         main_rect_filename = f"image_{self.image_name}_rect.jpg"
 
         self.image.save(os.path.join(save_to_tulisan, main_rect_filename))
         self.mask_image.save(os.path.join(save_to_tulisan, mask_filename))
+        self.mask_negative.save(os.path.join(save_to_tulisan, mask_negative_filename))
         self.result_image.save(os.path.join(save_to_tulisan, result_filename))
         
         self.image.save(os.path.join(save_folder, main_rect_filename))
         self.mask_image.save(os.path.join(save_folder, mask_filename))
+        self.mask_negative.save(os.path.join(save_folder, mask_negative_filename))
         self.result_image.save(os.path.join(save_folder, result_filename))
 
         print("Result image saved successfully:")
