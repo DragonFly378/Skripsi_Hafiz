@@ -780,8 +780,9 @@ LaTeX Font Info:    Trying to load font information for T1+ptm on input line 19
 8.
 (t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux)
-(bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
+) (template-skripsi.aux (kata-pengantar.aux) (abstrak.aux)
+(abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux) (bab5.aux)
+(lampiran.aux))
 \openout1 = `template-skripsi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 198.
@@ -942,7 +943,23 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
 [][] 
  []
 
-[2] (template-skripsi.toc [3
+[2]
+\openout2 = `abstrak.aux'.
+
+ (abstrak.tex) [3
+
+
+
+
+]
+\openout2 = `abstract.aux'.
+
+ (abstract.tex) [4
+
+
+
+
+] (template-skripsi.toc [5
 
 
 
@@ -950,22 +967,23 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
- [4] (template-skripsi.lof
+ [6]
+(template-skripsi.lof
 Missing character: There is no ∈ ("2208) in font ptmr8t!
 
-LaTeX Warning: Reference `img:2.6' on page v undefined on input line 19.
+LaTeX Warning: Reference `img:2.6' on page vii undefined on input line 19.
 
-[5
+[7
 
 ])
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [6] (template-skripsi.lot)
+ [8] (template-skripsi.lot)
 \tf@lot=\write7
 \openout7 = `template-skripsi.lot'.
 
- [7
+ [9
 
 ]
 \openout2 = `bab1.aux'.
@@ -1718,11 +1736,6 @@ BAB V.
 
  (lampiran.tex
 LAMPIRAN A.
-[70
-
-
-] [71] [72] [73] [74] [75] [76] [77]
-LAMPIRAN B.
 File: gambar/dataset_citra/luka_hitam/2.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/2.jpg>
 File: gambar/dataset_citra/luka_hitam/4.jpg Graphic file (type bmp)
@@ -1736,325 +1749,326 @@ File: gambar/dataset_citra/luka_hitam/7.jpg Graphic file (type bmp)
 File: gambar/dataset_citra/luka_hitam/8.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/8.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 666--666
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 665--665
 []|\T1/ptm/m/n/12 luka_hitam/14.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/14.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/14.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 673--673
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 672--672
 []|\T1/ptm/m/n/12 luka_hitam/15.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/15.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/15.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 680--680
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 679--679
 []|\T1/ptm/m/n/12 luka_hitam/17.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/17.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/17.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 698--698
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 697--697
 []|\T1/ptm/m/n/12 luka_hitam/18.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/18.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/18.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 705--705
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 704--704
 []|\T1/ptm/m/n/12 luka_hitam/19.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/19.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/19.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 712--712
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 711--711
 []|\T1/ptm/m/n/12 luka_hitam/20.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/20.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/20.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 719--719
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 718--718
 []|\T1/ptm/m/n/12 luka_hitam/22.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/22.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/22.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 726--726
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 725--725
 []|\T1/ptm/m/n/12 luka_hitam/26.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/26.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/26.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 733--733
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 732--732
 []|\T1/ptm/m/n/12 luka_hitam/27.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/27.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/27.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 740--740
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 739--739
 []|\T1/ptm/m/n/12 luka_hitam/28.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/28.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/28.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 747--747
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 746--746
 []|\T1/ptm/m/n/12 luka_hitam/29.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/29.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/29.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 754--754
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 753--753
 []|\T1/ptm/m/n/12 luka_hitam/33.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/33.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/33.jpg>
-[78
+[70
+
 
 ]
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 773--773
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 772--772
 []|\T1/ptm/m/n/12 luka_hitam/37.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/37.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/37.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 780--780
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 779--779
 []|\T1/ptm/m/n/12 luka_hitam/40.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/40.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/40.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 787--787
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 786--786
 []|\T1/ptm/m/n/12 luka_hitam/41.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/41.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/41.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 794--794
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 793--793
 []|\T1/ptm/m/n/12 luka_hitam/16.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/16.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/16.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 801--801
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 800--800
 []|\T1/ptm/m/n/12 luka_hitam/31.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/31.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/31.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 808--808
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 807--807
 []|\T1/ptm/m/n/12 luka_hitam/39.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/39.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/39.jpg>
-[79]
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 827--827
+[71]
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 826--826
 []|\T1/ptm/m/n/12 luka_kuning/13.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/13.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/13.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 834--834
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 833--833
 []|\T1/ptm/m/n/12 luka_kuning/17.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/17.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/17.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 841--841
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 840--840
 []|\T1/ptm/m/n/12 luka_kuning/18.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/18.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/18.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 847--847
 []|\T1/ptm/m/n/12 luka_kuning/19.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/19.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/19.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 855--855
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 854--854
 []|\T1/ptm/m/n/12 luka_kuning/21.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/21.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/21.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 862--862
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 861--861
 []|\T1/ptm/m/n/12 luka_kuning/23.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/23.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/23.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 869--869
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 868--868
 []|\T1/ptm/m/n/12 luka_kuning/25.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/25.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/25.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 876--876
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 875--875
 []|\T1/ptm/m/n/12 luka_kuning/34.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/34.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/34.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 883--883
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 882--882
 []|\T1/ptm/m/n/12 luka_kuning/35.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/35.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/35.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 890--890
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 889--889
 []|\T1/ptm/m/n/12 luka_kuning/38.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/38.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/38.jpg>
-[80]
+[72]
 Overfull \vbox (4.72025pt too high) has occurred while \output is active []
 
 
-[81]
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 909--909
+[73]
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 908--908
 []|\T1/ptm/m/n/12 luka_kuning/42.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/42.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/42.jpg>
 
-Overfull \hbox (0.94766pt too wide) in paragraph at lines 916--916
+Overfull \hbox (0.94766pt too wide) in paragraph at lines 915--915
 []|\T1/ptm/m/n/12 luka_kuning/3.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/3.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/3.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 923--923
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 922--922
 []|\T1/ptm/m/n/12 luka_kuning/12.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/12.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/12.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 930--930
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 929--929
 []|\T1/ptm/m/n/12 luka_kuning/10.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/10.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/10.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 937--937
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 936--936
 []|\T1/ptm/m/n/12 luka_kuning/16.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/16.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/16.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 955--955
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 954--954
 []|\T1/ptm/m/n/12 luka_merah/16.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/16.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/16.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 962--962
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 961--961
 []|\T1/ptm/m/n/12 luka_merah/17.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/17.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/17.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 969--969
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 968--968
 []|\T1/ptm/m/n/12 luka_merah/22.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/22.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/22.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 976--976
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 975--975
 []|\T1/ptm/m/n/12 luka_merah/24.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/24.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/24.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 983--983
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 982--982
 []|\T1/ptm/m/n/12 luka_merah/25.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/25.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/25.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 990--990
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 989--989
 []|\T1/ptm/m/n/12 luka_merah/30.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/30.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/30.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 997--997
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 996--996
 []|\T1/ptm/m/n/12 luka_merah/32.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/32.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/32.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1004--1004
 []|\T1/ptm/m/n/12 luka_merah/33.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/33.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/33.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1012--1012
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1011--1011
 []|\T1/ptm/m/n/12 luka_merah/37.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/37.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/37.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1019--1019
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1018--1018
 []|\T1/ptm/m/n/12 luka_merah/39.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/39.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/39.jpg>
-[82]
+[74]
 Overfull \vbox (20.16275pt too high) has occurred while \output is active []
 
 
-[83]
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1038--1038
+[75]
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1037--1037
 []|\T1/ptm/m/n/12 luka_merah/42.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/42.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/42.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1045--1045
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1044--1044
 []|\T1/ptm/m/n/12 luka_merah/44.jpg| 
  []
 
@@ -2075,105 +2089,105 @@ File: gambar/dataset_citra/luka_merah/8.jpg Graphic file (type bmp)
 File: gambar/dataset_citra/luka_merah/9.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/9.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1113--1113
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1112--1112
 []|\T1/ptm/m/n/12 luka_merah/10.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/10.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/10.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1120--1120
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1119--1119
 []|\T1/ptm/m/n/12 luka_merah/11.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/11.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/11.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1127--1127
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1126--1126
 []|\T1/ptm/m/n/12 luka_merah/12.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/12.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/12.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1134--1134
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1133--1133
 []|\T1/ptm/m/n/12 luka_merah/14.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/14.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/14.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1141--1141
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1140--1140
 []|\T1/ptm/m/n/12 luka_merah/18.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/18.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/18.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1148--1148
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1147--1147
 []|\T1/ptm/m/n/12 luka_merah/19.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/19.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/19.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1155--1155
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1154--1154
 []|\T1/ptm/m/n/12 luka_merah/20.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/20.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/20.jpg>
-[84]
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1174--1174
+[76]
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1173--1173
 []|\T1/ptm/m/n/12 luka_merah/23.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/23.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/23.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1181--1181
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1180--1180
 []|\T1/ptm/m/n/12 luka_merah/26.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/26.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/26.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1188--1188
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1187--1187
 []|\T1/ptm/m/n/12 luka_merah/29.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/29.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/29.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1195--1195
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1194--1194
 []|\T1/ptm/m/n/12 luka_merah/35.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/35.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/35.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1201--1201
 []|\T1/ptm/m/n/12 luka_merah/36.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/36.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/36.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1209--1209
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1208--1208
 []|\T1/ptm/m/n/12 luka_merah/38.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/38.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/38.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 1216--1216
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1215--1215
 []|\T1/ptm/m/n/12 luka_merah/20.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/20.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/20.jpg>
-[85] [86]
-LAMPIRAN C.
+[77] [78]
+LAMPIRAN B.
 File: gambar/hasil_segmentasi/luka_hitam/image_2_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_2_rect.jpg>
@@ -2223,7 +2237,7 @@ File: gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg>
 
-Overfull \hbox (1.88992pt too wide) in paragraph at lines 1287--1287
+Overfull \hbox (1.88992pt too wide) in paragraph at lines 1286--1286
 \T1/ptm/m/n/10 (114,104,157,108)| 
  []
 
@@ -2260,7 +2274,7 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_17.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_17.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/17_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/17_r.jpg>
-[87
+[79
 
 ]
 File: gambar/hasil_segmentasi/luka_hitam/image_18_rect.jpg Graphic file (type b
@@ -2317,7 +2331,7 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_27.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_27.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/27_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/27_r.jpg>
- [88]
+ [80]
 File: gambar/hasil_segmentasi/luka_hitam/image_28_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_28_rect.jpg>
@@ -2372,7 +2386,7 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/41_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/41_r.jpg>
- [89]
+ [81]
 File: gambar/hasil_segmentasi/luka_hitam/image_16_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_16_rect.jpg>
@@ -2400,15 +2414,16 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_39.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_39.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/39_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/39_r.jpg>
-) [90] [91] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (b
-ab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
+) [82] [83] (template-skripsi.aux (kata-pengantar.aux)
+(abstrak.aux) (abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux)
+(bab5.aux) (lampiran.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 3823BDC04540D6AC498FA814000DA05D;11890.
+(rerunfilecheck)             Checksum: DCAE5AAC4AE9C5848423A530C09D752E;11376.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (100 pages, 631856 bytes).
+Output written on template-skripsi.xdv (94 pages, 427000 bytes).

@@ -2,9 +2,11 @@
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{LEMBAR PENGESAHAN}{i}{section*.1}%
 \contentsline {chapter}{KATA PENGANTAR}{iii}{Item.6}%
-\contentsline {chapter}{DAFTAR ISI}{iv}{chapter*.3}%
-\contentsline {chapter}{DAFTAR GAMBAR}{vi}{chapter*.4}%
-\contentsline {chapter}{DAFTAR TABEL}{vii}{chapter*.5}%
+\contentsline {chapter}{ABSTRAK}{iv}{chapter*.3}%
+\contentsline {chapter}{\emph {ABSTRACT}}{v}{chapter*.4}%
+\contentsline {chapter}{DAFTAR ISI}{vi}{chapter*.5}%
+\contentsline {chapter}{DAFTAR GAMBAR}{viii}{chapter*.6}%
+\contentsline {chapter}{DAFTAR TABEL}{ix}{chapter*.7}%
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
@@ -71,11 +73,5 @@
 \contentsline {section}{\numberline {5.1}Kesimpulan}{68}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Saran}{68}{section.5.2}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{69}{section.5.2}%
-\contentsline {chapter}{\numberline {A}\emph {Source code} program}{70}{appendix.A}%
-\contentsline {section}{\numberline {1.1}main.py}{70}{section.A.1}%
-\contentsline {section}{\numberline {1.2}image\_editing.py}{70}{section.A.2}%
-\contentsline {section}{\numberline {1.3}grabcut.py}{73}{section.A.3}%
-\contentsline {section}{\numberline {1.4}gmm.py}{75}{section.A.4}%
-\contentsline {section}{\numberline {1.5}validate.py}{76}{section.A.5}%
-\contentsline {chapter}{\numberline {B}Tabel pengolahan data citra input}{78}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Tabel hasil deteksi keliling luka menggunakan \emph {Grabcut}}{87}{appendix.C}%
+\contentsline {chapter}{\numberline {A}Tabel pengolahan data citra input}{70}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Tabel hasil deteksi keliling luka menggunakan \emph {Grabcut}}{79}{appendix.B}%
