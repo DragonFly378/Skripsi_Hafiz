@@ -322,7 +322,7 @@ dimana,
 \end{conditions}
 
 % Dengan memisalkan rumus \ref{eq:rumus_energi1} dengan \(U = - \log P(X_1, X_2, ..., X_N, k | \Phi)\)
-% maka didapatkan hasil seperti langkah kedua dari gambar \ref{gambar:2.6} yaitu 
+% maka didapatkan hasil seperti langkah kedua dari gambar \ref{img:2.6} yaitu 
 % sebagai berikut :
 
 % \begin{equation} \label{eq:phi}
@@ -867,7 +867,7 @@ mulai dari mengedit piksel hingga menandai lokasi \emph{foreground} atau \emph{b
 % Kebaruan pendekatan yang dilakukan Boykov pertama-tama terletak pada penanganan segmentasi. \cite{Boykov:2004} 
 % telah membuat dua peningkatan pada mekanisme \emph{Graph Cut}: "estimasi iteratif" 
 % dan "pelabelan tidak lengkap" yang memungkinkan tingkat interaksi pengguna yang 
-% sangat berkurang untuk kualitas hasil tertentu (gambar \ref{gambar:2.5}(f)). Hal ini memungkinkan 
+% sangat berkurang untuk kualitas hasil tertentu (gambar \ref{img:2.5}(f)). Hal ini memungkinkan 
 % \emph{GrabCut} untuk memberi beban ringan pada pengguna, yang interaksinya hanya 
 % terdiri dari menyeret persegi panjang di sekitar objek yang diinginkan. Dengan 
 % demikian, pengguna menunjukkan wilayah latar belakang, dan bebas dari kebutuhan 
@@ -1045,7 +1045,7 @@ dengan cara menempatkan bentuk di sekitar objek.
   \caption{
     Perbandingan beberapa \emph{matting tools} dan segmentasi. (\cite{Rother:2004})
     }
-  \label{gambar:2.5}
+  \label{img:2.5}
 \end{figure}
 
 
@@ -1114,7 +1114,7 @@ Skema minimisasi energi baru di \emph{GrabCut} bekerja secara iteratif, menggant
 sekali pakai sebelumnya (Boykov). Ini memiliki keuntungan yang memungkinkan 
 penyempurnaan otomatis dari opasitas \(\alpha\), karena piksel berlabel baru dari 
 wilayah TU pada trimap awal digunakan untuk menyempurnakan parameter GMM warna \( \theta \). 
-Elemen utama dari sistem \emph{GrabCut} diberikan dalam gambar \ref{gambar:2.6}. Langkah 1 sangat mudah, 
+Elemen utama dari sistem \emph{GrabCut} diberikan dalam gambar \ref{img:2.6}. Langkah 1 sangat mudah, 
 dilakukan dengan pencacahan sederhana nilai kn untuk setiap piksel n. Langkah 2 
 diimplementasikan sebagai satu set prosedur estimasi parameter Gaussian, sebagai 
 berikut. Untuk komponen GMM k yang diberikan, katakanlah, model latar depan, himpunan 
@@ -1135,7 +1135,7 @@ lokal E. Sangat mudah untuk mendeteksi kapan E berhenti menurun secara signifika
 dan menghentikan iterasi secara otomatis. 
 
 
-Manfaat praktis dari minimisasi iteratif. Gambar. \ref{gambar:2.5}(e) dan \ref{gambar:2.5}(f) 
+Manfaat praktis dari minimisasi iteratif. Gambar. \ref{img:2.5}(e) dan \ref{img:2.5}(f) 
 mengilustrasikan bagaimana kekuatan tambahan dari minimisasi iteratif dalam 
 \emph{Grab Cut} dapat sangat mengurangi jumlah interaksi pengguna yang diperlukan 
 untuk menyelesaikan tugas segmentasi, relatif terhadap pendekatan \emph{one-shot graph cut}. 
@@ -1152,7 +1152,7 @@ sederhana, misalnya dengan mengizinkan pelabelan yang tidak lengkap oleh penggun
   \caption{
     Segmentasi gambar di \emph{GrabCut} (\cite{Rother:2004})
     }
-  \label{gambar:2.6}
+  \label{img:segmentasi_grabcut}
 \end{figure}
 
 
@@ -1174,10 +1174,10 @@ sederhana, misalnya dengan mengizinkan pelabelan yang tidak lengkap oleh penggun
       \caption{}
     \end{subfigure}  
   \caption{
-    Konvergensi minimalisasi iteratif untuk data gambar \ref{gambar:2.5}(f). (a) Energi E untuk contoh 
+    Konvergensi minimalisasi iteratif untuk data gambar \ref{img:2.5}(f). (a) Energi E untuk contoh 
     llama konvergen selama 12 iterasi dengan K = 5, komponen campuran digunakan untuk latar belakang (merah) dan latar depan (biru) (\cite{Rother:2004}). 
     }
-    \label{gambar:2.7}
+    \label{img:2.7}
 \end{figure}
 
 \subsubsection{{Interaksi Pengguna dan Trimap yang Tidak Lengkap}}
@@ -1186,13 +1186,13 @@ sederhana, misalnya dengan mengizinkan pelabelan yang tidak lengkap oleh penggun
 keserbagunaan interaksi pengguna. Secara khusus, pelabelan yang tidak lengkap menjadi 
 layak di mana, sebagai pengganti trimap T penuh, pengguna hanya perlu menentukan, 
 katakanlah, wilayah latar belakang \(T_{B}\), meninggalkan \(T_{F} = 0\). Tidak ada pelabelan latar 
-depan keras yang dilakukan sama sekali. Minimisasi iteratif (gambar \ref{gambar:2.6}) menangani 
+depan keras yang dilakukan sama sekali. Minimisasi iteratif (gambar \ref{img:2.6}) menangani 
 ketidaklengkapan ini dengan mengizinkan label sementara pada beberapa piksel (di 
 latar depan) yang kemudian dapat ditarik kembali; hanya label latar belakang \(T_{B}\) 
 yang dianggap tegas — dijamin tidak akan ditarik kembali nantinya. (Tentu saja 
 skema pelengkap, dengan label tegas untuk latar depan saja, juga memungkinkan.) 
 \(T_{B}\) awal ditentukan oleh pengguna sebagai strip piksel di sekitar bagian 
-luar sudut persegi yang ditandai ( ditandai dengan warna merah pada gambar \ref{gambar:2.5}(f))
+luar sudut persegi yang ditandai ( ditandai dengan warna merah pada gambar \ref{img:2.5}(f))
 
 \begin{figure}[H]
   \centering
@@ -1202,19 +1202,19 @@ luar sudut persegi yang ditandai ( ditandai dengan warna merah pada gambar \ref{
     \end{subfigure}     
   \caption{
     Pengeditan pengguna. Setelah interaksi pengguna awal dan segmentasi (baris atas), 
-    pengeditan pengguna lebih lanjut (gambar \ref{gambar:2.6}) diperlukan. (\cite{Rother:2004})
+    pengeditan pengguna lebih lanjut (gambar \ref{img:2.6}) diperlukan. (\cite{Rother:2004})
     }
-    \label{gambar:2.8}
+    \label{img:2.8}
 \end{figure}
 
 \textbf{Pengeditan pengguna lebih lanjut.} Pelabelan pengguna awal yang tidak lengkap 
 cukup sepuluh untuk memungkinkan seluruh segmentasi diselesaikan secara otomatis, 
 tetapi tidak berarti selalu. Jika tidak, pengeditan pengguna lebih lanjut diperlukan, 
-seperti yang ditunjukkan pada gambar \ref{gambar:2.8}. Ini mengambil bentuk menyikat piksel, membatasinya 
+seperti yang ditunjukkan pada gambar \ref{img:2.8}. Ini mengambil bentuk menyikat piksel, membatasinya 
 menjadi latar depan yang kokoh atau latar belakang yang kokoh; lalu minimisasi 
-langkah 3. pada gambar \ref{gambar:2.6} diterapkan. Perhatikan bahwa cukup menyikat, secara 
+langkah 3. pada gambar \ref{img:2.6} diterapkan. Perhatikan bahwa cukup menyikat, secara 
 kasar, hanya sebagian dari area yang salah diberi label. Selain itu, operasi "perbaiki" 
-opsional dari gambar \ref{gambar:2.6} memperbarui model warna, mengikuti suntingan pengguna. Ini 
+opsional dari gambar \ref{img:2.6} memperbarui model warna, mengikuti suntingan pengguna. Ini 
 menopang efek operasi edit yang seringkali bermanfaat. Perhatikan bahwa untuk efisiensi 
 aliran optimal, dihitung dengan \emph{graph cut}, dapat digunakan kembali selama 
 pengeditan pengguna.

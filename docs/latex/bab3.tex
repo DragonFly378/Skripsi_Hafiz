@@ -382,254 +382,255 @@ Fungsi \emph{path} akan penulis jelaskan pada bagian \ref{section:skenario_ekspe
 	\caption{Garis berwarna hijau menunjukkan \emph{path} s-a-h-i-t}
 \end{figure}
 
-Berikut struktur data untuk mencari \emph{path}
-\begin{lstlisting} [language=C++, caption=Struktur data untuk mencari \emph{path}]
+% Berikut struktur data untuk mencari \emph{path}
+% \begin{lstlisting} [language=C++, caption=Struktur data untuk mencari \emph{path}]
 
-class Node {
-    public:
-        char name;
-        int data;
-        int capacity; // Capacity of the edge between this node and its parent
-        Node* parent;
-        vector<Node*> children;
-        map<Node*, int> edges; // Map to store child nodes and their capacities
+% class Node {
+%     public:
+%         char name;
+%         int data;
+%         int capacity; // Capacity of the edge between this node and its parent
+%         Node* parent;
+%         vector<Node*> children;
+%         map<Node*, int> edges; // Map to store child nodes and their capacities
 
 
-        Node(char name) {
-            this->name = name;
-            parent = nullptr;
-            // capacity = 0; // Initialize capacity to 0
-        }
-    };
+%         Node(char name) {
+%             this->name = name;
+%             parent = nullptr;
+%             // capacity = 0; // Initialize capacity to 0
+%         }
+%     };
 
-class Tree {
-    private:
-        Node* root;
-    public:
-    Tree() {
-        root = nullptr;
-    }
+% class Tree {
+%     private:
+%         Node* root;
+%     public:
+%     Tree() {
+%         root = nullptr;
+%     }
 
-    void insertChild(Node* current, Node* next, int capacity) {
-        Node* rootOfCurrent = getRoot(current);
-        Node* rootOfNext = getRoot(next);
+%     void insertChild(Node* current, Node* next, int capacity) {
+%         Node* rootOfCurrent = getRoot(current);
+%         Node* rootOfNext = getRoot(next);
 
-        if(next->parent == nullptr || rootOfNext->name == rootOfCurrent->name){
+%         if(next->parent == nullptr || rootOfNext->name == rootOfCurrent->name){
 
-            next->parent = current;
-            current->edges[next] = capacity;
-            current->children.push_back(next);
+%             next->parent = current;
+%             current->edges[next] = capacity;
+%             current->children.push_back(next);
 
-            // get root of each node
-            Node* nextRoot = getRoot(next);        
-            cout << "node " << next->name 
-            << " masuk ke tree " 
-            << nextRoot->name ;
-            cout << endl;
+%             // get root of each node
+%             Node* nextRoot = getRoot(next);        
+%             cout << "node " << next->name 
+%             << " masuk ke tree " 
+%             << nextRoot->name ;
+%             cout << endl;
 
-        }else if (rootOfNext->name != rootOfCurrent->name){
-            cout << endl << "ada path di: "
-            << next->name << endl;
-            cout << "path nya adalah: "<< endl; 
-            getPath(current, next);
-            cout << "masuk ke tahap augmentasi" 
-            << endl << endl;
-        }  
+%         }else if (rootOfNext->name != rootOfCurrent->name){
+%             cout << endl << "ada path di: "
+%             << next->name << endl;
+%             cout << "path nya adalah: "<< endl; 
+%             getPath(current, next);
+%             cout << "masuk ke tahap augmentasi" 
+%             << endl << endl;
+%         }  
         
-    }
+%     }
 
-    // Add this helper function to get the capacity between two nodes
-    int getEdgeCapacity(Node* parent, Node* child) {
-        // Find the edge connecting the parent and child nodes
-        auto it = parent->edges.find(child);
-        if (it != parent->edges.end()) {
-            return it->second; // Return the capacity of the edge
-        }
-        return 0; // Return 0 if the edge is not found (should not happen if the tree is correctly constructed)
-    }
+%     // Add this helper function to get the capacity between two nodes
+%     int getEdgeCapacity(Node* parent, Node* child) {
+%         // Find the edge connecting the parent and child nodes
+%         auto it = parent->edges.find(child);
+%         if (it != parent->edges.end()) {
+%             return it->second; // Return the capacity of the edge
+%         }
+%         return 0; // Return 0 if the edge is not found (should not happen if the tree is correctly constructed)
+%     }
     
 
-    void display(Node* node, int depth = 0) {
+%     void display(Node* node, int depth = 0) {
 
-        if (node == nullptr)
-            return;
+%         if (node == nullptr)
+%             return;
 
-        // Print current node with indentation
-        for (int i = 0; i < depth; ++i) {
-            cout << "    ";
-        }
-        cout << "|-- " << node->name << " (Capacity: " << node->capacity << ")" << endl;
+%         // Print current node with indentation
+%         for (int i = 0; i < depth; ++i) {
+%             cout << "    ";
+%         }
+%         cout << "|-- " << node->name << " (Capacity: " << node->capacity << ")" << endl;
 
-        // Recursively display children
-        for (Node* child : node->children) {
-            display(child, depth + 1);
-        }
-    }
+%         // Recursively display children
+%         for (Node* child : node->children) {
+%             display(child, depth + 1);
+%         }
+%     }
 
-    void displayTree(Node* root) {
-        cout << endl << "Tree dari Search Node " 
-        << root->name << " adalah: " << endl;
-        display(root);
-    }
+%     void displayTree(Node* root) {
+%         cout << endl << "Tree dari Search Node " 
+%         << root->name << " adalah: " << endl;
+%         display(root);
+%     }
 
-    Node* getRoot(Node* child) {
+%     Node* getRoot(Node* child) {
 
-        Node* current = child;
-        while (current->parent != nullptr) {
-            current = current->parent;
-        }
+%         Node* current = child;
+%         while (current->parent != nullptr) {
+%             current = current->parent;
+%         }
 
-        return current;
-    }
+%         return current;
+%     }
 
-    vector<Node*> getLeafNodes(Node* node) {
-        vector<Node*> leafNodes;
+%     vector<Node*> getLeafNodes(Node* node) {
+%         vector<Node*> leafNodes;
 
-        if (node == nullptr){
-            return leafNodes;
-        }
+%         if (node == nullptr){
+%             return leafNodes;
+%         }
 
-        if (node->children.empty()) {
-            leafNodes.push_back(node);
-        } else {
-            for (Node* child : node->children) {
-                vector<Node*> childLeafNodes = 
-                getLeafNodes(child);
+%         if (node->children.empty()) {
+%             leafNodes.push_back(node);
+%         } else {
+%             for (Node* child : node->children) {
+%                 vector<Node*> childLeafNodes = 
+%                 getLeafNodes(child);
 
-                leafNodes.insert(
-                leafNodes.end(), 
-                childLeafNodes.begin(), 
-                childLeafNodes.end()
-                );
-            }
-        }        
-        return leafNodes;
-    }
+%                 leafNodes.insert(
+%                 leafNodes.end(), 
+%                 childLeafNodes.begin(), 
+%                 childLeafNodes.end()
+%                 );
+%             }
+%         }        
+%         return leafNodes;
+%     }
 
-    void displayLeafNodes(Node* root) {
-        vector<Node*> leafNodes = getLeafNodes(root);
-        cout << "Leaf nodes: ";
-        for (Node* leafNode : leafNodes) {
-            cout << leafNode->name << " ";
-        }
-        cout << endl;
-    }
+%     void displayLeafNodes(Node* root) {
+%         vector<Node*> leafNodes = getLeafNodes(root);
+%         cout << "Leaf nodes: ";
+%         for (Node* leafNode : leafNodes) {
+%             cout << leafNode->name << " ";
+%         }
+%         cout << endl;
+%     }
     
-    bool getPathToRoot(Node* leaf, 
-    vector<char>& path) {
-        if (leaf == nullptr)
-            return false;
+%     bool getPathToRoot(Node* leaf, 
+%     vector<char>& path) {
+%         if (leaf == nullptr)
+%             return false;
 
-        Node* current = leaf;
-        while (current != nullptr) {
-            path.push_back(current->name);
-            current = current->parent;
-        }
+%         Node* current = leaf;
+%         while (current != nullptr) {
+%             path.push_back(current->name);
+%             current = current->parent;
+%         }
 
-        return true;
-    }
+%         return true;
+%     }
     
-    vector<char> getPathFromLeafToRoot(Node* leaf) {
-        vector<char> path;
-        getPathToRoot(leaf, path);
-        return path;
-    }
+%     vector<char> getPathFromLeafToRoot(Node* leaf) {
+%         vector<char> path;
+%         getPathToRoot(leaf, path);
+%         return path;
+%     }
 
-    void displayLeafToRoot ( Node* leaf) {
-        vector<char> path = 
-        getPathFromLeafToRoot(leaf);
-        getPathToRoot(leaf, path);
+%     void displayLeafToRoot ( Node* leaf) {
+%         vector<char> path = 
+%         getPathFromLeafToRoot(leaf);
+%         getPathToRoot(leaf, path);
 
-        // Display the path
-        if(path[path.size()-1] != 't'){
-            reverse(path.begin(), path.end());
-        }
-        cout << "Path from leaf " << leaf->name 
-        << " to root:" << endl;
-        for (int i = 0; i < path.size(); i++) {
-            cout << path[i];
-            if(i != path.size() -1){
-                cout<< "->";
-            }
-        }
-        cout << endl;
-    }
+%         // Display the path
+%         if(path[path.size()-1] != 't'){
+%             reverse(path.begin(), path.end());
+%         }
+%         cout << "Path from leaf " << leaf->name 
+%         << " to root:" << endl;
+%         for (int i = 0; i < path.size(); i++) {
+%             cout << path[i];
+%             if(i != path.size() -1){
+%                 cout<< "->";
+%             }
+%         }
+%         cout << endl;
+%     }
 
-    void getPath(Node* current, Node* next){
-        vector<char> tmp_current = 
-        getPathFromLeafToRoot(current);
-        vector<char> tmp_next = 
-        getPathFromLeafToRoot(next);
-        vector<char> path;
-        int totalCapacity = 0;
+%     void getPath(Node* current, Node* next){
+%         vector<char> tmp_current = 
+%         getPathFromLeafToRoot(current);
+%         vector<char> tmp_next = 
+%         getPathFromLeafToRoot(next);
+%         vector<char> path;
+%         int totalCapacity = 0;
 
-        for (char cek : tmp_current){
-            cout<< cek ;
-        };
+%         for (char cek : tmp_current){
+%             cout<< cek ;
+%         };
 
-        cout<<endl;
+%         cout<<endl;
 
-        for (char cek2 : tmp_next){
-            cout<< cek2;
-        };
+%         for (char cek2 : tmp_next){
+%             cout<< cek2;
+%         };
 
-        cout<< endl;
+%         cout<< endl;
 
 
 
-        if(tmp_current[tmp_current.size() - 1] == 't'){
+%         if(tmp_current[tmp_current.size() - 1] == 't'){
 
-            reverse(tmp_next.begin(), tmp_next.end());
+%             reverse(tmp_next.begin(), tmp_next.end());
 
-            for(char node : tmp_next){
-                path.push_back(node);
-                if (path.size() > 1) {
-                    Node* parent = next->parent;
-                    int capacity = getEdgeCapacity(parent, next);
-                    totalCapacity += capacity;
-                    cout << "Capacity from " << parent->name << " to " << next->name << ": " << capacity << endl;
-                }
-            }
-            for(char node : tmp_current){
-                path.push_back(node);
-                if (path.size() > 1) {
-                    Node* parent = current->parent;
-                    int capacity = getEdgeCapacity(parent, current);
-                    totalCapacity += capacity;
-                    cout << "Capacity from " << parent->name << " to " << next->name << ": " << capacity << endl;
-                }
-            }
-        }else{
+%             for(char node : tmp_next){
+%                 path.push_back(node);
+%                 if (path.size() > 1) {
+%                     Node* parent = next->parent;
+%                     int capacity = getEdgeCapacity(parent, next);
+%                     totalCapacity += capacity;
+%                     cout << "Capacity from " << parent->name << " to " << next->name << ": " << capacity << endl;
+%                 }
+%             }
+%             for(char node : tmp_current){
+%                 path.push_back(node);
+%                 if (path.size() > 1) {
+%                     Node* parent = current->parent;
+%                     int capacity = getEdgeCapacity(parent, current);
+%                     totalCapacity += capacity;
+%                     cout << "Capacity from " << parent->name << " to " << next->name << ": " << capacity << endl;
+%                 }
+%             }
+%         }else{
             
-            reverse(tmp_current.begin(), tmp_current.end());
+%             reverse(tmp_current.begin(), tmp_current.end());
 
-            for(char node : tmp_current){
-                path.push_back(node);
-                if (path.size() > 1) {
-                    Node* parent = current->parent;
-                    int capacity = getEdgeCapacity(parent, current);
-                    totalCapacity += capacity;
-                    cout << "Capacity from cu " << parent->name << " to " << current->name << ": " << capacity << endl;
-                }
-            }
-            for(char node : tmp_next){
-                path.push_back(node);
-                if (path.size() > 1 && next->parent != nullptr) {
-                    Node* parent_tmp = next->parent;
-                    // cout<< parent->name;
-                    int capacity = getEdgeCapacity(parent_tmp, next);
-                    totalCapacity += capacity;
-                    cout << "Capacity from ci " << parent_tmp->name << " to " << next->name << ": " << capacity << endl;
-                    next = parent_tmp;
-                }
-            }
-        }
-        for (char i : path) {
-            cout << i;
-        }
-    }
-};
-\end{lstlisting}
+%             for(char node : tmp_current){
+%                 path.push_back(node);
+%                 if (path.size() > 1) {
+%                     Node* parent = current->parent;
+%                     int capacity = getEdgeCapacity(parent, current);
+%                     totalCapacity += capacity;
+%                     cout << "Capacity from cu " << parent->name << " to " << current->name << ": " << capacity << endl;
+%                 }
+%             }
+%             for(char node : tmp_next){
+%                 path.push_back(node);
+%                 if (path.size() > 1 && next->parent != nullptr) {
+%                     Node* parent_tmp = next->parent;
+%                     // cout<< parent->name;
+%                     int capacity = getEdgeCapacity(parent_tmp, next);
+%                     totalCapacity += capacity;
+%                     cout << "Capacity from ci " << parent_tmp->name << " to " << next->name << ": " << capacity << endl;
+%                     next = parent_tmp;
+%                 }
+%             }
+%         }
+%         for (char i : path) {
+%             cout << i;
+%         }
+%     }
+% };
+% \end{lstlisting}
+
 % int main() {
 % 	// Create Tree S and T
 % 	Tree tree_S;
@@ -697,16 +698,11 @@ public:
     }
 
     void inisiasi_piksel(){}
-
     void init_assign_gmm(){}
-
     void memperbarui_gmm(){}
-
     void hitung_smoothness(){}
-
     void bangun_graf(){}
-
-    void graphcut_segmentation(){}
+    void mincut_segmentation(){}
 };
 
 class GaussianMixture {
@@ -730,28 +726,18 @@ public:
     }
 
     void init_rand(){}
-
     void dis_mult(){}
-
     void prob_calc(){}
-
     void learn_gmm(){}
-
     void count_params(){}
-
 }
 
-class GraphCut {
+class mincut_segmentation {
 public:
-
     void build_graph(){}
-
     void run(){}
-
     void growth(){}
-
     void augmentation(){}
-
     void adoption(){}
 }
 \end{lstlisting}
@@ -1064,73 +1050,73 @@ berikut algoritma dari \emph{GrabCut}:
     \end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm}
-    \caption{tahap growth pada \emph{mincut} di bagian \ref{fase_growth}}          
-    \label{algo:fase_growth}                 
-    \begin{algorithmic}            % enter the algorithmic environment
-        \Function{$growth\textunderscore step$}{}
-            \State $\textbf{vector<Node*> } list\textunderscore neighbors $
-            \State $\Call{search\textunderscore neighbors}{active\textunderscore nodes, tree\textunderscore cap}$
-            \While{$active\textunderscore nodes \neq 0$}
-                \For{$\textbf{int }i; i < list\textunderscore neighbors.size(); i++$}
-                    \If{$tree\textunderscore cap[i] > 0$}
-                        \If{$\textbf{tree.getRoot}(list\textunderscore neighbors[i]) == null$}
-                            \State $tree.insertChild(active\textunderscore nodes[0], list\textunderscore neighbors[i])$
-                        \ElsIf{$\textbf{tree.getRoot}(list\textunderscore neighbors[i]) \neq null \textbf{ and } \newline
-                                \textbf{tree.getRoot}(list\textunderscore neighbors[i]) \neq \textbf{tree.getRoot}(active\textunderscore nodes[0])$}
-                            \State $paths \gets tree.getPath(active\textunderscore nodes[0], list\textunderscore neighbors[i])$                    
-                        \EndIf
-                    \EndIf
-                \EndFor
-                \State $active\textunderscore nodes.pop()$
-            \EndWhile
-            \State $\textbf{return } paths \neq 0$
-        \EndFunction
-    \end{algorithmic}
-\end{algorithm}
+% \begin{algorithm}
+%     \caption{tahap growth pada \emph{mincut} di bagian \ref{fase_growth}}          
+%     \label{algo:fase_growth}                 
+%     \begin{algorithmic}            % enter the algorithmic environment
+%         \Function{$growth\textunderscore step$}{}
+%             \State $\textbf{vector<Node*> } list\textunderscore neighbors $
+%             \State $\Call{search\textunderscore neighbors}{active\textunderscore nodes, tree\textunderscore cap}$
+%             \While{$active\textunderscore nodes \neq 0$}
+%                 \For{$\textbf{int }i; i < list\textunderscore neighbors.size(); i++$}
+%                     \If{$tree\textunderscore cap[i] > 0$}
+%                         \If{$\textbf{tree.getRoot}(list\textunderscore neighbors[i]) == null$}
+%                             \State $tree.insertChild(active\textunderscore nodes[0], list\textunderscore neighbors[i])$
+%                         \ElsIf{$\textbf{tree.getRoot}(list\textunderscore neighbors[i]) \neq null \textbf{ and } \newline
+%                                 \textbf{tree.getRoot}(list\textunderscore neighbors[i]) \neq \textbf{tree.getRoot}(active\textunderscore nodes[0])$}
+%                             \State $paths \gets tree.getPath(active\textunderscore nodes[0], list\textunderscore neighbors[i])$                    
+%                         \EndIf
+%                     \EndIf
+%                 \EndFor
+%                 \State $active\textunderscore nodes.pop()$
+%             \EndWhile
+%             \State $\textbf{return } paths \neq 0$
+%         \EndFunction
+%     \end{algorithmic}
+% \end{algorithm}
 
-\begin{algorithm}
-    \caption{tahap augmentasi pada \emph{mincut} di bagian \ref{fase_augmentation}}          
-    \label{algo:fase_augmentation}                 
-    \begin{algorithmic}            % enter the algorithmic environment
-        \Function{$augmentation\textunderscore step$}{$\textbf{vector<int> } gc\textunderscore graph, gc\textunderscore sink, gc\textunderscore source$}
-            \Call{$tree.get\textunderscore residu$}{paths, gc\textunderscore graph\textunderscore capacity}
-            \For{$\textbf{int }i; i < path\textunderscore residu.size(); i++$}
-                \If{$\textbf{tree.getRoot}(i[0]) == \textbf{tree.getRoot}(i[1]) == gc\textunderscore source$}
-                    \State $\textbf{tree.setParentNull}(i[1])$
-                    \State $orphans.push\textunderscore back(i[1])$
-                \ElsIf{$\textbf{tree.getRoot}(i[0]) == \textbf{tree.getRoot}(i[1]) == gc\textunderscore sink$}
-                    \State $\textbf{tree.setParentNull}(i[0])$
-                    \State $orphans.push\textunderscore back(i[0])$
-                \EndIf
-            \EndFor
-        \EndFunction
-    \end{algorithmic}
-\end{algorithm}
+% \begin{algorithm}
+%     \caption{tahap augmentasi pada \emph{mincut} di bagian \ref{fase_augmentation}}          
+%     \label{algo:fase_augmentation}                 
+%     \begin{algorithmic}            % enter the algorithmic environment
+%         \Function{$augmentation\textunderscore step$}{$\textbf{vector<int> } gc\textunderscore graph, gc\textunderscore sink, gc\textunderscore source$}
+%             \Call{$tree.get\textunderscore residu$}{paths, gc\textunderscore graph\textunderscore capacity}
+%             \For{$\textbf{int }i; i < path\textunderscore residu.size(); i++$}
+%                 \If{$\textbf{tree.getRoot}(i[0]) == \textbf{tree.getRoot}(i[1]) == gc\textunderscore source$}
+%                     \State $\textbf{tree.setParentNull}(i[1])$
+%                     \State $orphans.push\textunderscore back(i[1])$
+%                 \ElsIf{$\textbf{tree.getRoot}(i[0]) == \textbf{tree.getRoot}(i[1]) == gc\textunderscore sink$}
+%                     \State $\textbf{tree.setParentNull}(i[0])$
+%                     \State $orphans.push\textunderscore back(i[0])$
+%                 \EndIf
+%             \EndFor
+%         \EndFunction
+%     \end{algorithmic}
+% \end{algorithm}
 
-\begin{algorithm}
-    \caption{tahap augmentasi pada \emph{mincut} di bagian \ref{fase_adoption}}          
-    \label{algo:fase_adoption}                 
-    \begin{algorithmic}            % enter the algorithmic environment
-        \Function{$adoption\textunderscore step$}{$\textbf{vector<int> } gc\textunderscore graph, gc\textunderscore sink, gc\textunderscore source$}
-            \State $\textbf{Node*} current\textunderscore orphans $
-            \While{$orphans \neq 0$}
-                \State $current\textunderscore orphans \gets orphans[0]$
-                \State $\Call{search\textunderscore neighbors}{current\textunderscore orphans, tree\textunderscore cap}$
-                \State $orphans.pop()$
-                \For{$\textbf{int }i; i < list\textunderscore neighbors.size(); i++$}
-                    \If{$tree.getRoot(list\textunderscore neighbors[i]) == \hfill \newline 
-                    \hspace*{5em} tree.getRoot(current\textunderscore orphans)  \textbf{ and } \hfill \newline 
-                    \hspace*{5em} tree.getEdgeCapacity(list\textunderscore neighbors[i],\newline 
-                    \hspace*{5em} current\textunderscore orphans) > 0$} 
-                        \State $tree.insertChild(list\textunderscore neighbors[i], current\textunderscore orphans)$     
-                        \State $\textbf{break}$             
-                    \EndIf 
-                \EndFor
-            \EndWhile
-        \EndFunction
-    \end{algorithmic}
-\end{algorithm}
+% \begin{algorithm}
+%     \caption{tahap augmentasi pada \emph{mincut} di bagian \ref{fase_adoption}}          
+%     \label{algo:fase_adoption}                 
+%     \begin{algorithmic}            % enter the algorithmic environment
+%         \Function{$adoption\textunderscore step$}{$\textbf{vector<int> } gc\textunderscore graph, gc\textunderscore sink, gc\textunderscore source$}
+%             \State $\textbf{Node*} current\textunderscore orphans $
+%             \While{$orphans \neq 0$}
+%                 \State $current\textunderscore orphans \gets orphans[0]$
+%                 \State $\Call{search\textunderscore neighbors}{current\textunderscore orphans, tree\textunderscore cap}$
+%                 \State $orphans.pop()$
+%                 \For{$\textbf{int }i; i < list\textunderscore neighbors.size(); i++$}
+%                     \If{$tree.getRoot(list\textunderscore neighbors[i]) == \hfill \newline 
+%                     \hspace*{5em} tree.getRoot(current\textunderscore orphans)  \textbf{ and } \hfill \newline 
+%                     \hspace*{5em} tree.getEdgeCapacity(list\textunderscore neighbors[i],\newline 
+%                     \hspace*{5em} current\textunderscore orphans) > 0$} 
+%                         \State $tree.insertChild(list\textunderscore neighbors[i], current\textunderscore orphans)$     
+%                         \State $\textbf{break}$             
+%                     \EndIf 
+%                 \EndFor
+%             \EndWhile
+%         \EndFunction
+%     \end{algorithmic}
+% \end{algorithm}
 
 
 \pagebreak
@@ -1302,12 +1288,14 @@ Selanjutnya penulis melakukan segmentasi dengan menggunakan algoritma \emph{min-
 atau \emph{GraphCut}. Algoritma ini memvisualisasikan gambar sebagai graf, dan piksel 
 sebagai \emph{node} pada graf tersebut, kemudian \emph{GraphCut} bertugas untuk 
 segmentasi piksel mana yang termasuk \emph{foreground} dan \emph{background} dengan cara
-melakukan \emph{cut} pada graf. Terdapat dua terminal pada graf yaitu terminal \emph{source} s
-dan \emph{sink} t, kedua terminal saling terhubung terhadap semua piksel yang ada di graf,
-piksel yang masuk ke dalam \emph{source} akan menjadi \emph{foreground} sementara piksel
-yang masuk ke dalam \emph{sink} akan menjadi \emph{background}. Setiap \emph{node} 
-pada graf memiliki hubungan yang yang disebut \emph{edge}, \emph{edge} akan memiliki arah 
-dan bobot dimana bobot tersebut akan digunakan untuk mencari \emph{mincut} dari graf.
+melakukan \emph{cut} pada graf. 
+
+% Terdapat dua terminal pada graf yaitu terminal \emph{source} s
+% dan \emph{sink} t, kedua terminal saling terhubung terhadap semua piksel yang ada di graf,
+% piksel yang masuk ke dalam \emph{source} akan menjadi \emph{foreground} sementara piksel
+% yang masuk ke dalam \emph{sink} akan menjadi \emph{background}. Setiap \emph{node} 
+% pada graf memiliki hubungan yang yang disebut \emph{edge}, \emph{edge} akan memiliki arah 
+% dan bobot dimana bobot tersebut akan digunakan untuk mencari \emph{mincut} dari graf.
 
 
 \begin{figure}[H]
@@ -1329,16 +1317,16 @@ dan bobot dimana bobot tersebut akan digunakan untuk mencari \emph{mincut} dari 
   
   \end{figure}
 
-Algoritma \emph{mincut} terdiri dari beberapa tahap, penjelasan singkatnya yaitu 
-tahap pertama dimana graf bertumbuh (\emph{growth}) hingga menemukan jalan (\emph{path}) 
-dari \emph{source} menuju \emph{sink}, selanjutnya tahap kedua (augmentasi) dimana 
-\emph{path} yang sudah ditemukan akan dilihat kapasitas tiap \emph{edge} nya lalu 
-masing-masing kapasitas \emph{edge} akan dikurangi dengan kapasitas paling kecil 
-(\emph{bottleneck}), apabila ada kapasitas \emph{edge} yang kosong, maka \emph{node} 
-tersebut menjadi \emph{Orphans} (tidak memiliki orang tua), setelah itu masuk tahap 
-ketiga (adopsi) yaitu mencari orang tua baru dari \emph{node} yang menjadi \emph{orphans} 
-sebelumnya, apabila tidak ada maka \emph{node} tersebut menjadi \emph{node} bebas. 
-Struktur algoritma \emph{mincut} dapat dilihat pada bagian \ref{pseudo:1.0}. 
+% Algoritma \emph{mincut} terdiri dari beberapa tahap, penjelasan singkatnya yaitu 
+% tahap pertama dimana graf bertumbuh (\emph{growth}) hingga menemukan jalan (\emph{path}) 
+% dari \emph{source} menuju \emph{sink}, selanjutnya tahap kedua (augmentasi) dimana 
+% \emph{path} yang sudah ditemukan akan dilihat kapasitas tiap \emph{edge} nya lalu 
+% masing-masing kapasitas \emph{edge} akan dikurangi dengan kapasitas paling kecil 
+% (\emph{bottleneck}), apabila ada kapasitas \emph{edge} yang kosong, maka \emph{node} 
+% tersebut menjadi \emph{Orphans} (tidak memiliki orang tua), setelah itu masuk tahap 
+% ketiga (adopsi) yaitu mencari orang tua baru dari \emph{node} yang menjadi \emph{orphans} 
+% sebelumnya, apabila tidak ada maka \emph{node} tersebut menjadi \emph{node} bebas. 
+% Struktur algoritma \emph{mincut} dapat dilihat pada bagian \ref{pseudo:1.0}. 
 
 Setiap piksel pada gambar memiliki komponen GMM tersendiri, pada tahap ini nilai k
 tiap piksel telah didapatkan dari GMM, dimana nilai k dari tiap piksel memiliki rentang

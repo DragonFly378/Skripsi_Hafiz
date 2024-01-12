@@ -910,20 +910,20 @@ File: gambar/logounj.png Graphic file (type bmp)
  [1
 
 ]
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
-File: Lembar_Pengesahan.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan.pdf, page 1>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf, page 1>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf, page 1>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf, page 1>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf, page 1>
+File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
+<use Lembar_Pengesahan_Skripsi.pdf, page 1>
  [0
 
 ]
@@ -952,6 +952,9 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
 
  [4] (template-skripsi.lof
 Missing character: There is no ∈ ("2208) in font ptmr8t!
+
+LaTeX Warning: Reference `img:2.6' on page v undefined on input line 19.
+
 [5
 
 ])
@@ -1064,7 +1067,11 @@ File: gambar/gambar-2_5(e).png Graphic file (type bmp)
 <gambar/gambar-2_5(e).png>
 File: gambar/gambar-2_5(f).png Graphic file (type bmp)
 <gambar/gambar-2_5(f).png>
- [29] [30] [31]
+ [29] [30]
+
+LaTeX Warning: Reference `img:2.6' on page 31 undefined on input line 1117.
+
+[31]
 File: gambar/gambar-2_6.png Graphic file (type bmp)
 <gambar/gambar-2_6.png>
  [32]
@@ -1075,15 +1082,34 @@ File: gambar/gambar-2_7(b).png Graphic file (type bmp)
 File: gambar/gambar-2_7(c).png Graphic file (type bmp)
 <gambar/gambar-2_7(c).png>
 
+
+LaTeX Warning: Reference `img:2.6' on page 33 undefined on input line 1189.
+
 Missing character: There is no — ("2014) in font ptmr8t!
 [33]
 File: gambar/gambar-2_8.png Graphic file (type bmp)
 <gambar/gambar-2_8.png>
+
+
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1206.
+
+
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1206.
+
+
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1215.
+
+
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1217.
+
 ) [34]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
+
+LaTeX Warning: Reference `gambar:2.6' on page 35 undefined on input line 18.
+
 File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
 <gambar/gambar-3_2(b).jpg>
 File: gambar/rectangle.png Graphic file (type bmp)
@@ -1130,24 +1156,24 @@ File: gambar/graf.png Graphic file (type bmp)
  [43] [44]
 File: gambar/contoh_path.png Graphic file (type bmp)
 <gambar/contoh_path.png>
- [45] [46] [47] [48] [49] [50] [51] [52] [53]
+ [45] [46]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 766.
+put line 752.
 
-Overfull \hbox (8.4281pt too wide) in paragraph at lines 775--776
+Overfull \hbox (8.4281pt too wide) in paragraph at lines 761--762
 []$\OML/cmm/m/it/12 mask \OMS/cmsy/m/n/12   []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
  gambar:shape\OT1/cmr/m/n/12 [0]\OML/cmm/m/it/12 ; gambar:shape\OT1/cmr/m/n/12 
 [1])$ 
  []
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 780.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 766.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 780.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 766.
 
 
-Overfull \hbox (14.65237pt too wide) in paragraph at lines 780--782
+Overfull \hbox (14.65237pt too wide) in paragraph at lines 766--768
 []$\OML/cmm/m/it/12 flagsValue\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 bg[]\OT1/cmr/
 m/n/12 ]\OML/cmm/m/it/12 ; flagsValue\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12 fg[]\O
 T1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; flagsValue\OT1/cmr/m/n/12 [[]\OML/cmm/m/it/12
@@ -1156,55 +1182,94 @@ L/cmm/m/it/12 prob[]fg[]\OT1/cmr/m/n/12 ][]
  []
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 785.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 771.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 787.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 773.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 798.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 784.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 802.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 788.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 804.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 790.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 824.
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 807.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 825.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 810.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 827.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 811.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 827.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 813.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 828.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 813.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 828.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 814.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 833.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 814.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 833.
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 818.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 834.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 819.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 834.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 819.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 835.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 820.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 835.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 820.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 821.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 821.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 822.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 823.
+
+
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 827.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 829.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 829.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 829.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 830.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 830.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 830.
+
+
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 834.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 836.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 836.
@@ -1213,91 +1278,103 @@ LaTeX Warning: Command \textunderscore invalid in math mode on input line 836.
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 837.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 843.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 837.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 843.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 837.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 843.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 837.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 844.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 837.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 844.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 844.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 850.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 850.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
-
-
-Overfull \hbox (11.711pt too wide) in paragraph at lines 851--852
+Overfull \hbox (11.711pt too wide) in paragraph at lines 837--838
 [] $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 gc[]graph; gc[]sink; gc[]source; gc[]gr
 aph[]capacity\OT1/cmr/m/n/12 )$ 
  []
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 864.
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 846.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 865.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 850.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 865.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 866.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 851.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 867.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 852.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 867.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 853.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 868.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 853.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 871.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 854.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 872.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 857.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 873.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 858.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 874.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 859.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 860.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 876.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 876.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 877.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 877.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 878.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 878.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 880.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 880.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 880.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 881.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 881.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 881.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 885.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 887.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 890.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 890.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 891.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 891.
@@ -1309,82 +1386,49 @@ LaTeX Warning: Command \textunderscore invalid in math mode on input line 892.
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 892.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 894.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 893.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 894.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 894.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 896.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 895.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 895.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 895.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 896.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 899.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 901.
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 916.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 904.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 917.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 905.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 921.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 906.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 921.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 906.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 921.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 907.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 922.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 908.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 922.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 910.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 922.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 910.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 927.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 913.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 931.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 935.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 935.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 935.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 936.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 936.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 936.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 941.
-
-
-Overfull \hbox (64.09506pt too wide) in paragraph at lines 945--946
+Overfull \hbox (64.09506pt too wide) in paragraph at lines 931--932
 [] $\OML/cmm/m/it/12 coefs\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 ] 
 \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 labelCounts\OT1/cmr/m/n/12 [\OML/cmm/m/it/1
 2 k\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =accumulate\OT1/cmr/m/n/12 (\OML/cmm/m/it/
@@ -1393,13 +1437,25 @@ r/m/n/12 ()\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)$
  []
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 952.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 938.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 953.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 939.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 964.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 950.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 950.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 951.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 954.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 954.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 964.
@@ -1408,134 +1464,151 @@ LaTeX Warning: Command \textunderscore invalid in math mode on input line 964.
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 965.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 968.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 965.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 966.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 967.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 967.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 968.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 978.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 968.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 979.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 970.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 979.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 970.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 980.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 971.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 981.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 971.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 981.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 972.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 982.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 972.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 982.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 972.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 984.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 972.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 984.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 972.
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 985.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 985.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
-
-
-Overfull \hbox (11.711pt too wide) in paragraph at lines 986--987
+Overfull \hbox (11.711pt too wide) in paragraph at lines 972--973
 [] $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 gc[]graph; gc[]sink; gc[]source; gc[]gr
 aph[]capacity\OT1/cmr/m/n/12 )$ 
  []
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 997.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 983.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 984.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 985.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 985.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 986.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 988.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 988.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 989.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 989.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 993.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 994.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 995.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 995.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 995.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 996.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 996.
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 998.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 999.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 999.
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1000.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1002.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1002.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1003.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1003.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1007.
-
 
 
 LaTeX Warning: Command \textunderscore invalid in math mode on input line 1008.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1009.
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 1016.
+
+
+LaTeX Warning: Reference `gambar:2.6' on page 47 undefined on input line 1016.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1020.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1009.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1021.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1009.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1023.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1010.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1027.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1010.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1028.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1012.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1032.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1022.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1032.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1033.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1033.
 
 
 
@@ -1543,7 +1616,11 @@ LaTeX Warning: Command \textunderscore invalid in math mode on input line 1034.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1035.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1034.
+
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1034.
 
 
 
@@ -1551,241 +1628,37 @@ LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1041.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1042.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1046.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1046.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1047.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1037.
 
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1047.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1048.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1048.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1048.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1051.
-
-
-
-Overfull \hbox (92.85147pt too wide) in paragraph at lines 1051--1052
+Overfull \hbox (92.85147pt too wide) in paragraph at lines 1037--1038
 []\T1/ptm/b/n/12 fun-ction $\OML/cmm/m/it/12 mincut[]segmentataion$\T1/ptm/m/n/
 12 ($[]\OML/cmm/m/it/12 gc[]graph; gc[]sink; gc[]source; gc[]graph[]capacity$\T
 1/ptm/m/n/12 ) 
  []
 
+[47] [48] [49] [50] [51] [52] [53]
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1071.
+LaTeX Warning: Citation 'Silva:2015' on page 54 undefined on input line 1147.
 
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1072.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1073.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1073.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1074.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1075.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1076.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1077.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1078.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1078.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1080.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1080.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1080.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1081.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1081.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1085.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1096.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1097.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1098.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1099.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1101.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1102.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1104.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1115.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1116.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1118.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1119.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1119.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1121.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1125.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1126.
-
-
-
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1126.
-
-
-[54] [55] [56] [57] [58] [59] [60] [61]
-
-LaTeX Warning: Citation 'Silva:2015' on page 62 undefined on input line 1161.
-
-[62]
+[54]
 File: gambar/gambar-3_2(a).png Graphic file (type bmp)
 <gambar/gambar-3_2(a).png>
 File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
@@ -1796,44 +1669,47 @@ File: gambar/gambar-3_2(d).png Graphic file (type bmp)
 <gambar/gambar-3_2(d).png>
 File: gambar/gambar-3_4.png Graphic file (type bmp)
 <gambar/gambar-3_4.png>
- [63]
+ [55]
 File: gambar/rectangle.png Graphic file (type bmp)
 <gambar/rectangle.png>
- [64]
+ [56]
 File: gambar/cth-graph-1.png Graphic file (type bmp)
 <gambar/cth-graph-1.png>
 File: gambar/cth-graph-2.png Graphic file (type bmp)
 <gambar/cth-graph-2.png>
- [65] [66]
+ [57]
 File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
 <gambar/gambar-3_2(b).jpg>
 File: gambar/rectangle.png Graphic file (type bmp)
 <gambar/rectangle.png>
 File: gambar/res_2.png Graphic file (type bmp)
 <gambar/res_2.png>
- [67]) [68]
+ [58] [59]) [60]
 \openout2 = `bab4.aux'.
 
  (bab4.tex
 BAB IV.
 (lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [69
+) [61
 
 
 
 
-] [70]) [71]
+] [62] [63] [64] [65]
+File: gambar/hasil_bab4.jpg Graphic file (type bmp)
+<gambar/hasil_bab4.jpg>
+) [66] [67]
 \openout2 = `bab5.aux'.
 
  (bab5.tex
 BAB V.
-) [72
+) [68
 
 
 
 
-] [73
+] [69
 
 
 
@@ -1842,10 +1718,10 @@ BAB V.
 
  (lampiran.tex
 LAMPIRAN A.
-[74
+[70
 
 
-] [75] [76] [77] [78]
+] [71] [72] [73] [74] [75] [76] [77]
 LAMPIRAN B.
 File: gambar/dataset_citra/luka_hitam/2.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/2.jpg>
@@ -1860,325 +1736,325 @@ File: gambar/dataset_citra/luka_hitam/7.jpg Graphic file (type bmp)
 File: gambar/dataset_citra/luka_hitam/8.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/8.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 442--442
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 666--666
 []|\T1/ptm/m/n/12 luka_hitam/14.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/14.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/14.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 449--449
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 673--673
 []|\T1/ptm/m/n/12 luka_hitam/15.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/15.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/15.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 456--456
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 680--680
 []|\T1/ptm/m/n/12 luka_hitam/17.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/17.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/17.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 474--474
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 698--698
 []|\T1/ptm/m/n/12 luka_hitam/18.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/18.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/18.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 481--481
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 705--705
 []|\T1/ptm/m/n/12 luka_hitam/19.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/19.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/19.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 488--488
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 712--712
 []|\T1/ptm/m/n/12 luka_hitam/20.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/20.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/20.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 495--495
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 719--719
 []|\T1/ptm/m/n/12 luka_hitam/22.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/22.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/22.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 502--502
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 726--726
 []|\T1/ptm/m/n/12 luka_hitam/26.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/26.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/26.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 509--509
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 733--733
 []|\T1/ptm/m/n/12 luka_hitam/27.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/27.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/27.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 516--516
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 740--740
 []|\T1/ptm/m/n/12 luka_hitam/28.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/28.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/28.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 523--523
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 747--747
 []|\T1/ptm/m/n/12 luka_hitam/29.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/29.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/29.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 530--530
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 754--754
 []|\T1/ptm/m/n/12 luka_hitam/33.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/33.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/33.jpg>
-[79
+[78
 
 ]
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 549--549
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 773--773
 []|\T1/ptm/m/n/12 luka_hitam/37.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/37.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/37.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 556--556
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 780--780
 []|\T1/ptm/m/n/12 luka_hitam/40.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/40.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/40.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 563--563
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 787--787
 []|\T1/ptm/m/n/12 luka_hitam/41.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/41.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/41.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 570--570
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 794--794
 []|\T1/ptm/m/n/12 luka_hitam/16.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/16.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/16.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 577--577
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 801--801
 []|\T1/ptm/m/n/12 luka_hitam/31.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/31.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/31.jpg>
 
-Overfull \hbox (0.94734pt too wide) in paragraph at lines 584--584
+Overfull \hbox (0.94734pt too wide) in paragraph at lines 808--808
 []|\T1/ptm/m/n/12 luka_hitam/39.jpg| 
  []
 
 File: gambar/dataset_citra/luka_hitam/39.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_hitam/39.jpg>
-[80]
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 603--603
+[79]
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 827--827
 []|\T1/ptm/m/n/12 luka_kuning/13.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/13.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/13.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 610--610
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 834--834
 []|\T1/ptm/m/n/12 luka_kuning/17.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/17.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/17.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 617--617
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 841--841
 []|\T1/ptm/m/n/12 luka_kuning/18.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/18.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/18.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 624--624
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 848--848
 []|\T1/ptm/m/n/12 luka_kuning/19.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/19.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/19.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 631--631
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 855--855
 []|\T1/ptm/m/n/12 luka_kuning/21.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/21.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/21.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 638--638
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 862--862
 []|\T1/ptm/m/n/12 luka_kuning/23.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/23.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/23.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 645--645
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 869--869
 []|\T1/ptm/m/n/12 luka_kuning/25.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/25.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/25.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 652--652
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 876--876
 []|\T1/ptm/m/n/12 luka_kuning/34.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/34.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/34.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 659--659
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 883--883
 []|\T1/ptm/m/n/12 luka_kuning/35.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/35.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/35.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 666--666
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 890--890
 []|\T1/ptm/m/n/12 luka_kuning/38.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/38.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/38.jpg>
-[81]
+[80]
 Overfull \vbox (4.72025pt too high) has occurred while \output is active []
 
 
-[82]
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 685--685
+[81]
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 909--909
 []|\T1/ptm/m/n/12 luka_kuning/42.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/42.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/42.jpg>
 
-Overfull \hbox (0.94766pt too wide) in paragraph at lines 692--692
+Overfull \hbox (0.94766pt too wide) in paragraph at lines 916--916
 []|\T1/ptm/m/n/12 luka_kuning/3.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/3.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/3.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 699--699
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 923--923
 []|\T1/ptm/m/n/12 luka_kuning/12.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/12.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/12.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 706--706
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 930--930
 []|\T1/ptm/m/n/12 luka_kuning/10.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/10.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/10.jpg>
 
-Overfull \hbox (6.94766pt too wide) in paragraph at lines 713--713
+Overfull \hbox (6.94766pt too wide) in paragraph at lines 937--937
 []|\T1/ptm/m/n/12 luka_kuning/16.jpg| 
  []
 
 File: gambar/dataset_citra/luka_kuning/16.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/16.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 731--731
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 955--955
 []|\T1/ptm/m/n/12 luka_merah/16.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/16.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/16.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 738--738
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 962--962
 []|\T1/ptm/m/n/12 luka_merah/17.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/17.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/17.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 745--745
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 969--969
 []|\T1/ptm/m/n/12 luka_merah/22.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/22.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/22.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 752--752
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 976--976
 []|\T1/ptm/m/n/12 luka_merah/24.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/24.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/24.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 759--759
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 983--983
 []|\T1/ptm/m/n/12 luka_merah/25.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/25.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/25.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 766--766
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 990--990
 []|\T1/ptm/m/n/12 luka_merah/30.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/30.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/30.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 773--773
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 997--997
 []|\T1/ptm/m/n/12 luka_merah/32.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/32.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/32.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 781--781
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1005--1005
 []|\T1/ptm/m/n/12 luka_merah/33.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/33.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/33.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 788--788
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1012--1012
 []|\T1/ptm/m/n/12 luka_merah/37.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/37.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/37.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 795--795
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1019--1019
 []|\T1/ptm/m/n/12 luka_merah/39.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/39.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/39.jpg>
-[83]
+[82]
 Overfull \vbox (20.16275pt too high) has occurred while \output is active []
 
 
-[84]
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 814--814
+[83]
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1038--1038
 []|\T1/ptm/m/n/12 luka_merah/42.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/42.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/42.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 821--821
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1045--1045
 []|\T1/ptm/m/n/12 luka_merah/44.jpg| 
  []
 
@@ -2199,268 +2075,340 @@ File: gambar/dataset_citra/luka_merah/8.jpg Graphic file (type bmp)
 File: gambar/dataset_citra/luka_merah/9.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/9.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 889--889
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1113--1113
 []|\T1/ptm/m/n/12 luka_merah/10.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/10.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/10.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 896--896
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1120--1120
 []|\T1/ptm/m/n/12 luka_merah/11.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/11.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/11.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 903--903
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1127--1127
 []|\T1/ptm/m/n/12 luka_merah/12.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/12.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/12.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 910--910
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1134--1134
 []|\T1/ptm/m/n/12 luka_merah/14.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/14.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/14.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 917--917
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1141--1141
 []|\T1/ptm/m/n/12 luka_merah/18.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/18.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/18.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 924--924
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1148--1148
 []|\T1/ptm/m/n/12 luka_merah/19.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/19.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/19.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 931--931
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1155--1155
 []|\T1/ptm/m/n/12 luka_merah/20.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/20.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/20.jpg>
-[85]
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 950--950
+[84]
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1174--1174
 []|\T1/ptm/m/n/12 luka_merah/23.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/23.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/23.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 957--957
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1181--1181
 []|\T1/ptm/m/n/12 luka_merah/26.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/26.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/26.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 964--964
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1188--1188
 []|\T1/ptm/m/n/12 luka_merah/29.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/29.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/29.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 971--971
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1195--1195
 []|\T1/ptm/m/n/12 luka_merah/35.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/35.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/35.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 978--978
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1202--1202
 []|\T1/ptm/m/n/12 luka_merah/36.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/36.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/36.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 985--985
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1209--1209
 []|\T1/ptm/m/n/12 luka_merah/38.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/38.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/38.jpg>
 
-Overfull \hbox (3.59947pt too wide) in paragraph at lines 992--992
+Overfull \hbox (3.59947pt too wide) in paragraph at lines 1216--1216
 []|\T1/ptm/m/n/12 luka_merah/20.jpg| 
  []
 
 File: gambar/dataset_citra/luka_merah/20.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/20.jpg>
-[86] [87]
+[85] [86]
 LAMPIRAN C.
 File: gambar/hasil_segmentasi/luka_hitam/image_2_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_2_rect.jpg>
-
-Overfull \hbox (3.49448pt too wide) in paragraph at lines 1010--1010
-\T1/ptm/m/n/12 (153,48,299,158)| 
- []
-
 File: gambar/hasil_segmentasi/luka_hitam/result_2.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_2.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_2_cv.jpg Graphic file (type bmp
-)
-<gambar/hasil_segmentasi/luka_hitam/result_2_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_2.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_2.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_2.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_2.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/2_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/2_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_4_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_4_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_4.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_4.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_4_cv.jpg Graphic file (type bmp
-)
-<gambar/hasil_segmentasi/luka_hitam/result_4_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_4.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_4.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_4.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_4.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/4_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/4_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_5_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_5_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_5.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_5.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_5_cv.jpg Graphic file (type bmp
-)
-<gambar/hasil_segmentasi/luka_hitam/result_5_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_5.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_5.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_5.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_5.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/5_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/5_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_6.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_6.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_6_cv.jpg Graphic file (type bmp
-)
-<gambar/hasil_segmentasi/luka_hitam/result_6_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_6.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_6.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_6.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_6.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/6_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/6_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_7_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_7_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_7.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_7.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_7_cv.jpg Graphic file (type bmp
-)
-<gambar/hasil_segmentasi/luka_hitam/result_7_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_7.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_7.jpg>
-
-Overfull \hbox (24.104pt too wide) in paragraph at lines 1004--1049
- [][] 
- []
-
-[88
-
-]
-Overfull \vbox (12.00319pt too high) has occurred while \output is active []
-
-
-[89]
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_7.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_7.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/7_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/7_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg>
+
+Overfull \hbox (1.88992pt too wide) in paragraph at lines 1287--1287
+\T1/ptm/m/n/10 (114,104,157,108)| 
+ []
+
 File: gambar/hasil_segmentasi/luka_hitam/result_8.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_8.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_8_cv.jpg Graphic file (type bmp
-)
-<gambar/hasil_segmentasi/luka_hitam/result_8_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_8.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_8.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_8.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_8.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/8_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/8_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_14_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_14_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_14.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_14.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_14_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_14_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_14.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_14.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_14.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_14.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/14_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/14_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_15_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_15_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_15.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_15.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_15_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_15_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_15.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_15.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_15.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_15.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/15_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/15_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_17_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_17_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_17.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_17.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_17_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_17_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_17.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_17.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_17.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_17.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/17_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/17_r.jpg>
+[87
+
+]
 File: gambar/hasil_segmentasi/luka_hitam/image_18_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_18_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_18.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_18.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_18_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_18_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_18.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_18.jpg>
-
-Overfull \hbox (24.104pt too wide) in paragraph at lines 1055--1101
- [][] 
- []
-
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_18.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_18.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/18_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/18_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_19_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_19_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_19.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_19.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_19_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_19_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_19.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_19.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_19.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_19.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/19_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/19_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_20.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_20.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_20_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_20_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_20.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_20.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_20.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_20.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/20_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/20_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/result_22.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/result_22.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_22_cv.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/result_22_cv.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_22.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_22.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_22.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_22.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/22_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/22_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_26_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_26_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_26.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_26.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_26.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_26.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/26_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/26_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_27_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_27_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_27.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_27.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_27.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_27.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/27_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/27_r.jpg>
+ [88]
+File: gambar/hasil_segmentasi/luka_hitam/image_28_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_28_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_28.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_28.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_28.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_28.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/28_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/28_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_29_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_29_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_29.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_29.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_29.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_29.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/29_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/29_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_33_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_33_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_33.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_33.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_33.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_33.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/33_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/33_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_37_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_37_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_37.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_37.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_37.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_37.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/37_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/37_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_40_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_40_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_40.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_40.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_40.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_40.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/40_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/40_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_41_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_41_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_41.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_41.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/41_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/41_r.jpg>
+ [89]
+File: gambar/hasil_segmentasi/luka_hitam/image_16_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_16_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_16.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_16.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_16.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_16.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/16_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/16_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_31_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_31_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_31.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_31.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_31.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_31.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/31_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/31_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_39_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_39_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_39.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_39.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_39.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_39.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/39_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/39_r.jpg>
+) [90] [91] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (b
+ab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
 
-Overfull \hbox (24.104pt too wide) in paragraph at lines 1108--1138
- [][] 
- []
+LaTeX Warning: There were undefined references.
 
-) [90] [91] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux)
-(bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 375702207C63AC5BFC8F80D2D8EBFCDE;10820.
+(rerunfilecheck)             Checksum: 3823BDC04540D6AC498FA814000DA05D;11890.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (100 pages, 583200 bytes).
+Output written on template-skripsi.xdv (100 pages, 631856 bytes).

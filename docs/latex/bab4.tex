@@ -28,7 +28,7 @@ serta menyamakan ukuran tiap sampel citra gambar, berikut \emph{source code} nya
 		self.image = self.image.resize((new_width, new_height)) 
 	\end{lstlisting}
 	\caption{\emph{source code} mengubah ukuran lebar citra menjadi 320 piksel}
-	\label{img:resize_gambar}
+	\label{code:resize_gambar}
 \end{figure}
 
 Fungsi \texttt{setSizeImg()} dibuat untuk mengubah ukuran lebar piksel citra 
@@ -42,7 +42,7 @@ beberapa tahapan, setiap tahapan akan mengolah data input berupa citra gambar lu
 yang disimpan menjadi \emph{array} multidimensi (lebar, tinggi, nilai RGB).
 Berikut adalah tahapannya:
 
-\subsection{Inisiasi kotak (\emph{Bounding Box})}
+\subsection{Inisiasi Kotak Pembatas (\emph{Bounding Box})}
 
 Dalam segmentasi citra luka, dimulai dengan inisiasi kotak atau \emph{bounding box} 
 yang digambar mengelilingi area citra luka, berikut \emph{source code} nya:
@@ -93,34 +93,222 @@ yang digambar mengelilingi area citra luka, berikut \emph{source code} nya:
 
 	\end{lstlisting}
 	\caption{\emph{source code} menggambar kotak pada area luka}
-	\label{img:inisiasi_rectangle}
+	\label{code:inisiasi_rectangle}
 \end{figure}
 
 Ketika kotak sudah tergambar, koordinat dimasukkan kedalam variabel \texttt{KOTAK["coord"]}
 pada fungsi \texttt{onRelease\_rect()} yang mana \texttt{KOTAK["coord"]} berupa array 
 berisi x1, y1, x2, y2 yang akan digunakan untuk tahap selanjutnya.
 
-\subsection{Inisiasi piksel}
+\subsection{Inisiasi Piksel}
 Tahap selanjutnya adalah membuat salinan \emph{masking} pada citra gambar luka yang diubah
 menjadi gambar hitam, salinan dibuat dengan menggunakan \emph{library} \emph{Numpy}
 dengan target citra gambar luka. Berikut \emph{source code} nya:
 
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	self.gambar = np.array(self.image)
+	self.gambar2 = self.gambar.copy()
+	self.mask = np.zeros(self.gambar2.shape[:2], dtype=np.uint8)
+	self.mask2 = self.mask.copy()
+
+	def inisiasi_piksel(self):
+		self.alpha[self.rect[1]:self.rect[1] + self.rect[3],self.rect[0]:self.rect[0] + self.rect[2]] = F_TF
+		self.trimap['TB'] = np.where(self.alpha == F_TB)
+		self.trimap['TU'] = np.where(self.alpha == F_TF)
+		"""Inisiasi GMM"""
+		self.gmm_fg =  MixtureModel(self.trimap['TU'], 
+						self.gambar[self.trimap['TU']], 
+						self.komponen_gmm, self.theta['TU'])
+		self.gmm_bg =  MixtureModel(self.trimap['TB'], 
+						self.gambar[self.trimap['TB']], 
+						self.komponen_gmm, self.theta['TB'])
+		self.gmm_fg.init_gmm_rand(self.gambar[self.trimap['TU']], self.theta['TU'])
+		self.gmm_bg.init_gmm_rand(self.gambar[self.trimap['TB']], self.theta['TB'])
+	\end{lstlisting}
+	\caption{\emph{source code} inisasi objek gmm \emph{foreground} dan \emph{background} }
+	\label{code:mask_image}
+\end{figure}
+
+Variabel  \texttt{self.gmm\_fg} dan \texttt{self.gmm\_bg} dibuat sebagai penanda antara objek untuk
+\emph{foreground} dan \emph{background}, masing masing memiliki parameter \texttt{self.gambar}, 
+\texttt{self.theta}, \texttt{self.trimap}, dan \texttt{self.komponen\_gmm}. Parameter 
+tersebut dibedakan nilainya yakni \textbf{'TU'} atau \textbf{'TB'}. 
 
 \begin{figure}[H]
 	\begin{lstlisting}[language=Python, basicstyle=\tiny]
-			self.gambar = np.array(self.image)
-        self.gambar2 = self.gambar.copy()
-        print("ukuran gambar: ", self.gambar.shape)
-
-        # buat masking dari gambar awal
-        self.mask = np.zeros(self.gambar2.shape[:2], dtype=np.uint8)
-        self.mask2 = self.mask.copy()
+	def init_gmm_rand(self, z, theta):
+        labels_k = []
+        for i in range(z.shape[0]):
+            labels_k.append(random.randint(0, self.komponen_gmm-1))
+        labels_k = np.array(labels_k)
+        self.count_params(z, labels_k, theta)
 	\end{lstlisting}
-	\caption{\emph{source code} menggambar kotak pada area luka}
-	\label{img:mask_image}
+	\caption{\emph{source code} menentukan label awal secara acak}
+	\label{code:init_gmm_random}
+\end{figure}
+
+Fungsi \texttt{init\_gmm\_rand()} memiliki tugas sebagai pembuat label gmm secara 
+acak sepanjang  \texttt{self.gambar} dengan batas angka yakni dari angka 0 sampai 
+\texttt{self.komponen\_gmm}, setelah label terbentuk dilanjutkan dengan menjalankan 
+fungsi \texttt{count\_params} untuk menghitung nilai GMM berdasarkan nilai awal 
+(inisiasi). Berikut \emph{source code} nya:
+
+\subsection{Menentukan Komponen Awal GMM}
+Tahap ini merupakan tahap pertama pada gambar \ref{img:segmentasi_grabcut}. Setelah
+membuat variabel gmm (fg dan bg) didalamnya terdapat fungsi untuk menentukan dan 
+menghitung komponen gmm awal. Berikut \emph{source code} nya:
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	def assign_gmm(self):
+        """Step 1 (assign GMM) pada gambar 2.11"""
+        print('\nMulai assign GMM')
+        self.komponen_piksel[self.trimap['TU']] = self.gmm_fg.assign_component(
+            self.gambar[self.trimap['TU']], self.theta['TU'], self.komponen_gmm
+        )
+        self.komponen_piksel[self.trimap['TB']] = self.gmm_bg.assign_component(
+            self.gambar[self.trimap['TB']], self.theta['TB'], self.komponen_gmm
+        )
+	\end{lstlisting}
+	\caption{\emph{source code} menghitung nilai gmm menggunakan label awal}
+	\label{code:assign_gmm}
+\end{figure}
+
+Fungsi \texttt{assign\_component} adalah fungsi yang menghitung nilai akumulasi 
+dari distribusi probabilitas gaussian yang terdapat pada gambar \ref{img:segmentasi_grabcut}
+tahap pertama. Berikut \emph{source code} nya:
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	def assign_component(self, z, theta, komponen_gmm):
+        gauss_distribution = []
+        for k in range(komponen_gmm):
+            gauss_score = self.dis_mult(z, k, theta)
+            gauss_distribution.append(gauss_score)
+        gauss_distribution = np.array(gauss_distribution)
+        gauss_distribution = gauss_distribution.T
+
+        return np.argmin(gauss_distribution, axis=1)
+	\end{lstlisting}
+	\caption{\emph{source code} menghitung akumulasi distribusi gaussian}
+	\label{code:assign_component}
+\end{figure}
+
+Hasil dari tahap ini adalah label gmm yang telah dihitung yang kemudian akan dipakai 
+di tahap selanjutnya.
+
+
+\subsection{Mempelajari Parameter GMM}
+Masuk ke tahap selanjutnya (kedua) dari gambar \ref{img:segmentasi_grabcut} dimana 
+label gmm yang sudah diperbarui akan digunakan untuk menghitung kembali parameter 
+gmm yakni \texttt{self.theta}. Berikut \emph{source code} nya:
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	def mempelajari_gmm(self):
+        self.gmm_fg.count_params(self.gambar[self.trimap['TU']], 
+                                 self.komponen_piksel[self.trimap['TU']], 
+                                 self.theta['TU'])
+
+        self.gmm_bg.count_params(self.gambar[self.trimap['TB']], 
+                                 self.komponen_piksel[self.trimap['TB']], 
+                                 self.theta['TB'])
+
+        idx_TU = np.where(self.alpha.reshape(-1) == F_TF)
+
+		self.D_count_fg = []
+        self.D_count_bg = []
+        for kn in range(self.komponen_gmm):
+            zn = self.gambar.reshape(-1, 3)[idx_TU]
+
+            tmp_d_fg = self.gmm_fg.d_calc(zn, kn, self.theta['TU'])
+            tmp_d_bg = self.gmm_bg.d_calc(zn, kn, self.theta['TB'])
+
+            self.D_count_fg.append(tmp_d_fg)
+            self.D_count_bg.append(tmp_d_bg)
+
+        self.D_count_fg = np.array(self.D_count_fg)
+        self.D_count_bg = np.array(self.D_count_bg)
+        self.U_count_fg = np.sum(self.D_count_fg, axis=0)
+        self.U_count_bg = np.sum(self.D_count_bg, axis=0)       
+	\end{lstlisting}
+	\caption{\emph{source code} mempelajari parameter GMM}
+	\label{code:learn_gmm}
+\end{figure}
+
+Setelah mendapat parameter gmm yang baru, selanjutnya adalah menghitung nilai \(D\)
+dengan menggunakan rumus \ref{eq:rumus_D}, fungsi yang menghitungnya terdapat pada 
+fungsi \texttt{d\_calc}. Berikut \emph{source code} nya:
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	def d_calc(self, zn, kn, theta):
+        gauss_res1 = self.gauss_dist_second(zn, kn, theta)
+        d_res1 = -np.log(theta['koefisien'][kn]) + gauss_res1
+
+        return d_res1
+	\end{lstlisting}
+	\caption{\emph{source code} menghitung nilai D}
+	\label{code:count_d}
+\end{figure}
+
+\subsection{Segmentasi Gambar dengan Algoritma \emph{Mincut}}
+Tahap terakhir adalah segmentasi gambar dengan algoritma \emph{mincut}, tahap 
+ini bertujuan untuk melakukan pemotongan gambar yang telah dikalkulasi pada 
+tahap sebelumnya, algoritma ini membutuhkan adanya graf yang dibuat dari gambar 
+citra, \emph{node} pada graf merepresentasikan piksel dalam citra. 
+Berikut \emph{source code} nya:
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	def build_graph(self):
+		self.gc_graph = ig.Graph(self.kolom * self.baris + 1)
+		self.gc_graph.add_edges(self.edges)
+	\end{lstlisting}
+	\caption{\emph{source code} Membangun graf}
+	\label{code:build_graph}
+\end{figure}
+
+Setelah graf terbentuk, segmentasi akan dilakukan dengan algoritma \emph{mincut}.
+Berikut \emph{source code} nya:
+\begin{figure}[H]
+	\begin{lstlisting}[language=Python, basicstyle=\tiny]
+	def mincut_segmentation(self):
+
+        mincut = self.gc_graph.st_mincut(
+        self.source_gc, self.sink_gc, self.kapasitas_graph)
+
+        idx_pr = np.where(self.alpha == F_TF)
+        img_indexes = np.arange(self.baris * self.kolom,
+                                dtype=np.uint32).reshape(self.baris, self.kolom)
+
+        self.alpha[idx_pr] = np.where(np.isin(img_indexes[idx_pr], mincut.partition[0]),F_TF, F_TB)
+	\end{lstlisting}
+	\caption{\emph{source code} Membangun graf}
+	\label{code:mincut_segmentation}
 \end{figure}
 
 
+
+\section{Eksperimen}
+\emph{Source code} program disimpan di dalam repositori yang dapat diakses di
+\url{https://github.com/DragonFly378/Skripsi_Hafiz} di bawah lisensi \emph{GNU General Public License v3.0.}
+Rancangan eksperimen deteksi keliling luka dengan algoritma \emph{Grabcut}. Proses 
+ini diperlukan adanya penyesuaian parameter dari algoritma yang dijalankan dengan 
+data yang tersedia untuk setiap citra. Setelah hasil segmentasi citra didapatkan,
+dilanjutkan dengan identifikasi citra hasil segmentasi dan dibandingkan terhadap area 
+\emph{ground truth} untuk kemudian dihitung akurasinya menggunakan persamaan \ref{eq:validasi}.
+Rincian lengkap hasil dari parameter dan validasi citra tersedia di bagian \textbf{lampiran C}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{gambar/hasil_bab4.jpg}
+	\caption{(a) Kotak pembatas (b) Hasil segmentasi (c) Area \emph{ground truth} (d) Akurasi}
+	\label{img:hasil_segmentasi}
+\end{figure}
+
+\section{Analisa Hasil}
 
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi

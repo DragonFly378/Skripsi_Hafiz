@@ -46,30 +46,36 @@
 \contentsline {subsection}{\numberline {3.3.2}\emph {Linkedlist}}{39}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}\emph {Tree}}{41}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Graf}{43}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Algoritma \emph {GrabCut}}{51}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}Algoritma Segmentasi Gambar dengan Metode \emph {GrabCut}}{54}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Alat dan Bahan Penelitian}{62}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Tahapan Penelitian}{62}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Persiapan \emph {dataset} input citra}{62}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Inisiai \emph {Bounding Box} di area luka}{64}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Inisiasi GMM}{64}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Mempelajari parameter GMM}{64}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Segmentasi Citra dengan Algoritma \emph {Mincut}}{65}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Menghitung Tingkat Akurasi}{67}{subsection.3.6.6}%
-\contentsline {section}{\numberline {3.7}Skenario Eksperimen}{67}{section.3.7}%
-\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{69}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pemrosesan citra gambar input}{69}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Deteksi keliling luka menggunakan \emph {Grabcut}}{69}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Inisiasi kotak (\emph {Bounding Box})}{69}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Inisiasi piksel}{70}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {V}KESIMPULAN DAN SARAN}{72}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{72}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{72}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{73}{section.5.2}%
-\contentsline {chapter}{\numberline {A}\emph {Source code} program}{74}{appendix.A}%
-\contentsline {section}{\numberline {1.1}main.py}{74}{section.A.1}%
-\contentsline {section}{\numberline {1.2}image\_editing.py}{74}{section.A.2}%
-\contentsline {section}{\numberline {1.3}grabcut.py}{77}{section.A.3}%
-\contentsline {section}{\numberline {1.4}GMM.py}{77}{section.A.4}%
-\contentsline {chapter}{\numberline {B}Tabel pengolahan data citra input}{79}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Tabel hasil deteksi keliling luka menggunakan \emph {Grabcut}}{88}{appendix.C}%
+\contentsline {subsection}{\numberline {3.3.5}Algoritma \emph {GrabCut}}{45}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Algoritma Segmentasi Gambar dengan Metode \emph {GrabCut}}{47}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Alat dan Bahan Penelitian}{54}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Tahapan Penelitian}{54}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Persiapan \emph {dataset} input citra}{54}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Inisiai \emph {Bounding Box} di area luka}{56}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Inisiasi GMM}{56}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Mempelajari parameter GMM}{56}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Segmentasi Citra dengan Algoritma \emph {Mincut}}{57}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Menghitung Tingkat Akurasi}{59}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Skenario Eksperimen}{59}{section.3.7}%
+\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{61}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pemrosesan citra gambar input}{61}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Deteksi keliling luka menggunakan \emph {Grabcut}}{61}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Inisiasi Kotak Pembatas (\emph {Bounding Box})}{61}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Inisiasi Piksel}{62}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Menentukan Komponen Awal GMM}{63}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Mempelajari Parameter GMM}{64}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Segmentasi Gambar dengan Algoritma \emph {Mincut}}{65}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Eksperimen}{66}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Analisa Hasil}{67}{section.4.4}%
+\contentsline {chapter}{\numberline {V}KESIMPULAN DAN SARAN}{68}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{68}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{68}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{69}{section.5.2}%
+\contentsline {chapter}{\numberline {A}\emph {Source code} program}{70}{appendix.A}%
+\contentsline {section}{\numberline {1.1}main.py}{70}{section.A.1}%
+\contentsline {section}{\numberline {1.2}image\_editing.py}{70}{section.A.2}%
+\contentsline {section}{\numberline {1.3}grabcut.py}{73}{section.A.3}%
+\contentsline {section}{\numberline {1.4}gmm.py}{75}{section.A.4}%
+\contentsline {section}{\numberline {1.5}validate.py}{76}{section.A.5}%
+\contentsline {chapter}{\numberline {B}Tabel pengolahan data citra input}{78}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Tabel hasil deteksi keliling luka menggunakan \emph {Grabcut}}{87}{appendix.C}%
