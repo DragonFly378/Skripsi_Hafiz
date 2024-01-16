@@ -6,7 +6,7 @@
 \contentsline {chapter}{\emph {ABSTRACT}}{v}{chapter*.4}%
 \contentsline {chapter}{DAFTAR ISI}{vi}{chapter*.5}%
 \contentsline {chapter}{DAFTAR GAMBAR}{viii}{chapter*.6}%
-\contentsline {chapter}{DAFTAR TABEL}{ix}{chapter*.7}%
+\contentsline {chapter}{DAFTAR TABEL}{x}{chapter*.7}%
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
@@ -68,7 +68,7 @@
 \contentsline {subsection}{\numberline {4.2.4}Mempelajari Parameter GMM}{64}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Segmentasi Gambar dengan Algoritma \emph {Mincut}}{65}{subsection.4.2.5}%
 \contentsline {section}{\numberline {4.3}Eksperimen}{66}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Analisa Hasil}{67}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Analisa hasil}{67}{section.4.4}%
 \contentsline {chapter}{\numberline {V}KESIMPULAN DAN SARAN}{68}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Kesimpulan}{68}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Saran}{68}{section.5.2}%

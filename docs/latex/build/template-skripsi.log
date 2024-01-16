@@ -979,13 +979,13 @@ LaTeX Warning: Reference `img:2.6' on page vii undefined on input line 19.
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [8] (template-skripsi.lot)
+ [8] (template-skripsi.lot [9
+
+])
 \tf@lot=\write7
 \openout7 = `template-skripsi.lot'.
 
- [9
-
-]
+ [10]
 \openout2 = `bab1.aux'.
 
  (bab1.tex
@@ -1125,9 +1125,6 @@ LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1217.
 
  (bab3.tex
 BAB III.
-
-LaTeX Warning: Reference `gambar:2.6' on page 35 undefined on input line 18.
-
 File: gambar/gambar-3_2(b).jpg Graphic file (type bmp)
 <gambar/gambar-3_2(b).jpg>
 File: gambar/rectangle.png Graphic file (type bmp)
@@ -1717,7 +1714,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ] [62] [63] [64] [65]
 File: gambar/hasil_bab4.jpg Graphic file (type bmp)
 <gambar/hasil_bab4.jpg>
-) [66] [67]
+ [66]) [67]
 \openout2 = `bab5.aux'.
 
  (bab5.tex
@@ -1948,7 +1945,7 @@ Overfull \hbox (6.94766pt too wide) in paragraph at lines 889--889
 File: gambar/dataset_citra/luka_kuning/38.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_kuning/38.jpg>
 [72]
-Overfull \vbox (4.72025pt too high) has occurred while \output is active []
+Overfull \vbox (6.43015pt too high) has occurred while \output is active []
 
 
 [73]
@@ -2057,7 +2054,7 @@ Overfull \hbox (3.59947pt too wide) in paragraph at lines 1018--1018
 File: gambar/dataset_citra/luka_merah/39.jpg Graphic file (type bmp)
 <gambar/dataset_citra/luka_merah/39.jpg>
 [74]
-Overfull \vbox (20.16275pt too high) has occurred while \output is active []
+Overfull \vbox (20.97316pt too high) has occurred while \output is active []
 
 
 [75]
@@ -2215,15 +2212,6 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_5.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_5.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/5_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/5_r.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_6.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/result_6.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_r_6.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_r_6.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/6_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/6_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_7_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_hitam/image_7_rect.jpg>
@@ -2233,20 +2221,6 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_7.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_7.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/7_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/7_r.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg Graphic file (type bm
-p)
-<gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg>
-
-Overfull \hbox (1.88992pt too wide) in paragraph at lines 1286--1286
-\T1/ptm/m/n/10 (114,104,157,108)| 
- []
-
-File: gambar/hasil_segmentasi/luka_hitam/result_8.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/result_8.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_r_8.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_r_8.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/8_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/8_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_14_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_14_rect.jpg>
@@ -2265,18 +2239,6 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_15.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_15.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/15_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/15_r.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/image_17_rect.jpg Graphic file (type b
-mp)
-<gambar/hasil_segmentasi/luka_hitam/image_17_rect.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_17.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/result_17.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_r_17.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_r_17.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/17_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/17_r.jpg>
-[79
-
-]
 File: gambar/hasil_segmentasi/luka_hitam/image_18_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_18_rect.jpg>
@@ -2295,24 +2257,6 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_19.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_19.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/19_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/19_r.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg Graphic file (type b
-mp)
-<gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_20.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/result_20.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_r_20.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_r_20.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/20_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/20_r.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg Graphic file (type b
-mp)
-<gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_22.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/result_22.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_r_22.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_r_22.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/22_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/22_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_26_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_26_rect.jpg>
@@ -2322,6 +2266,9 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_26.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_26.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/26_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/26_r.jpg>
+[79
+
+]
 File: gambar/hasil_segmentasi/luka_hitam/image_27_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_27_rect.jpg>
@@ -2331,7 +2278,6 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_27.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_27.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/27_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/27_r.jpg>
- [80]
 File: gambar/hasil_segmentasi/luka_hitam/image_28_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_28_rect.jpg>
@@ -2377,16 +2323,48 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_40.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_40.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/40_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/40_r.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/image_41_rect.jpg Graphic file (type b
+ [80]
+File: gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_hitam/image_6_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_6.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_6.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_6.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_6.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/6_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/6_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_hitam/image_8_rect.jpg>
+
+Overfull \hbox (1.88992pt too wide) in paragraph at lines 1395--1395
+\T1/ptm/m/n/10 (114,104,157,108)| 
+ []
+
+File: gambar/hasil_segmentasi/luka_hitam/result_8.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_8.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_8.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_8.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/8_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/8_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg Graphic file (type b
 mp)
-<gambar/hasil_segmentasi/luka_hitam/image_41_rect.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/result_41.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/result_41.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg>
-File: gambar/hasil_segmentasi/luka_hitam/41_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_hitam/41_r.jpg>
- [81]
+<gambar/hasil_segmentasi/luka_hitam/image_20_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_20.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_20.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_20.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_20.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/20_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/20_r.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_22_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_22.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_22.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_22.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_22.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/22_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/22_r.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/image_16_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_16_rect.jpg>
@@ -2396,6 +2374,7 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_16.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_16.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/16_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/16_r.jpg>
+[81]
 File: gambar/hasil_segmentasi/luka_hitam/image_31_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_hitam/image_31_rect.jpg>
@@ -2414,16 +2393,514 @@ File: gambar/hasil_segmentasi/luka_hitam/mask_r_39.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/mask_r_39.jpg>
 File: gambar/hasil_segmentasi/luka_hitam/39_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_hitam/39_r.jpg>
-) [82] [83] (template-skripsi.aux (kata-pengantar.aux)
-(abstrak.aux) (abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux)
-(bab5.aux) (lampiran.aux))
+File: gambar/hasil_segmentasi/luka_hitam/image_41_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_hitam/image_41_rect.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/result_41.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/result_41.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/mask_r_41.jpg>
+File: gambar/hasil_segmentasi/luka_hitam/41_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_hitam/41_r.jpg>
+ [82]
+File: gambar/hasil_segmentasi/luka_kuning/image_13_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_13_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_13.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_13.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_13.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_13.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/13_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/13_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_17_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_17_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_17.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_17.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_17.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_17.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/17_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/17_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_18_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_18_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_18.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_18.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_18.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_18.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/18_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/18_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_19_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_19_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_19.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_19.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_19.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_19.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/19_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/19_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_21_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_21_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_21.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_21.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_21.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_21.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/21_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/21_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_13_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_13_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_23.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_23.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_23.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_23.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/23_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/23_r.jpg>
+ [83]
+File: gambar/hasil_segmentasi/luka_kuning/image_25_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_25_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_25.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_25.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_25.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_25.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/25_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/25_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_34_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_34_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_34.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_34.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_34.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_34.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/34_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/34_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_35_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_35_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_35.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_35.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_35.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_35.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/35_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/35_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_38_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_38_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_38.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_38.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_38.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_38.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/38_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/38_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_42_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_42_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_42.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_42.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_42.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_42.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/42_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/42_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_3_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_kuning/image_3_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_3.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/result_3.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_3.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/mask_r_3.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/3_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/3_r.jpg>
+ [84]
+File: gambar/hasil_segmentasi/luka_kuning/image_12_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_12_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_12.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_12.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_12.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_12.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/12_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/12_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_10_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_10_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_10.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_10.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_10.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_10.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/10_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/10_r.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/image_16_rect.jpg Graphic file (type 
+bmp)
+<gambar/hasil_segmentasi/luka_kuning/image_16_rect.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/result_16.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/result_16.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/mask_r_16.jpg Graphic file (type bmp)
+
+<gambar/hasil_segmentasi/luka_kuning/mask_r_16.jpg>
+File: gambar/hasil_segmentasi/luka_kuning/16_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_kuning/16_r.jpg>
+ [85]
+File: gambar/hasil_segmentasi/luka_merah/image_16_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_16_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_16.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_16.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_16.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_16.jpg>
+File: gambar/hasil_segmentasi/luka_merah/16_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/16_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_17_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_17_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_17.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_17.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_17.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_17.jpg>
+File: gambar/hasil_segmentasi/luka_merah/17_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/17_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_22_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_22_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_22.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_22.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_22.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_22.jpg>
+File: gambar/hasil_segmentasi/luka_merah/22_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/22_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_24_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_24_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_24.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_24.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_24.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_24.jpg>
+File: gambar/hasil_segmentasi/luka_merah/24_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/24_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_25_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_25_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_25.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_25.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_25.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_25.jpg>
+File: gambar/hasil_segmentasi/luka_merah/25_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/25_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_30_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_30_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_30.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_30.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_30.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_30.jpg>
+File: gambar/hasil_segmentasi/luka_merah/30_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/30_r.jpg>
+ [86]
+Overfull \vbox (1.70544pt too high) has occurred while \output is active []
+
+
+[87]
+File: gambar/hasil_segmentasi/luka_merah/image_32_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_32_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_32.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_32.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_32.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_32.jpg>
+File: gambar/hasil_segmentasi/luka_merah/32_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/32_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_33_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_33_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_33.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_33.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_33.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_33.jpg>
+File: gambar/hasil_segmentasi/luka_merah/33_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/33_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_37_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_37_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_37.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_37.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_37.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_37.jpg>
+File: gambar/hasil_segmentasi/luka_merah/37_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/37_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_39_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_39_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_39.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_39.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_39.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_39.jpg>
+File: gambar/hasil_segmentasi/luka_merah/39_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/39_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_42_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_42_rect.jpg>
+
+Overfull \hbox (1.88992pt too wide) in paragraph at lines 1731--1731
+\T1/ptm/m/n/10 (107,101,126,106)| 
+ []
+
+File: gambar/hasil_segmentasi/luka_merah/result_42.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_42.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_42.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_42.jpg>
+File: gambar/hasil_segmentasi/luka_merah/42_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/42_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_44_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_44_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_44.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_44.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_44.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_44.jpg>
+File: gambar/hasil_segmentasi/luka_merah/44_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/44_r.jpg>
+
+Overfull \vbox (2.83461pt too high) has occurred while \output is active []
+
+
+[88]
+File: gambar/hasil_segmentasi/luka_merah/image_2_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_2_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_2.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_2.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_2.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_2.jpg>
+File: gambar/hasil_segmentasi/luka_merah/2_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/2_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_3_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_3_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_3.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_3.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_3.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_3.jpg>
+File: gambar/hasil_segmentasi/luka_merah/3_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/3_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_4_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_4_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_4.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_4.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_4.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_4.jpg>
+File: gambar/hasil_segmentasi/luka_merah/4_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/4_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_6_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_6_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_6.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_6.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_6.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_6.jpg>
+File: gambar/hasil_segmentasi/luka_merah/6_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/6_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_7_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_7_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_7.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_7.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_7.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_7.jpg>
+File: gambar/hasil_segmentasi/luka_merah/7_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/7_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_8_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_8_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_8.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_8.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_8.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_8.jpg>
+File: gambar/hasil_segmentasi/luka_merah/8_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/8_r.jpg>
+
+Overfull \vbox (122.52663pt too high) has occurred while \output is active []
+
+
+[89]
+File: gambar/hasil_segmentasi/luka_merah/image_9_rect.jpg Graphic file (type bm
+p)
+<gambar/hasil_segmentasi/luka_merah/image_9_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_9.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_9.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_9.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_9.jpg>
+File: gambar/hasil_segmentasi/luka_merah/9_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/9_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_10_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_10_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_10.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_10.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_10.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_10.jpg>
+File: gambar/hasil_segmentasi/luka_merah/10_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/10_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_11_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_11_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_11.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_11.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_11.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_11.jpg>
+File: gambar/hasil_segmentasi/luka_merah/11_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/11_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_12_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_12_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_12.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_12.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_12.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_12.jpg>
+File: gambar/hasil_segmentasi/luka_merah/12_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/12_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_14_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_14_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_14.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_14.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_14.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_14.jpg>
+File: gambar/hasil_segmentasi/luka_merah/14_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/14_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_18_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_18_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_18.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_18.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_18.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_18.jpg>
+File: gambar/hasil_segmentasi/luka_merah/18_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/18_r.jpg>
+
+Overfull \vbox (44.38806pt too high) has occurred while \output is active []
+
+
+[90]
+File: gambar/hasil_segmentasi/luka_merah/image_19_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_19_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_19.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_19.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_19.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_19.jpg>
+File: gambar/hasil_segmentasi/luka_merah/19_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/19_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_20_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_20_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_20.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_20.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_20.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_20.jpg>
+File: gambar/hasil_segmentasi/luka_merah/20_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/20_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_23_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_23_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_23.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_23.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_23.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_23.jpg>
+File: gambar/hasil_segmentasi/luka_merah/23_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/23_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_26_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_26_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_26.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_26.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_26.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_26.jpg>
+File: gambar/hasil_segmentasi/luka_merah/26_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/26_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_29_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_29_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_29.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_29.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_29.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_29.jpg>
+File: gambar/hasil_segmentasi/luka_merah/29_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/29_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_31_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_31_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_31.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_31.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_31.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_31.jpg>
+File: gambar/hasil_segmentasi/luka_merah/31_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/31_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_35_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_35_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_35.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_35.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_35.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_35.jpg>
+File: gambar/hasil_segmentasi/luka_merah/35_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/35_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_36_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_36_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_36.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_36.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_36.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_36.jpg>
+File: gambar/hasil_segmentasi/luka_merah/36_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/36_r.jpg>
+File: gambar/hasil_segmentasi/luka_merah/image_38_rect.jpg Graphic file (type b
+mp)
+<gambar/hasil_segmentasi/luka_merah/image_38_rect.jpg>
+File: gambar/hasil_segmentasi/luka_merah/result_38.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/result_38.jpg>
+File: gambar/hasil_segmentasi/luka_merah/mask_r_38.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/mask_r_38.jpg>
+File: gambar/hasil_segmentasi/luka_merah/38_r.jpg Graphic file (type bmp)
+<gambar/hasil_segmentasi/luka_merah/38_r.jpg>
+) [91] [92] (template-skripsi.aux (kata-pengantar.aux) (abstrak.aux)
+(abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux) (bab5.aux)
+(lampiran.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: DCAE5AAC4AE9C5848423A530C09D752E;11376.
+(rerunfilecheck)             Checksum: 0177521CB9BB606DBF6EAEAB8A55B033;11376.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (94 pages, 427000 bytes).
+Output written on template-skripsi.xdv (104 pages, 480568 bytes).

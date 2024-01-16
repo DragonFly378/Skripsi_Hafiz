@@ -8,7 +8,7 @@
 
 \section{Pemrosesan citra gambar input}
 Langkah pertama dalam pemrosesan citra gambar input adalah menentukan rasio piksel 
-dari citra tersebut, penulis mengubah lebar citra menjadi 320 piksel untuk efisiensi 
+dari citra tersebut, peneliti mengubah lebar citra menjadi 320 piksel untuk efisiensi 
 serta menyamakan ukuran tiap sampel citra gambar, berikut \emph{source code} nya:
 
 \begin{figure}[H]
@@ -32,9 +32,9 @@ serta menyamakan ukuran tiap sampel citra gambar, berikut \emph{source code} nya
 \end{figure}
 
 Fungsi \texttt{setSizeImg()} dibuat untuk mengubah ukuran lebar piksel citra 
-menjadi 320 piksel, untuk mempertahankan rasionya, makan dibentuk dengan menghitung
+menjadi 320 piksel, untuk mempertahankan rasionya, maka dibentuk dengan menghitung
 menggunakan rumus \texttt{aspect\_ratio} dimana tinggi gambar akan otomatis mengikuti lebar gambar 
-dengan perbandingan yang stabil.
+dengan perbandingan yang tetap.
 
 \section{Deteksi keliling luka menggunakan \emph{Grabcut}}
 Alur deteksi keliling luka menggunakan algoritma \emph{Grabcut} dilakukan melalui
@@ -46,7 +46,6 @@ Berikut adalah tahapannya:
 
 Dalam segmentasi citra luka, dimulai dengan inisiasi kotak atau \emph{bounding box} 
 yang digambar mengelilingi area citra luka, berikut \emph{source code} nya:
-
 \begin{figure}[H]
 	\begin{lstlisting}[language=Python, basicstyle=\tiny]
 		def drawing_rectangle(self):
@@ -308,8 +307,18 @@ Rincian lengkap hasil dari parameter dan validasi citra tersedia di bagian \text
 	\label{img:hasil_segmentasi}
 \end{figure}
 
-\section{Analisa Hasil}
-
+\section{Analisa hasil}
+Berikut analisa hasil setelah melakukan eksperimen terhadap populasi:
+\begin{enumerate}
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} kategori luka hitam menghasilkan 5 data (dari 24 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 84.2\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} kategori luka kuning menghasilkan 5 data (dari 15 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 76.14\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} kategori luka merah menghasilkan 2 data (dari 30 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 62.25\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{intepolasi} kategori luka hitam menghasilkan 21 data (dari 24 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 87.6\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{interpolasi} kategori luka kuning menghasilkan 11 data (dari 15 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 79.2\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{interpolasi} kategori luka merah menghasilkan 12 data (dari 30 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 89.7\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} untuk semua kategori menghasilkan 12 data (dari 71 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 77.18\%.
+	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} untuk semua kategori menghasilkan 44 data (dari 71 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 86.1\%.
+\end{enumerate}
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan

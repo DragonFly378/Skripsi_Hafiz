@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'template-skripsi.blg'
-[193] biber-MSWIN64:340> INFO - === 
-[248] Biber.pm:418> INFO - Reading 'template-skripsi.bcf'
-[433] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
-[459] Biber.pm:4383> INFO - Processing section 0
-[480] Biber.pm:4574> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
-[558] bibtex.pm:1713> INFO - LaTeX decoding ...
-[615] bibtex.pm:1518> INFO - Found BibTeX data source 'daftar-pustaka.bib'
-[835] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[845] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[846] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[846] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[878] bbl.pm:654> INFO - Writing 'template-skripsi.bbl' with encoding 'UTF-8'
-[897] bbl.pm:757> INFO - Output to template-skripsi.bbl
-[898] Biber.pm:130> WARN - ISBN '0162-8828' in entry 'Boykov:2004' is invalid - run biber with '--validate_datamodel' for details.
-[898] Biber.pm:130> WARN - I didn't find a database entry for 'Silva:2015' (section 0)
-[898] Biber.pm:132> INFO - WARNINGS: 2
+[1] Config.pm:310> INFO - Logfile is 'template-skripsi.blg'
+[270] biber-MSWIN64:340> INFO - === 
+[328] Biber.pm:418> INFO - Reading 'template-skripsi.bcf'
+[551] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
+[579] Biber.pm:4383> INFO - Processing section 0
+[596] Biber.pm:4574> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
+[674] bibtex.pm:1713> INFO - LaTeX decoding ...
+[722] bibtex.pm:1518> INFO - Found BibTeX data source 'daftar-pustaka.bib'
+[972] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[977] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[977] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[977] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[1028] bbl.pm:654> INFO - Writing 'template-skripsi.bbl' with encoding 'UTF-8'
+[1046] bbl.pm:757> INFO - Output to template-skripsi.bbl
+[1046] Biber.pm:130> WARN - ISBN '0162-8828' in entry 'Boykov:2004' is invalid - run biber with '--validate_datamodel' for details.
+[1046] Biber.pm:130> WARN - I didn't find a database entry for 'Silva:2015' (section 0)
+[1046] Biber.pm:132> INFO - WARNINGS: 2

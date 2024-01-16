@@ -7,7 +7,7 @@
 \chapter{METODOLOGI PENELITIAN}
 
 \section{Desain Segmentasi Luka dengan Metode \emph{GrabCut}}
-Proses pembuatan segmentasi luka, penulis menggunakan metode 
+Proses pembuatan segmentasi luka, peneliti menggunakan metode 
 \emph{GrabCut}. Metode segmentasi luka berupa citra gambar dengan metode \emph{GrabCut} 
 berdasarkan algoritma yang telah dikembangkan oleh (\cite{Rother:2004}) adalah program 
 untuk mensegmentasi citra gambar menjadi dua bagian yaitu \emph{foreground} dan
@@ -15,10 +15,10 @@ sisanya akan dianggap menjadi \emph{background}.
 
 Algoritma \emph{GrabCut} secara umum terdapat beberapa tahapan yaitu tahap inisiasi
 kotak pembatas (\emph{bounding box}), setelah itu tahap iterasi minimisasi, dan dilanjutkan
-dengan penyuntingan pengguna (lihat \ref{gambar:2.6}).
+dengan penyuntingan pengguna.
 
 \subsection{Inisiasi Kotak Pembatas (\emph{Bounding Box})}
-Penulis melakukan inisiasi \emph{bounding box} pada daerah yang melingkupi objek 
+peneliti melakukan inisiasi \emph{bounding box} pada daerah yang melingkupi objek 
 dimana daerah yang berada didalam \emph{bounding box} akan digunakan untuk membuat 
 \emph{Trimap Unknown} \((T_{U})\) dan daerah di luarnya akan dianggap sebagai \emph{Trimap Background} 
 atau \((T_{B})\). Setiap piksel-n yang termasuk \((T_{B})\) akan memiliki \(\alpha_{n}\) 
@@ -50,7 +50,7 @@ Inisiasi GMM digunakan untuk memperoleh nilai probabilistik dari tiap piksel yan
 didalam \((T_{U})\). GMM terdiri dari beberapa parameter yaitu \textbf{K} komponen, 
 rata-rata \(\mu\), matriks kovarians \(\Sigma\), dan probabilitas prior \(\omega\). 
 Selanjutnya mempelajari parameter GMM yang berdasarkan probabilitas dari parameter 
-GMM tiap piksel. Setelah mempelajari nilai dari parameter GMM tiap piksel.
+GMM tiap piksel.
 
 Setelah mempelajari parameter GMM dari tiap piksel, maka diperoleh nilai parameter
 untuk komponen yang ada pada setiap piksel, masuk ke tahap segmentasi citra luka 
@@ -127,7 +127,7 @@ Berikut adalah diagram alir segmentasi luka dengan metode \emph{GrabCut}:
 \emph{Node} merupakan elemen dasar dalam pembentukan struktur data seperti \emph{linked list},
 pohon, dan graf. Sebuah \emph{node} setidaknya terdiri dari dua komponen, yaitu 
 data atau nilai dari \emph{node} tersebut dan referensi atau tautan yang menghubungkan 
-\emph{node} tersebut dengan \emph{node} lainnya. Penulis menggunakan struktur data \emph{node} untuk merepresentasikan piksel dari
+\emph{node} tersebut dengan \emph{node} lainnya. Peneliti menggunakan struktur data \emph{node} untuk merepresentasikan piksel dari
 citra luka, setiap piksel dari gambar menyimpan beberapa informasi, di antaranya komponen warna
 RGB (\emph{Red,Green,Blue}), komponen GMM dan nilai label piksel.
 
@@ -152,7 +152,7 @@ class Node {
 \end{lstlisting}
 
 \subsection{\emph{Linkedlist}} 
-Secara umum komponen yang ada \emph{node} di antaranya data yang disimpan dan 
+Secara umum komponen yang ada \emph{node} diantaranya data yang disimpan dan 
 referensi kepada \emph{node} selanjutnya, \emph{linkedlist} akan terbentuk 
 dari rangkaian \emph{node} yang saling terhubung.
 
@@ -162,8 +162,8 @@ dari rangkaian \emph{node} yang saling terhubung.
 	\caption{Komponen yang ada pada sebuah \emph{node}}
 \end{figure}
 
-Pada penelitian ini struktur komponen \emph{node} yang akan penulis gunakan 
-memiliki tiga komponen itu referensi ke \emph{node} sebelumnya, data dari \emph{node},
+Pada penelitian ini struktur komponen \emph{node} yang akan peneliti gunakan 
+memiliki tiga komponen yaitu referensi ke \emph{node} sebelumnya, data dari \emph{node},
 dan referensi ke \emph{node} selanjutnya.
 
 \begin{figure}[H]
@@ -307,9 +307,9 @@ class Tree {
 
 \subsection{Graf}
 Struktur data graf dipakai untuk merepresentasikan gambar citra luka, citra yang
-di input akan berbentuk matriks dua dimensi yang mana terdiri dari baris, kolom, 
+diinput akan berbentuk matriks dua dimensi yang mana terdiri dari baris, kolom, 
 dan ranah warna RGB, graf selanjutnya dibangun dan menghubungkan antar \emph{node}
-piksel, penulis membuat ilustrasi dari graf sebagai berikut 
+piksel, peneliti membuat ilustrasi dari graf sebagai berikut 
 
 \begin{figure}[H]
 	\centering{}
@@ -374,7 +374,7 @@ public:
 Setelah graf terbentuk, algoritma akan mulai mencari \emph{path} dari setiap \emph{node}
 dengan ditentukannya dua \emph{node} khusus yaitu s (\emph{source}) dan t (\emph{sink}), 
 dimana \emph{node} s akan menjadi  menjadi \emph{foreground} dan t menjadi \emph{background}.
-Fungsi \emph{path} akan penulis jelaskan pada bagian \ref{section:skenario_eksperimen}.
+Fungsi \emph{path} akan peneliti jelaskan pada bagian \ref{section:skenario_eksperimen}.
 
 \begin{figure}[H]
 	\centering{}
@@ -1121,12 +1121,12 @@ berikut algoritma dari \emph{GrabCut}:
 
 \pagebreak
 \section{Alat dan Bahan Penelitian}
-Pada penelitian kali ini, penulis menggunakan perangkat keras sebagai berikut:
+Pada penelitian kali ini, peneliti menggunakan perangkat keras sebagai berikut:
 \begin{enumerate}
     \item Laptop dengan prosesor AMD Ryzen 5 3500H \emph{series} dan \emph{RAM 16 GB}
     \item Koneksi berbasis Wi-Fi serta kuota internet dari ponsel pintar
     \end{enumerate}
-Untuk perangkat lunak yang penulis gunakan sebagai berikut:
+Untuk perangkat lunak yang peneliti gunakan sebagai berikut:
 \begin{enumerate}
     \item Windows 11 64 bit OS
     \item Visual Studio Code sebagai \emph{Code Editor}
@@ -1134,28 +1134,28 @@ Untuk perangkat lunak yang penulis gunakan sebagai berikut:
     \end{enumerate}
 
 \section{Tahapan Penelitian} \label{section:tahapan_penelitian}
-Dalam penelitian ini penulis melakukan perancangan penelitian terhadap citra luka 
-yang akan di segmentasi antara objek luka dan latar belakang, perancangan yang akan
-penulis lakukan yaitu 
+Dalam penelitian ini peneliti melakukan perancangan penelitian terhadap citra luka 
+yang akan disegmentasi antara objek luka dan latar belakang, perancangan yang akan
+peneliti lakukan yaitu 
 
 \subsection{Persiapan \emph{dataset} input citra}
 
-Sebelum melakukan inisiasi pada luka, penulis perlu menyiapkan \emph{dataset} luka, \emph{dataset}
-ini kemudian penulis jadikan sampel data input citra. Sampel data dinilai baik 
+Sebelum melakukan inisiasi pada luka, peneliti perlu menyiapkan \emph{dataset} luka, \emph{dataset}
+ini kemudian peneliti jadikan sampel data input citra. Sampel data dinilai baik 
 ketika sampel tersebut mencerminkan populasi dari data tersebut (\cite{Rizki:2022}). 
 Silva menggunakan 105 citra luka tentang segmentasi luka otomatis dengan menggunakan 
-SVM dan Grabcut(\cite{Silva:2015}). Dalam penelitiannya Wang melakukan automasi segmentasi luka dengan
+SVM dan Grabcut (\cite{Silva:2015}). Dalam penelitiannya Wang melakukan automasi segmentasi luka dengan
 \emph{Deep Convolutional Neural Networks} menggunakan 2700 citra gambar luka (\cite{Wang:2015}).
 
-Penulis menggunakan \emph{dataset} berjumlah 108, 37 data tidak dapat digunakan 
+Peneliti menggunakan \emph{dataset} berjumlah 108, 37 data tidak dapat digunakan 
 karena terdapat duplikasi dengan data lain sehingga tersedia 71 buah citra 
-yang penulis jadikan sebagai populasi sekaligus sampel (sampel = populasi),
-citra tersebut memiliki kategori sesuai dengan warna luka, yaitu luka hitam sebanyak
+yang peneliti jadikan sebagai populasi sekaligus sampel (sampel = populasi).
+Citra tersebut memiliki kategori sesuai dengan warna luka, yaitu luka hitam sebanyak
 24 citra, luka kuning sebanyak 15 citra, dan luka merah 32 citra. \emph{Dataset}
-penulis dapat dari penelitian luka Ns. Ratna Aryani, K.Kep, tahun 2018 (\cite{Aryani:2018})
+peneliti dapat dari penelitian luka Ns. Ratna Aryani, M.Kep, tahun 2018 (\cite{Aryani:2018})
 yang terdapat pada repositori \url{https://github.com/mekas/InjuryDetection}.
 
-Data awal yang penulis dapat adalah data-data yang berekstensi .xcf yang bisa 
+Data awal yang peneliti dapat adalah data-data yang berekstensi .xcf yang bisa 
 dibuka menggunakan \emph{software} GIMP, pengolahan data sebelum deteksi menggunakan
 \emph{GrabCut} dilakukan menggunakan \emph{software} Figma. Masing-masing \emph{dataset} 
 didalamnya terdapat \emph{layer} citra (luka), \emph{layer} region (luka), dan 
@@ -1187,13 +1187,14 @@ didalamnya terdapat \emph{layer} citra (luka), \emph{layer} region (luka), dan
 		(a)Data citra format .xcf, (b) \emph{layer} citra (luka), (c) \emph{layer} 
 		region, (d)path
 	 }
+    \label{img:dataset_persiapan}
   \end{figure}
 
-Langkah selanjutnya adalah penulis memasukkan data citra 2(b) ke dalam figma untuk
+Langkah selanjutnya adalah peneliti memasukkan data citra \ref{img:dataset_persiapan}(b) ke dalam figma untuk
 membuat \emph{layer} dan region (luka) dengan menggunakan \emph{pen tools}, hasil 
-dari \emph{pen tools} akan berupa \emph{stroke} atau seperti path 2(d), kemudian 
-penulis menduplikasi hasil path dan mengubahnya menjadi objek (\emph{fill object})
-seperti 2(c).
+dari \emph{pen tools} akan berupa \emph{stroke} atau seperti path \ref{img:dataset_persiapan}(d), kemudian 
+peneliti menduplikasi hasil path dan mengubahnya menjadi objek (\emph{fill object})
+seperti \ref{img:dataset_persiapan}(c).
 
 \begin{figure}[H]
 	\centering{}
@@ -1201,7 +1202,7 @@ seperti 2(c).
 	\caption{Proses \emph{resize} citra gambar luka dengan ukuran 0.5 dari ukuran awal}
   \end{figure}
 
-Setelah penulis melakukan \emph{resize} ukuran citra, selanjutnya penulis \emph{export}
+Setelah peneliti melakukan \emph{resize} ukuran citra, selanjutnya peneliti \emph{export}
 \emph{layer} masing masing ke format .jpg.
 
 % \begin{figure}[H]
@@ -1212,7 +1213,7 @@ Setelah penulis melakukan \emph{resize} ukuran citra, selanjutnya penulis \emph{
 
 \subsection{Inisiai \emph{Bounding Box} di area luka}
 
-Penulis memulai dengan menentukan kotak pembatas (\emph{bounding box}) yang mengelilingi 
+Peneliti memulai dengan menentukan kotak pembatas (\emph{bounding box}) yang mengelilingi 
 objek yang ingin dipisahkan. Area di dalam \emph{bounding box} akan digunakan untuk membuat 
 \emph{Trimap Unknown} \((T_{U})\), sementara area di luar \emph{bounding box} dianggap sebagai Trimap 
 Background \((T_{B})\). Setiap piksel yang termasuk dalam \((T_{B})\) akan memiliki nilai 
@@ -1228,13 +1229,14 @@ akurasi segmentasi.
 
 \subsection{Inisiasi GMM}
 
-Pertama penulis akan melakukan inisiasi untuk tiap parameter GMM, di antaranya 
+Pertama peneliti akan melakukan inisiasi untuk tiap parameter GMM, di antaranya 
 \(\{\mu, \Sigma \}\), pada algoritma \emph{grabcut} akan digunakan K = 5. Adapun
 inisiasi yang dilakukan adalah membuat nilai random terhadap \(\mu\) dan \(\Sigma\).
-setelah itu penulis menentukan \(\omega_k = \frac{1}{5}\), untuk \(k \in \{1, ..., 5\}\).
+setelah itu peneliti menentukan \(\omega_k = \frac{1}{5}\), untuk \(k \in \{1, ..., 5\}\).
 Distribusi gaussian yang akan digunakan untuk citra gambar berwarna yaitu distribusi 
-gaussian \emph{multivariate} 2 dimensi atau 3 dimensi, sebagai ilustrasi gausian berdistribusi 
-normal 2 dimensi dengan objek citra gambar luka berwarna :
+gaussian \emph{multivariate} 2 dimensi atau 3 dimensi.
+% sebagai ilustrasi gausian berdistribusi 
+% normal 2 dimensi dengan objek citra gambar luka berwarna.
 
 % \begin{figure}[H]
 % 	\centering
@@ -1252,6 +1254,7 @@ normal 2 dimensi dengan objek citra gambar luka berwarna :
 % 	\caption{
 % 		(a) Citra gambar luka, (b) Deteksi \emph{clustering} citra dengan GMM
 % 	}
+%     \label{img:ilustrasi_gmm_2dimensi}
 % \end{figure}
 
 \subsection{Mempelajari parameter GMM}
@@ -1284,7 +1287,7 @@ latar belakang, sehingga memperbaiki hasil segmentasi dengan lebih baik.
 
 \subsection{Segmentasi Citra dengan Algoritma \emph{Mincut}}
 
-Selanjutnya penulis melakukan segmentasi dengan menggunakan algoritma \emph{min-cut}
+Selanjutnya peneliti melakukan segmentasi dengan menggunakan algoritma \emph{min-cut}
 atau \emph{GraphCut}. Algoritma ini memvisualisasikan gambar sebagai graf, dan piksel 
 sebagai \emph{node} pada graf tersebut, kemudian \emph{GraphCut} bertugas untuk 
 segmentasi piksel mana yang termasuk \emph{foreground} dan \emph{background} dengan cara
@@ -1330,10 +1333,10 @@ melakukan \emph{cut} pada graf.
 
 Setiap piksel pada gambar memiliki komponen GMM tersendiri, pada tahap ini nilai k
 tiap piksel telah didapatkan dari GMM, dimana nilai k dari tiap piksel memiliki rentang
-dari 1 sampai 5. Pada permulaan algoritma \emph{mincut} penulis menentukan \emph{node}
+dari 1 sampai 5. Pada permulaan algoritma \emph{mincut} peneliti menentukan \emph{node}
 mana yang menjadi tetangga dari \emph{source} atau \emph{sink} dengan menghitung
-menghitung jumlah nilai D dari persamaan \ref{eq:rumus_energi2} pada setiap komponen GMM, 
-kemudian penulis menjumlahkan nilai yang didapat dan membaginya dengan 5 (total K),
+jumlah nilai D dari persamaan \ref{eq:rumus_energi2} pada setiap komponen GMM, 
+kemudian peneliti menjumlahkan nilai yang didapat dan membaginya dengan 5 (total K),
 nilai yang didapat akan dijadikan sebagai \emph{treshold} dalam menentukan hubungan
 tiap piksel ke \emph{Source} atau ke \emph{Sink}. Tahap ini mensegmentasi citra 
 yang telah dihitung setiap komponen pikselnya pada langkah-langkah sebelumnya sesuai 
@@ -1369,11 +1372,11 @@ dengan persamaan \ref{eq:rumus_energi1}.
 % ke langkah awal sampai terjadinya konvergensi yaitu tidak ada perbedaan segmentasi antar Iterasi.
 
 % \subsection{Penyuntingan oleh Pengguna}
-% Langkah selanjutnya penulis melakukan perbaikan dari citra yang telah tersegmentasi
+% Langkah selanjutnya peneliti melakukan perbaikan dari citra yang telah tersegmentasi
 % dari hasil sebelumnya, pengguna menggunakan \emph{brush} yaitu menggambar manual daerah 
 % yang menjadi \emph{background} dengan warna hitam, dan daerah objek dengan warna putih
 % kemudian melakukan algoritma \emph{mincut} yang hanya dilakukan sekali. Berikut 
-% gambaran simulasi penelitian yang akan penulis lakukan terhadap citra gambar luka 
+% gambaran simulasi penelitian yang akan peneliti lakukan terhadap citra gambar luka 
 % untuk mendapatkan hasil segmentasi dengan metode \emph{GrabCut}:
 
 \begin{figure}[H]
@@ -1415,7 +1418,7 @@ Menggunakan \emph{GRABCUT}"
 \begin{enumerate}
     \item{Input gambar luka kronis}
     \item{Pengguna memberi kotak pembatas di sekeliling area luka (objek) pada gambar luka}
-    \item{Inisiasi titik koordinat \((y,x)\) kotak pembatas di dalam gambar luka}
+    \item{Inisiasi titik koordinat \((x,y)\) kotak pembatas di dalam gambar luka}
     \item{Memberi penanda area di luar kotak dengan angka 1, dan area di luar kotak
     dengan angka 0}
     \item{Memasukkan komponen GMM di setiap piksel untuk menghitung probabilitas 
@@ -1423,5 +1426,5 @@ Menggunakan \emph{GRABCUT}"
     \item{Mempelajari parameter GMM dengan melihat hasil probabilitas objek atau latar belakang}
     \item{Segmentasi area keliling luka dengan menggunakan algoritma \emph{GraphCut}}
     \item{Ulangi sampai sesuai dengan area luka}
-    \item{Mendapatkan Nilai \emph{Image Similarity}}
+    \item{Mendapatkan nilai akurasi}
   \end{enumerate}

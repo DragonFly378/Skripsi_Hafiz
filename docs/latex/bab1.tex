@@ -161,7 +161,7 @@ menjadi kelompok piksel yang lebih kecil sesuai dengan spasial dan kriteria warn
 Segmentasi superpiksel  ini digunakan oleh beberapa metode di antaranya SEED, LSC 
 dan SLIC. Metode ini menghasilkan beberapa informasi dari gambar luka seperti tepi 
 luka dan parameter yang digunakan untuk metode selanjutnya (\cite{Silva:2021}). 
-\cite{Wang:2015} menggunakan gambar berukuran 480 x 640 piksel, hal ini dikarenakan 
+\cite{Wang:2015} menggunakan gambar berukuran 320 x 640 piksel, hal ini dikarenakan 
 untuk memangkas biaya komputasi dalam pemrosesan, sampel diambil secara acak, sementara 
 SVM linier untuk melatih data yang tersedia. Setelah data telah tersegmentasi menjadi 
 superpiksel, maka dilakukan proses klasifikasi dengan menggunakan \emph{Support Vector 
@@ -181,17 +181,17 @@ oleh \emph{GrabCut}, namun jika data tersebut hanya terdapat satu objek maka \em
 melakukan seleksi citra dengan baik dan menghasilkan data yang bagus.
 
 
-Di dalam penelitian ini, penulis akan melakukan penerapan algoritma \emph{GrabCut} pada 
+Di dalam penelitian ini, peneliti akan melakukan penerapan algoritma \emph{GrabCut} pada 
 pemrosesan citra gambar yang akan menghasilkan segmentasi area luka, metode yang 
-penulis pilih berdasarkan hasil dari penelitian Muhammad Rizki dimana \emph{ground truth} (area sebenarnya) 
-yang dihasilkan lebih banyak yang gagal dibandingkan yang berhasil, sehingga penulis 
+peneliti pilih berdasarkan hasil dari penelitian Muhammad Rizki dimana \emph{ground truth} (area sebenarnya) 
+yang dihasilkan lebih banyak yang gagal dibandingkan yang berhasil, sehingga peneliti 
 tertarik untuk mengganti metode yang dijalankan untuk segmentasi area keliling luka 
-kronis. Selain itu penulis memilih metode \emph{GrabCut} untuk dijadikan sebagai 
+kronis. Selain itu peneliti memilih metode \emph{GrabCut} untuk dijadikan sebagai 
 penelitian dikarenakan metode ini sangat cocok untuk citra gambar luka dimana yang 
-merupakan citra satu objek \emph{(single object)}. Tahap pertama penulis akan menandai 
+merupakan citra satu objek \emph{(single object)}. Tahap pertama peneliti akan menandai 
 daerah yang mencakup objek luka, kemudian objek akan dilakukan pengujian metode 
 \emph{GrabCut} pada citra tunggal (\emph{single object}). Dalam penelitian ini 
-penulis akan menggunakan dataset citra yang tersedia di repositori \emph{https://github.com/mekas/InjuryDetection.}
+peneliti akan menggunakan dataset citra yang tersedia di repositori \emph{https://github.com/mekas/InjuryDetection.}
 Dataset citra ini berasal dari penelitian luka Ns. Ratna Aryani M.Kep, tahun 2018 
 (\cite{Aryani:2018}). Diharapkan dalam penelitian ini mendapatkan hasil berupa nilai 
 akurasi antara metode \emph{GrabCut} dengan hasil citra referensi.
@@ -223,7 +223,7 @@ dengan menggunakan metode \emph{GrabCut}.
 
 \section{Manfaat Penelitian}
 \begin{enumerate}
-	\item Bagi Penulis
+	\item Bagi peneliti
 	\begin{itemize}
 		\item Meningkatkan wawasan dan pengalaman praktis terkait deteksi latar 
 		depan pada citra luka melalui penggunaan metode \emph{GrabCut}.
@@ -243,7 +243,7 @@ dengan menggunakan metode \emph{GrabCut}.
 	\begin{itemize}
 		\item Mahasiswa
 		
-		Penulis berharap penelitian ini dapat digunakan sebagai sumber penunjang 
+		peneliti berharap penelitian ini dapat digunakan sebagai sumber penunjang 
 		referensi, khususnya Pustaka tentang deteksi keliling luka kronis dengan 
 		menggunakan metode \emph{GrabCut}.
 
