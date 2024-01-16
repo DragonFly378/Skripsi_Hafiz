@@ -74,7 +74,6 @@ class ImageEditing:
         self.LoadCanvas()
 
     def LoadCanvas(self):    
-
         # Make image as main canvas
         main_title_label = Label(self.title_frame, text="Main Canvas", font=('Helvetica', 10, 'bold'))
         self.photo = ImageTk.PhotoImage(self.image)
@@ -122,7 +121,8 @@ class ImageEditing:
     def setSizeImg(self):
         global new_width, aspect_ratio, new_height
         # set ukuran gambar
-        new_width = 320  # Atur ukuran hanya 480 px
+        new_width = 480  # Atur ukuran hanya 480 px
+        # new_width = 320  # Atur ukuran hanya 320 px
         aspect_ratio = self.image.width / self.image.height
         new_height = int(new_width / aspect_ratio)
 
@@ -158,6 +158,14 @@ class ImageEditing:
         print("Koordinat Kotak: ", KOTAK["coord"])
 
 
+    def get_rectangle_coords(self):
+        if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
+            x1, y1 = KOTAK["titik_start"]
+            x2, y2 = KOTAK["titik_akhir"]
+            self.rect = (min(x1, x2), min(y1, y2), abs(x1-x2), abs(y1-y2))
+            return (x1, y1, x2, y2)
+        else:
+            return None
 
     def update_image(self):
         # Update the main canvas with image and annotations
@@ -172,7 +180,6 @@ class ImageEditing:
         self.main_canvas.create_image(0, 0, anchor=NW, image=self.photo)
     
     def update_result(self):
-
         # Update mask canvas with segmentation
         self.mask_image = Image.fromarray(self.mask)
         self.mask_image = self.mask_image.resize((new_width, new_height)) # <-- untuk resize ukuran
@@ -180,7 +187,7 @@ class ImageEditing:
         self.mask_canvas.create_image(0, 0, anchor=NW, image=self.mask_photo)
 
         # Update image with segmentation
-        self.result_image = Image.composite(self.image2, Image.new("RGB", self.image.size, "black"), self.mask_image)
+        self.result_image = Image.composite(self.image2, Image.new("RGB", self.image2.size, "black"), self.mask_image)
         # self.result_image = Image.fromarray(self.mask)
         self.result_photo = ImageTk.PhotoImage(self.result_image)
         self.result_canvas.create_image(0, 0, anchor=NW, image=self.result_photo)
@@ -188,15 +195,6 @@ class ImageEditing:
         # Get mask r(negative) from original mask
         self.mask_negative = self.invert_mask(self.mask_image)
 
-
-    def get_rectangle_coords(self):
-        if KOTAK["titik_start"] and KOTAK["titik_akhir"]:
-            x1, y1 = KOTAK["titik_start"]
-            x2, y2 = KOTAK["titik_akhir"]
-            self.rect = (min(x1, x2), min(y1, y2), abs(x1-x2), abs(y1-y2))
-            return (x1, y1, x2, y2)
-        else:
-            return None
 
     def segmentation_image(self):
         gc = GrabCut(self.gambar2, self.mask2, KOTAK["coord"])

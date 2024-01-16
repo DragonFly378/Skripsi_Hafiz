@@ -20,7 +20,6 @@ class GrabCut:
     def __init__(self, gambar, mask, rect=None, komponen_gmm = 5):
 
         self.gambar = gambar
-        self.mask = mask
         self.alpha = mask
         self.rect = rect
         self.komponen_gmm = komponen_gmm
@@ -177,29 +176,29 @@ class GrabCut:
         print('theta shape: ', self.theta['TU']['koefisien'].shape)
         
         # Cara default
-        # self.U_count_fg = self.gmm_fg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU], 
-        #                     self.komponen_gmm, self.theta['TU'])
-        # self.U_count_bg = self.gmm_bg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU], 
-        #                     self.komponen_gmm, self.theta['TB'])
+        self.U_count_fg = self.gmm_fg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU], 
+                            self.komponen_gmm, self.theta['TU'])
+        self.U_count_bg = self.gmm_bg.count_D_formula(self.gambar.reshape(-1, 3)[idx_TU], 
+                            self.komponen_gmm, self.theta['TB'])
 
         
         # Cara kedua
-        self.D_count_fg = []
-        self.D_count_bg = []
+        # self.D_count_fg = []
+        # self.D_count_bg = []
 
-        for kn in range(self.komponen_gmm):
-            zn = self.gambar.reshape(-1, 3)[idx_TU]
+        # for kn in range(self.komponen_gmm):
+        #     zn = self.gambar.reshape(-1, 3)[idx_TU]
 
-            tmp_d_fg = self.gmm_fg.d_calc(zn, kn, self.theta['TU'])
-            tmp_d_bg = self.gmm_bg.d_calc(zn, kn, self.theta['TB'])
+        #     tmp_d_fg = self.gmm_fg.d_calc(zn, kn, self.theta['TU'])
+        #     tmp_d_bg = self.gmm_bg.d_calc(zn, kn, self.theta['TB'])
 
-            self.D_count_fg.append(tmp_d_fg)
-            self.D_count_bg.append(tmp_d_bg)
+        #     self.D_count_fg.append(tmp_d_fg)
+        #     self.D_count_bg.append(tmp_d_bg)
 
-        self.D_count_fg = np.array(self.D_count_fg)
-        self.D_count_bg = np.array(self.D_count_bg)
-        self.U_count_fg = np.sum(self.D_count_fg, axis=0)
-        self.U_count_bg = np.sum(self.D_count_bg, axis=0)
+        # self.D_count_fg = np.array(self.D_count_fg)
+        # self.D_count_bg = np.array(self.D_count_bg)
+        # self.U_count_fg = np.sum(self.D_count_fg, axis=0)
+        # self.U_count_bg = np.sum(self.D_count_bg, axis=0)
 
         print("D fg count: ", self.U_count_fg.shape)
         print("D bg count: ", self.U_count_bg.shape)

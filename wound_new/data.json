@@ -1,0 +1,823 @@
+
+hitam/2.jpg
+kotak        :  (153,45,146,113)
+total diff   : 3698
+total piksel : 79680,
+akurasi      : 95.36%
+
+
+hitam/4.jpg
+kotak        : (60,89,162,153)
+total diff   : 4906
+total piksel : 101120
+akurasi      : 95.15%
+
+
+hitam/5.jpg
+kotak        : (68,48,115,106)
+total diff   : 2622
+total piksel : 56320
+akurasi      : 95.34%
+
+
+hitam/7.jpg
+kotak        : (100,50,117,142)
+total diff   : 5513
+total piksel : 78400
+akurasi      : 92.97%
+
+
+hitam/14.jpg
+kotak        : (98,43,116,121)
+total diff   : 7537
+total piksel : 67840
+akurasi      : 88.89%
+
+
+hitam/15.jpg
+kotak        : (89,10,140,171)
+total diff   : 5048
+total piksel : 61440
+akurasi      : 91.78%
+
+
+hitam/18.jpg
+kotak        : (50,59,219,201)
+total diff   : 8789
+total piksel : 102400
+akurasi      : 91.42%
+
+
+hitam/19.jpg
+kotak        : (107,82,147,104)
+total diff   : 4222
+total piksel : 74560
+akurasi      : 94.34%
+
+
+hitam/26.jpg
+kotak        : (45,26,205,186)
+total diff   : 4719
+total piksel : 78720
+akurasi      : 94.01%
+
+
+hitam/27.jpg
+kotak        : (43,43,227,148)
+total diff   : 9249
+total piksel : 82880
+akurasi      : 88.84%
+
+
+hitam/28.jpg
+kotak        : (46,91,130,149)
+total diff   : 4528
+total piksel : 94400
+akurasi      : 95.2%
+
+
+hitam/29.jpg
+kotak        : (47,51,207,151)
+total diff   : 9630
+total piksel : 78720
+akurasi      : 87.77%
+
+
+hitam/33.jpg
+kotak        : (81,42,176,114)
+total diff   : 3623
+total piksel : 68160
+akurasi      : 94.68%
+
+
+hitam/37.jpg
+kotak        : (43,45,146,110)
+total diff   : 3492
+total piksel : 76800
+akurasi      : 95.45%
+
+
+hitam/40.jpg
+kotak        : (35,73,164,82)
+total diff   : 5360
+total piksel : 74880
+akurasi      : 92.84%
+
+hitam/6.jpg
+kotak        : (83,97,130,97)
+total diff   : 4805
+total piksel : 76800
+akurasi      : 93.74%
+
+hitam/8.jpg
+kotak        : (114,104,157,108)
+total diff   : 12790
+total piksel : 76800
+akurasi      : 83.35%
+
+hitam/17.jpg
+kotak        : (28,34,208,213)
+total diff   : 11086
+total piksel : 89280
+akurasi      : 87.58%
+
+hitam/20.jpg
+kotak        : (51,107,168,101)
+total diff   : 4934
+total piksel : 79360
+akurasi      : 93.78%
+
+hitam/22.jpg
+kotak        : (63,67,186,98)
+total diff   : 5411
+total piksel : 72320
+akurasi      : 92.52%
+
+hitam/41.jpg
+kotak        : (94,15,122,150)
+total diff   : 10802
+total piksel : 76480
+akurasi      : 85.88%
+
+hitam/16.jpg
+kotak        : (47,88,193,79)
+total diff   : 6152
+total piksel : 83520
+akurasi      : 92.63%
+
+hitam/31.jpg
+kotak        : (24,64,271,273)
+total diff   : 17290
+total piksel : 136640
+akurasi      : 87.35%
+
+hitam/39.jpg
+kotak        : (63,52,203,187)
+total diff   : 1220
+total piksel : 89920
+akurasi      : 86.43%
+
+
+kuning/13.jpg
+kotak        : (21,26,278,139)
+total diff   : 29404
+total piksel : 26790
+akurasi      : 90.2
+
+
+kuning/17.jpg
+kotak        : (106,129,71,57)
+total diff   : 2183
+total piksel : 2078
+akurasi      : 98.58 %
+
+
+kuning/18.jpg
+kotak        : (104,58,115,117)
+total diff   : 9276
+total piksel : 6693
+akurasi      : 61.4 %
+
+
+kuning/19.jpg
+kotak        : (93,58,123,186)
+total diff   : 15953
+total piksel : 17507
+akurasi      : 91.1 %
+
+
+kuning/21.jpg
+kotak        : (83,58,143,136)
+total diff   : 14067
+total piksel : 13881
+akurasi      : 98.6 %
+
+
+kuning/23.jpg
+kotak        : (124,115,54,98)
+total diff   : 17436
+total piksel : 17229
+akurasi      : 98.7 %
+
+
+kuning/25.jpg
+kotak        : (104,120,87,90)
+total diff   : 19597
+total piksel : 19047
+akurasi      : 97.1 %
+
+
+kuning/34.jpg
+kotak        : (70,65,156,116)
+total diff   : 9985
+total piksel : 9890
+akurasi      : 99.0 %
+
+
+kuning/35.jpg
+kotak        : (41,35,215,211)
+total diff   : 28584
+total piksel : 27891
+akurasi      : 97.5 %
+
+
+kuning/38.jpg
+kotak        : (98,40,156,101)
+total diff   : 12851
+total piksel : 10910
+akurasi      : 82.2
+
+
+kuning/42.jpg
+kotak        : (80,34,156,127)
+total diff   : 11756
+total piksel : 11506
+akurasi      : 97.8 %
+
+
+kuning/3.jpg
+kotak        : (57,73,143,94)
+total diff   : 9118
+total piksel : 8444
+akurasi      : 92.0 %
+
+
+kuning/12.jpg
+kotak        : (85,65,161,79)
+total diff   : 9079
+total piksel : 8896
+akurasi      : 97.9 %
+
+
+kuning/10.jpg
+kotak        : (106,63,137,261)
+total diff   : 26167
+total piksel : 25099
+akurasi      : 95.7 %
+
+
+kuning/16.jpg
+kotak        : (38,38,243,173)
+total diff   : 37783
+total piksel : 37402
+akurasi      : 98.9 %
+
+
+merah/16.jpg
+kotak        : (63, 56, 178, 109)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/17.jpg
+kotak        : (88, 49, 146, 102)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/22.jpg
+kotak        : (103, 31, 123, 179)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/24.jpg
+kotak        : (37, 98, 270, 134)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/25.jpg
+kotak        : (119, 83, 158, 127)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/30.jpg
+kotak        : (113, 96, 77, 64)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/32.jpg
+kotak        : (77, 36, 163, 142)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/33.jpg
+kotak        : (70, 71, 230, 180)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/37.jpg
+kotak        : (79, 76, 173, 121)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/39.jpg
+kotak        : (130, 82, 67, 75)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/42.jpg
+kotak        : (107, 101, 126, 106)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/44.jpg
+kotak        : (189, 86, 61, 64)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/2.jpg
+kotak        : (54, 209, 97, 199)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/3.jpg
+kotak        : (106, 127, 68, 173)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/4.jpg
+kotak        : (81, 165, 139, 207)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/6.jpg
+kotak        : (90, 68, 138, 65)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/7.jpg
+kotak        : (110, 65, 99, 81)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/8.jpg
+kotak        : (125, 68, 70, 144)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/9.jpg
+kotak        : (72, 193, 139, 143)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/10.jpg
+kotak        : (95, 90, 120, 61)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/11.jpg
+kotak        : (90, 71, 189, 106)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/12.jpg
+kotak        : (64, 65, 181, 119)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/14.jpg
+kotak        : (55, 33, 224, 138)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/18.jpg
+kotak        : (137, 89, 65, 45)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/19.jpg
+kotak        : (39, 85, 267, 108)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/20.jpg
+kotak        : (38, 43, 225, 214)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/23.jpg
+kotak        : (34, 42, 228, 122)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/26.jpg
+kotak        : (71, 61, 172, 173)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/29.jpg
+kotak        : (96, 59, 118, 82)
+total diff   : 
+total piksel :
+akurasi      :
+
+merah/31.jpg
+kotak        : (103, 65, 142, 107)
+total diff   : 
+total piksel :
+akurasi      :
+
+merah/35.jpg
+kotak        : (35, 142, 255, 70)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/36.jpg
+kotak        : (108, 135, 109, 82)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+merah/38.jpg
+kotak        : (110, 74, 113, 127)
+total diff   : 
+total piksel :
+akurasi      :
+
+
+// Data luka hitam
+akurasi = [
+95,36
+95,15
+95,34
+93,74
+92,97
+83,35
+88,89
+91,78
+87,58
+91,42
+94,34
+93,78
+92,52
+94,01
+88,84
+95,2
+87,77
+94,68
+95,45
+92,84
+85,88
+92,63
+87,35
+86,43
+]
+
+total_diff = [ 
+3698 
+4906
+2622
+4805
+5513
+12790
+7537
+5048
+11086
+8789
+4222
+4934
+5411
+4719
+9249
+4528
+9630
+3623
+3492
+5360
+10802
+6152
+17290
+12201
+]
+
+total_piksel = [ 
+79680,
+101120,
+56320,
+76800,
+78400,
+76800,
+67840,
+61440,
+89280,
+102400,
+74560,
+79360,
+72320,
+78720,
+82880,
+94400,
+78720,
+68160,
+76800,
+74880,
+76480,
+83520,
+136640,
+89920,
+]
+
+kotak = [
+(153,45,146,113)
+(60,89,162,153)
+(68,48,115,106)
+(100,50,117,142)
+(98,43,116,121)
+(89,10,140,171)
+(50,59,219,201)
+(107,82,147,104)
+(45,26,205,186)
+(43,43,227,148)
+(46,91,130,149)
+(47,51,207,151)
+(81,42,176,114)
+(43,45,146,110)
+(35,73,164,82)
+(83,97,130,97)
+(114,104,157,108)
+(28,34,208,213)
+(51,107,168,101)
+(63,67,186,98)
+(94,15,122,150)
+(47,88,193,79)
+(24,64,271,273)
+(63,52,203,187)
+]
+
+
+// Data luka kuning
+akurasi = [
+59,79
+98,58
+90,26
+91,88
+82,56
+93,53
+76,24
+96,29
+92,33
+87,3
+95,68
+91,47
+92,8
+94,5 
+77,23
+]
+
+total_diff = [
+29205
+3494
+7135
+10443
+12057
+4408
+18246
+2922
+6751
+9309
+3317
+6227  
+4883
+6499
+18145
+] 
+
+total_piksel = [ 
+72640
+76480
+73280
+128640
+69120
+68160
+76800
+78720
+88000
+73280
+76800  
+72960
+67840
+118080 
+79680
+]
+
+kotak = [
+(21,26,278,139)
+(106,129,71,57)
+(104,58,115,117)
+(93,58,123,186)
+(83,58,143,136)
+(124,115,54,98)
+(89,26,138,194)
+(70,65,156,116)
+(41,35,215,211)
+(98,40,156,101)
+(80,34,156,127)
+(57,73,143,94)
+(85,65,161,79)
+(106,63,137,261)
+(38,38,243,173)
+]
+
+
+
+// Data luka merah
+akurasi = [
+92,69
+88,77
+93,28
+92,44
+88,14
+98,29
+90,82
+92,33
+93,6
+96,69
+96,5
+96,19
+97,46
+96,62
+93,69
+95,48
+95,84
+95,09
+96,4
+96,2
+93,32
+90,65
+93,48
+98,27
+93,14
+92,03
+91,85
+86,93
+91,87
+95,06
+95,81
+95,08
+92,39
+]
+
+total_diff = [ 
+5641
+7652
+5353
+7907 
+12026
+1311
+7135
+7782
+4893
+2549
+3635
+2765
+4621
+4608
+8606
+3488
+2847
+3786
+6555
+2932
+5153
+7211
+5032
+1321
+6298
+7220
+6285 
+12175
+5544
+3113
+4862
+3791
+5870
+]
+
+total_piksel = [ 
+77120
+68160
+79680
+104640
+101440
+76480
+77760
+101440
+76480
+77120
+104000
+72640
+182080
+136320
+136320
+77120
+68480
+77120
+182080
+77120
+77120
+77120
+77120
+76480
+91840
+90560
+77120
+93120
+68160
+63040
+116160
+77120
+77120
+]
+
+kotak = [
+(63,56,178,109)
+(88,49,146,102)
+(103,31,123,179)
+(37,98,270,134)
+(119,83,158,127)
+(113,96,77,64)
+(77,36,163,142)
+(70,71,230,180)
+(79,76,173,121)
+(130,82,67,75)
+(107,101,126,106)
+(189,86,61,64)
+(54,209,97,199)
+(106,127,68,173)
+(81,165,139,207)
+(90,68,138,65)
+(110,65,99,81)
+(125,68,70,144)
+(72,193,139,143)
+(95,90,120,61)
+(90,71,189,106)
+(64,65,181,119)
+(55,33,224,138)
+(137,89,65,45)
+(39,85,267,108)
+(38,43,225,214)
+(34,42,228,122)
+(71,61,172,173)
+(96,59,118,82)
+(103,65,142,107)
+(35,142,255,70)
+(108,135,109,82)
+(110,74,113,127)
+]
