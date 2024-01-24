@@ -28,14 +28,14 @@
 \contentsline {subsubsection}{\numberline {2.5.3.1}Penjelasan Algoritma}{22}{subsubsection.2.5.3.1}%
 \contentsline {subsubsection}{\numberline {2.5.3.2}Implementasi Lebih Lanjut}{23}{subsubsection.2.5.3.2}%
 \contentsline {paragraph}{\numberline {2.5.3.2.1}Fase \emph {Growth}}{24}{paragraph.2.5.3.2.1}%
-\contentsline {paragraph}{\numberline {2.5.3.2.2}Fase \emph {Augmentation}}{24}{paragraph.2.5.3.2.2}%
+\contentsline {paragraph}{\numberline {2.5.3.2.2}Fase \emph {Augmentation}}{25}{paragraph.2.5.3.2.2}%
 \contentsline {paragraph}{\numberline {2.5.3.2.3}Fase \emph {Adoption}}{25}{paragraph.2.5.3.2.3}%
 \contentsline {section}{\numberline {2.6}Segmentasi Citra dengan Algoritma \emph {GrabCut}}{26}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}{Sistem yang Diusulkan : \emph {GrabCut}}}{26}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}{Segmentasi gambar dengan \emph {graph cut}}}{27}{subsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.2.1}{Segmentasi dengan \emph {energy minimisation}}}{27}{subsubsection.2.6.2.1}%
-\contentsline {subsection}{\numberline {2.6.3}{Segmentasi gambar dengan algoritma \emph {GrabCut}}}{30}{subsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.3.1}{Model Pendataan Warna}}{30}{subsubsection.2.6.3.1}%
+\contentsline {subsubsection}{\numberline {2.6.2.1}{Segmentasi dengan \emph {energy minimisation}}}{28}{subsubsection.2.6.2.1}%
+\contentsline {subsection}{\numberline {2.6.3}{Segmentasi gambar dengan algoritma \emph {GrabCut}}}{31}{subsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.1}{Model Pendataan Warna}}{31}{subsubsection.2.6.3.1}%
 \contentsline {subsubsection}{\numberline {2.6.3.2}{Segmentasi berdasarkan Iterasi \emph {Energy Minimization}}}{32}{subsubsection.2.6.3.2}%
 \contentsline {subsubsection}{\numberline {2.6.3.3}{Interaksi Pengguna dan Trimap yang Tidak Lengkap}}{33}{subsubsection.2.6.3.3}%
 \contentsline {chapter}{\numberline {III}METODOLOGI PENELITIAN}{35}{chapter.3}%

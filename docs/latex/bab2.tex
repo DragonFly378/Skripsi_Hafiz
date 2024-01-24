@@ -723,6 +723,13 @@ yang menunjukkan afiliasi dari setiap \emph{node} p sehingga
     \end{matrix}
 \end{equation}
 
+\begin{conditions}
+  p & \emph{node} p\\
+  S & pohon pencarian \(S\)\\
+  T & pohon pencarian \(T\)\\
+  $\O$ & \emph{orphans} (\emph{node} bebas)\\
+\end{conditions}
+
 Jika \emph{node} p milik salah satu pohon pencarian maka informasi tentang induknya 
 akan disimpan sebagai \(PARENT(p)\). Akar pohon pencarian (\emph{source} dan \emph{sink}), 
 \emph{orphans}, dan semua \emph{node} bebas tidak memiliki orang tua, 
@@ -1145,9 +1152,9 @@ sederhana, misalnya dengan mengizinkan pelabelan yang tidak lengkap oleh penggun
 
 \begin{figure}[H]
   \centering
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.7\textwidth}
       \centering{}
-      \includegraphics[width=\textwidth]{gambar/gambar-2_6.png}
+      \includegraphics[width=\textwidth]{gambar/alur_grabcut_paper.png}
     \end{subfigure}     
   \caption{
     Segmentasi gambar di \emph{GrabCut} (\cite{Rother:2004})

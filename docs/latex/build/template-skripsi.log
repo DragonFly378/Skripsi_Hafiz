@@ -996,7 +996,7 @@ BAB I.
 
 ] [2] [3] [4] [5]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-28.
+33.
  (ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [6]) [7]
@@ -1058,21 +1058,21 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 70
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [23]
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 729.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 736.
 
 [24]
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 788.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 795.
 
 Missing character: There is no “ ("201C) in font ptmr8t!
 Missing character: There is no ” ("201D) in font ptmr8t!
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 801.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 808.
 
 [25] [26]
 Missing character: There is no “ ("201C) in font ptmr8t!
 Missing character: There is no ” ("201D) in font ptmr8t!
-[27] [28]
+[27] [28] [29]
 File: gambar/gambar-2_5(a).png Graphic file (type bmp)
 <gambar/gambar-2_5(a).png>
 File: gambar/gambar-2_5(b).png Graphic file (type bmp)
@@ -1085,14 +1085,13 @@ File: gambar/gambar-2_5(e).png Graphic file (type bmp)
 <gambar/gambar-2_5(e).png>
 File: gambar/gambar-2_5(f).png Graphic file (type bmp)
 <gambar/gambar-2_5(f).png>
- [29] [30]
+ [30] [31]
 
-LaTeX Warning: Reference `img:2.6' on page 31 undefined on input line 1117.
+LaTeX Warning: Reference `img:2.6' on page 32 undefined on input line 1124.
 
-[31]
-File: gambar/gambar-2_6.png Graphic file (type bmp)
-<gambar/gambar-2_6.png>
- [32]
+[32]
+File: gambar/alur_grabcut_paper.png Graphic file (type bmp)
+<gambar/alur_grabcut_paper.png>
 File: gambar/gambar-2_7(a).png Graphic file (type bmp)
 <gambar/gambar-2_7(a).png>
 File: gambar/gambar-2_7(b).png Graphic file (type bmp)
@@ -1101,7 +1100,7 @@ File: gambar/gambar-2_7(c).png Graphic file (type bmp)
 <gambar/gambar-2_7(c).png>
 
 
-LaTeX Warning: Reference `img:2.6' on page 33 undefined on input line 1189.
+LaTeX Warning: Reference `img:2.6' on page 33 undefined on input line 1196.
 
 Missing character: There is no — ("2014) in font ptmr8t!
 [33]
@@ -1109,16 +1108,16 @@ File: gambar/gambar-2_8.png Graphic file (type bmp)
 <gambar/gambar-2_8.png>
 
 
-LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1206.
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1213.
 
 
-LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1206.
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1213.
 
 
-LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1215.
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1222.
 
 
-LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1217.
+LaTeX Warning: Reference `img:2.6' on page 34 undefined on input line 1224.
 
 ) [34]
 \openout2 = `bab3.aux'.
@@ -2668,7 +2667,7 @@ File: gambar/hasil_segmentasi/luka_merah/image_42_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_merah/image_42_rect.jpg>
 
-Overfull \hbox (1.88992pt too wide) in paragraph at lines 1731--1731
+Overfull \hbox (1.88992pt too wide) in paragraph at lines 1724--1724
 \T1/ptm/m/n/10 (107,101,126,106)| 
  []
 
@@ -2737,6 +2736,11 @@ File: gambar/hasil_segmentasi/luka_merah/mask_r_7.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/mask_r_7.jpg>
 File: gambar/hasil_segmentasi/luka_merah/7_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/7_r.jpg>
+
+Overfull \vbox (34.57646pt too high) has occurred while \output is active []
+
+
+[89]
 File: gambar/hasil_segmentasi/luka_merah/image_8_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_merah/image_8_rect.jpg>
@@ -2746,11 +2750,6 @@ File: gambar/hasil_segmentasi/luka_merah/mask_r_8.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/mask_r_8.jpg>
 File: gambar/hasil_segmentasi/luka_merah/8_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/8_r.jpg>
-
-Overfull \vbox (122.52663pt too high) has occurred while \output is active []
-
-
-[89]
 File: gambar/hasil_segmentasi/luka_merah/image_9_rect.jpg Graphic file (type bm
 p)
 <gambar/hasil_segmentasi/luka_merah/image_9_rect.jpg>
@@ -2796,6 +2795,11 @@ File: gambar/hasil_segmentasi/luka_merah/mask_r_14.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/mask_r_14.jpg>
 File: gambar/hasil_segmentasi/luka_merah/14_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/14_r.jpg>
+
+Overfull \vbox (44.61389pt too high) has occurred while \output is active []
+
+
+[90]
 File: gambar/hasil_segmentasi/luka_merah/image_18_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_merah/image_18_rect.jpg>
@@ -2805,11 +2809,6 @@ File: gambar/hasil_segmentasi/luka_merah/mask_r_18.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/mask_r_18.jpg>
 File: gambar/hasil_segmentasi/luka_merah/18_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/18_r.jpg>
-
-Overfull \vbox (44.38806pt too high) has occurred while \output is active []
-
-
-[90]
 File: gambar/hasil_segmentasi/luka_merah/image_19_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_merah/image_19_rect.jpg>
@@ -2855,15 +2854,6 @@ File: gambar/hasil_segmentasi/luka_merah/mask_r_29.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/mask_r_29.jpg>
 File: gambar/hasil_segmentasi/luka_merah/29_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/29_r.jpg>
-File: gambar/hasil_segmentasi/luka_merah/image_31_rect.jpg Graphic file (type b
-mp)
-<gambar/hasil_segmentasi/luka_merah/image_31_rect.jpg>
-File: gambar/hasil_segmentasi/luka_merah/result_31.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_merah/result_31.jpg>
-File: gambar/hasil_segmentasi/luka_merah/mask_r_31.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_merah/mask_r_31.jpg>
-File: gambar/hasil_segmentasi/luka_merah/31_r.jpg Graphic file (type bmp)
-<gambar/hasil_segmentasi/luka_merah/31_r.jpg>
 File: gambar/hasil_segmentasi/luka_merah/image_35_rect.jpg Graphic file (type b
 mp)
 <gambar/hasil_segmentasi/luka_merah/image_35_rect.jpg>
@@ -2891,9 +2881,18 @@ File: gambar/hasil_segmentasi/luka_merah/mask_r_38.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/mask_r_38.jpg>
 File: gambar/hasil_segmentasi/luka_merah/38_r.jpg Graphic file (type bmp)
 <gambar/hasil_segmentasi/luka_merah/38_r.jpg>
-) [91] [92] (template-skripsi.aux (kata-pengantar.aux) (abstrak.aux)
-(abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux) (bab5.aux)
-(lampiran.aux))
+ [91]
+File: gambar/result_table_hitam.png Graphic file (type bmp)
+<gambar/result_table_hitam.png>
+ [92]
+File: gambar/result_table_kuning.png Graphic file (type bmp)
+<gambar/result_table_kuning.png>
+ [93]
+File: gambar/result_table_merah.png Graphic file (type bmp)
+<gambar/result_table_merah.png>
+ [94]) [95] (template-skripsi.aux (kata-pengantar.aux)
+(abstrak.aux) (abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux)
+(bab5.aux) (lampiran.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2903,4 +2902,4 @@ Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (104 pages, 480568 bytes).
+Output written on template-skripsi.xdv (107 pages, 480884 bytes).

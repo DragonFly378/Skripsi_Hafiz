@@ -49,3 +49,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Parameter dan akurasi dari hasil deteksi keliling luka menggunakan \emph {Grabcut} untuk kategori luka hitam\relax }}{93}{figure.caption.72}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Parameter dan akurasi dari hasil deteksi keliling luka menggunakan \emph {Grabcut} untuk kategori luka kuning\relax }}{94}{figure.caption.73}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Parameter dan akurasi dari hasil deteksi keliling luka menggunakan \emph {Grabcut} untuk kategori luka merah\relax }}{95}{figure.caption.74}%

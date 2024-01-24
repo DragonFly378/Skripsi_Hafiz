@@ -34,7 +34,7 @@ serta menyamakan ukuran tiap sampel citra gambar, berikut \emph{source code} nya
 Fungsi \texttt{setSizeImg()} dibuat untuk mengubah ukuran lebar piksel citra 
 menjadi 320 piksel, untuk mempertahankan rasionya, maka dibentuk dengan menghitung
 menggunakan rumus \texttt{aspect\_ratio} dimana tinggi gambar akan otomatis mengikuti lebar gambar 
-dengan perbandingan yang tetap.
+dengan perbandingan yang tetap .
 
 \section{Deteksi keliling luka menggunakan \emph{Grabcut}}
 Alur deteksi keliling luka menggunakan algoritma \emph{Grabcut} dilakukan melalui
@@ -310,17 +310,61 @@ Rincian lengkap hasil dari parameter dan validasi citra tersedia di bagian \text
 \section{Analisa hasil}
 Berikut analisa hasil setelah melakukan eksperimen terhadap populasi:
 \begin{enumerate}
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} kategori luka hitam menghasilkan 5 data (dari 24 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 84.2\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} kategori luka kuning menghasilkan 5 data (dari 15 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 76.14\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} kategori luka merah menghasilkan 2 data (dari 30 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 62.25\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{intepolasi} kategori luka hitam menghasilkan 21 data (dari 24 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 87.6\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{interpolasi} kategori luka kuning menghasilkan 11 data (dari 15 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 79.2\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{interpolasi} kategori luka merah menghasilkan 12 data (dari 30 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 89.7\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} untuk semua kategori menghasilkan 12 data (dari 71 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 77.18\%.
-	\item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi \emph{integer} untuk semua kategori menghasilkan 44 data (dari 71 data) yang kurva akhirnya berhasil menutupi luka dengan nilai akurasi rata-rata 86.1\%.
+	\item Hasil dari deteksi keliling luka menggunakan algoritma \emph{GrabCut} 
+	kategori luka hitam menghasilkan 24 data yang area segmentasi akhirnya memiliki 
+	nilai akurasi rata-rata 91.5\%.
+
+	\item Hasil dari deteksi keliling luka menggunakan algoritma \emph{GrabCut} 
+	kategori luka kuning menghasilkan 14 (dari 15 data) yang area segmentasi akhirnya 
+	memiliki nilai akurasi rata-rata 82.7\%.
+
+	\item Hasil dari deteksi keliling luka menggunakan algoritma \emph{GrabCut} 
+	kategori luka merah menghasilkan 33 data yang area segmentasi akhirnya memiliki 
+	nilai akurasi rata-rata 93.8\%.
+
+	% \item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi integer 
+	% kategori luka hitam yang dilakukan oleh \cite{Rizki:2022} menghasilkan 5 data 
+	% (dari 24 data) yang area segmentasi akhirnya memiliki nilai akurasi rata-rata 
+	% 84.18\% sedangkan deteksi keliling luka menggunakan \emph{Grabcut} kategori 
+	% luka hitam memiliki nilai akurasi rata-rata 92.57\%.
+
+	% \item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi integer 
+	% kategori luka kuning yang dilakukan oleh \cite{Rizki:2022} menghasilkan 5 data 
+	% (dari 15 data) yang area segmentasi akhirnya memiliki nilai akurasi rata-rata 
+	% 76.14\% sedangkan deteksi keliling luka menggunakan \emph{Grabcut} kategori 
+	% luka kuning memiliki nilai akurasi rata-rata 66.1\%.
+
+	% \item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi integer 
+	% kategori luka merah yang dilakukan oleh \cite{Rizki:2022} menghasilkan 2 data 
+	% (dari 32 data) yang area segmentasi akhirnya memiliki nilai akurasi rata-rata 
+	% 62.25\% sedangkan deteksi keliling luka menggunakan \emph{Grabcut} kategori 
+	% luka merah memiliki nilai akurasi rata-rata 95.74\%.
+
+	% \item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi interpolasi 
+	% kategori luka hitam yang dilakukan oleh \cite{Rizki:2022} menghasilkan 21 data 
+	% (dari 24 data) yang area segmentasi akhirnya memiliki nilai akurasi rata-rata 
+	% 87.63\% sedangkan deteksi keliling luka menggunakan \emph{Grabcut} kategori 
+	% luka hitam memiliki nilai akurasi rata-rata 91.94\%.
+
+	% \item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi interpolasi 
+	% kategori luka kuning yang dilakukan oleh \cite{Rizki:2022} menghasilkan 11 data 
+	% (dari 15 data) yang area segmentasi akhirnya memiliki nilai akurasi rata-rata 
+	% 79.21\% sedangkan deteksi keliling luka menggunakan \emph{Grabcut} kategori 
+	% luka kuning memiliki nilai akurasi rata-rata 80.45\%.
+
+	% \item Hasil dari deteksi keliling luka menggunakan \emph{snake} versi interpolasi 
+	% kategori luka merah yang dilakukan oleh \cite{Rizki:2022} menghasilkan 12 data 
+	% (dari 32 data) yang area segmentasi akhirnya memiliki nilai akurasi rata-rata 
+	% 89.73\% sedangkan deteksi keliling luka menggunakan \emph{Grabcut} kategori 
+	% luka merah memiliki nilai akurasi rata-rata 93.31\%.
+
+	\item Hasil dari deteksi keliling luka menggunakan algoritma \emph{GrabCut} 
+	untuk semua kategori menghasilkan 70 (dari 71 data) yang area segmentasi akhirnya 
+	memiliki nilai akurasi rata-rata 89.36\%.
+
 \end{enumerate}
 
-% Baris ini digunakan untuk membantu dalam melakukan sitasi
+% Baris ini digunakan untuk memban tu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan
 % oleh compiler LaTeX.
 \begin{comment}
