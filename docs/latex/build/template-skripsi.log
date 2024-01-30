@@ -782,7 +782,7 @@ LaTeX Font Info:    Trying to load font information for T1+ptm on input line 19
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (template-skripsi.aux (kata-pengantar.aux) (abstrak.aux)
 (abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux) (bab5.aux)
-(lampiran.aux))
+(lampiran.aux) (daftar-riwayat-hidup.aux))
 \openout1 = `template-skripsi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 198.
@@ -911,42 +911,57 @@ File: gambar/logounj.png Graphic file (type bmp)
  [1
 
 ]
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf>
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf>
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf, page 1>
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf, page 1>
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf, page 1>
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf, page 1>
-File: Lembar_Pengesahan_Skripsi.pdf Graphic file (type pdf)
-<use Lembar_Pengesahan_Skripsi.pdf, page 1>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf, page 1>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf, page 1>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf, page 1>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf, page 1>
+File: Lembar_Persetujuan_Revisi.pdf Graphic file (type pdf)
+<use Lembar_Persetujuan_Revisi.pdf, page 1>
  [0
 
 ]
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf>
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf>
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf, page 1>
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf, page 1>
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf, page 1>
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf, page 1>
+File: Lembar_Pernyataan.pdf Graphic file (type pdf)
+<use Lembar_Pernyataan.pdf, page 1>
+ [1]
 \openout2 = `kata-pengantar.aux'.
 
- (kata-pengantar.tex [1
+ (kata-pengantar.tex [2
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 46
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 53
 .
  (ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ))
-Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
+Overfull \hbox (7.51326pt too wide) in paragraph at lines 53--214
 [][] 
  []
 
-[2]
+[3]
 \openout2 = `abstrak.aux'.
 
- (abstrak.tex) [3
+ (abstrak.tex) [4
 
 
 
@@ -954,12 +969,12 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
 ]
 \openout2 = `abstract.aux'.
 
- (abstract.tex) [4
+ (abstract.tex) [5
 
 
 
 
-] (template-skripsi.toc [5
+] (template-skripsi.toc [6
 
 
 
@@ -967,25 +982,25 @@ Overfull \hbox (7.51326pt too wide) in paragraph at lines 46--212
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
- [6]
+ [7]
 (template-skripsi.lof
 Missing character: There is no ∈ ("2208) in font ptmr8t!
 
-LaTeX Warning: Reference `img:2.6' on page vii undefined on input line 19.
+LaTeX Warning: Reference `img:2.6' on page viii undefined on input line 19.
 
-[7
+[8
 
 ])
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [8] (template-skripsi.lot [9
+ [9] (template-skripsi.lot [10
 
 ])
 \tf@lot=\write7
 \openout7 = `template-skripsi.lot'.
 
- [10]
+ [11]
 \openout2 = `bab1.aux'.
 
  (bab1.tex
@@ -2890,16 +2905,28 @@ File: gambar/result_table_kuning.png Graphic file (type bmp)
  [93]
 File: gambar/result_table_merah.png Graphic file (type bmp)
 <gambar/result_table_merah.png>
- [94]) [95] (template-skripsi.aux (kata-pengantar.aux)
-(abstrak.aux) (abstract.aux) (bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux)
-(bab5.aux) (lampiran.aux))
+ [94]) [95]
+\openout2 = `daftar-riwayat-hidup.aux'.
+
+ (daftar-riwayat-hidup.tex
+File: gambar/hafiz_red.jpg Graphic file (type bmp)
+<gambar/hafiz_red.jpg>
+) [96
+
+
+
+
+]
+(template-skripsi.aux (kata-pengantar.aux) (abstrak.aux) (abstract.aux)
+(bab1.aux) (bab2.aux) (bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux)
+(daftar-riwayat-hidup.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 0177521CB9BB606DBF6EAEAB8A55B033;11376.
+(rerunfilecheck)             Checksum: 469274E46B1E6D305853D50DA91C521E;11672.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  )
-Output written on template-skripsi.xdv (107 pages, 480884 bytes).
+Output written on template-skripsi.xdv (109 pages, 485380 bytes).
